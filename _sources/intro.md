@@ -4,7 +4,7 @@
 **Nama** : Rohman Maulana  
 **Kelas** : IF2D  
 **Prodi** : Teknik Informatika  
-**Email** : [rohmanfake26@gmail.com]
+**Email** : [rohmanfake26@gmail.com](mailto:rohmanfake26@gmail.com)  
 
 ## **Penjelasan tentang Data Mining**
 Data Mining adalah proses yang menggunakan teknik statistik, matematika, kecerdasan buatan, dan machine learning untuk mengekstraksi dan mengidentifikasi informasi yang bermanfaat serta pengetahuan yang terkait dari berbagai database besar (Turban dkk., 2005). Proses ini membantu dalam menemukan pola, tren, dan hubungan yang tersembunyi dalam data yang dapat digunakan untuk pengambilan keputusan.
@@ -49,4 +49,3 @@ Data Mining merupakan proses penting dalam menganalisis data besar untuk menemuk
 
 ```{tableofcontents}
 ```
-

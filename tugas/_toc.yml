@@ -9,6 +9,6 @@ chapters:
 - file: data_understanding
   title: Data Understanding
   sections:
-  - file: Outlier Detection
+  - file: outlier_detection
     title: Outlier detection with Local Outlier Factor (LOF)
 

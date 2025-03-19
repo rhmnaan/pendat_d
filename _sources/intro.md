@@ -1,4 +1,4 @@
-# Introducing
+# **Introducing**  
 
 **NIM** : 23041100140  
 **Nama** : Rohman Maulana  
@@ -6,46 +6,41 @@
 **Prodi** : Teknik Informatika  
 **Email** : [rohmanfake26@gmail.com](mailto:rohmanfake26@gmail.com)  
 
-## **Penjelasan tentang Data Mining**
-Data Mining adalah proses yang menggunakan teknik statistik, matematika, kecerdasan buatan, dan machine learning untuk mengekstraksi dan mengidentifikasi informasi yang bermanfaat serta pengetahuan yang terkait dari berbagai database besar (Turban dkk., 2005). Proses ini membantu dalam menemukan pola, tren, dan hubungan yang tersembunyi dalam data yang dapat digunakan untuk pengambilan keputusan.
+## **Penjelasan tentang Data Mining**  
+Data Mining adalah proses analisis data untuk menemukan pola, hubungan, dan informasi berharga yang tersembunyi dalam dataset besar. Teknik ini menggunakan metode statistik, kecerdasan buatan, dan machine learning untuk mengidentifikasi wawasan yang dapat digunakan dalam pengambilan keputusan (Turban dkk., 2005).  
 
-Beberapa istilah lain yang memiliki makna sama dengan Data Mining adalah:
-- **Knowledge Discovery in Databases (KDD):** Proses menemukan pengetahuan dari database.
-- **Ekstraksi Pengetahuan (Knowledge Extraction):** Mengekstrak informasi berharga dari data.
-- **Analisis Data/Pola (Data/Pattern Analysis):** Menganalisis data untuk menemukan pola yang bermakna.
-- **Kecerdasan Bisnis (Business Intelligence):** Menggunakan data untuk mendukung keputusan bisnis.
-- **Data Archaeology dan Data Dredging:** Menjelajahi data untuk menemukan informasi yang relevan (Larose, 2005).
+Proses Data Mining terdiri dari beberapa tahapan utama, seperti yang ditampilkan dalam gambar. Berikut adalah penjelasan masing-masing tahap:  
+
+## **Tahapan dalam Data Mining (Berdasarkan Gambar)**  
+
+1. **Business Understanding (Pemahaman Bisnis)**  
+   - Memahami tujuan bisnis dan masalah yang ingin diselesaikan dengan Data Mining.  
+   - Mendefinisikan tujuan analisis data dan hasil yang diharapkan.  
+
+2. **Data Understanding (Pemahaman Data)**  
+   - Mengumpulkan data dari berbagai sumber.  
+   - Mengeksplorasi struktur dan karakteristik data, termasuk identifikasi outlier dan ketidakkonsistenan.  
+
+3. **Data Preparation (Persiapan Data)**  
+   - Melakukan pembersihan data (data cleaning) untuk mengatasi data yang hilang atau tidak akurat.  
+   - Menggabungkan data dari berbagai sumber (data integration) dan mentransformasikannya ke dalam format yang dapat dianalisis.  
+
+4. **Modeling (Pemodelan)**  
+   - Menerapkan algoritma Data Mining seperti klasifikasi, klastering, regresi, atau asosiasi.  
+   - Menguji berbagai model untuk menentukan yang paling sesuai dengan tujuan bisnis.  
+
+5. **Evaluation (Evaluasi Model)**  
+   - Mengevaluasi hasil model berdasarkan metrik yang sesuai (akurasi, presisi, recall, dsb.).  
+   - Menentukan apakah model sudah cukup baik atau perlu perbaikan lebih lanjut.  
+
+6. **Deployment (Penerapan Model)**  
+   - Mengimplementasikan model ke dalam sistem atau aplikasi bisnis.  
+   - Memantau performa model dalam lingkungan nyata dan melakukan pembaruan jika diperlukan.  
+
+## **Kesimpulan**  
+Data Mining adalah proses bertahap yang dimulai dari pemahaman bisnis hingga implementasi model analisis data. Dengan pendekatan sistematis seperti pada gambar di atas, proses ini dapat memberikan wawasan yang berguna dalam berbagai bidang, seperti bisnis, kesehatan, keuangan, dan pendidikan.  
 
 Untuk mempelajari lebih lanjut tentang Data Mining, Anda dapat mengunjungi link berikut: [Data Mining - Moelaab](https://moelaab.github.io/datamining/).
-
-## **Tahapan dalam Data Mining**
-Proses Data Mining umumnya terdiri dari beberapa tahapan, yaitu:
-1. **Pembersihan Data (Data Cleaning):** Menghapus data yang tidak lengkap, tidak akurat, atau tidak relevan.
-2. **Integrasi Data (Data Integration):** Menggabungkan data dari berbagai sumber menjadi satu dataset yang konsisten.
-3. **Seleksi Data (Data Selection):** Memilih subset data yang relevan untuk dianalisis.
-4. **Transformasi Data (Data Transformation):** Mengonversi data ke dalam format yang sesuai untuk analisis.
-5. **Data Mining:** Menerapkan teknik analisis untuk menemukan pola dalam data.
-6. **Evaluasi Pola (Pattern Evaluation):** Menilai dan menafsirkan pola yang ditemukan.
-7. **Representasi Pengetahuan (Knowledge Representation):** Menyajikan hasil dalam bentuk yang mudah dipahami oleh pengguna.
-
-## **Teknik dan Metode dalam Data Mining**
-Beberapa teknik umum dalam Data Mining meliputi:
-- **Klasifikasi (Classification):** Memprediksi kategori data berdasarkan data sebelumnya, seperti dalam deteksi spam email.
-- **Klastering (Clustering):** Mengelompokkan data berdasarkan kemiripan, misalnya segmentasi pelanggan dalam bisnis.
-- **Asosiasi (Association Rule Mining):** Menemukan hubungan antar-item dalam dataset, seperti dalam analisis keranjang belanja.
-- **Regresi (Regression):** Memprediksi nilai kontinu berdasarkan variabel lain, seperti prediksi harga rumah.
-- **Anomali Detection:** Mengidentifikasi data yang menyimpang dari pola umum, digunakan dalam deteksi fraud.
-
-## **Penerapan Data Mining dalam Berbagai Bidang**
-Data Mining digunakan dalam berbagai sektor, di antaranya:
-- **Bisnis:** Untuk analisis tren pasar, prediksi permintaan, dan personalisasi pelanggan.
-- **Kesehatan:** Menganalisis data pasien untuk diagnosis penyakit dan rekomendasi pengobatan.
-- **Keuangan:** Mendeteksi penipuan kartu kredit dan mengelola risiko investasi.
-- **Pendidikan:** Menganalisis performa siswa dan meningkatkan metode pembelajaran.
-- **Media Sosial:** Menganalisis sentimen publik dan perilaku pengguna.
-
-## **Kesimpulan**
-Data Mining merupakan proses penting dalam menganalisis data besar untuk menemukan informasi yang bermanfaat. Dengan berbagai teknik seperti klasifikasi, klastering, dan asosiasi, Data Mining membantu pengambilan keputusan di berbagai bidang.
 
 ```{tableofcontents}
 ```

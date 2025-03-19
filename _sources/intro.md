@@ -11,7 +11,7 @@ Data Mining adalah proses analisis data untuk menemukan pola, hubungan, dan info
 
 Proses Data Mining terdiri dari beberapa tahapan utama, seperti yang ditampilkan dalam gambar. Berikut adalah penjelasan masing-masing tahap:  
 
-## **Tahapan dalam Data Mining (Berdasarkan Gambar)**  
+## **Tahapan dalam Data Mining**  
 
 1. **Business Understanding (Pemahaman Bisnis)**  
    - Memahami tujuan bisnis dan masalah yang ingin diselesaikan dengan Data Mining.  

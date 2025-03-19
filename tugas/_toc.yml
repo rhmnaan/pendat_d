@@ -8,6 +8,6 @@ chapters:
 - file: data_understanding
   title: Data Understanding
   sections:
-    - file: outlier_detection
+    - file: outlier detection
       title: Outlier Detection
 

@@ -7,7 +7,8 @@ title: My website
 chapters:
 - file: data_understanding
   title: Data Understanding
-  sections:
-    - file: outlier_detection
-      title: Outlier Detection
+- file: outlier_detection
+  title: Outlier Detection
+
+   
 

@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: hello
-- file: markdown-notebooks
+
+- file: data_understanding
+  title: Data Understanding
+  sections:
+  - file: lof
+    title: Outlier detection with Local Outlier Factor (LOF)
+

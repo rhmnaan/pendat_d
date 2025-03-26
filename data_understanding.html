@@ -182,7 +182,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Data Understanding</strong></a></li>
+          <li class="toctree-l1 current active has-children"><a class="current reference internal" href="data_understanding.html">Data Understanding</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+            <li class="toctree-l2"><a class="reference internal" href="outlier_detection.html">Outliers Detection</a></li>
+            <li class="toctree-l2"><a class="reference internal" href="naive_bays.html">Local Outliers Factors</a></li>
 
 
 
@@ -1361,83 +1363,6 @@ Name: 0, dtype: object
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/8df0bbdd9975899a44cb307f83863765f5f63a5008f876376f0f92e5900c99e6.png" src="_images/8df0bbdd9975899a44cb307f83863765f5f63a5008f876376f0f92e5900c99e6.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>data.ipynb
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/usr/local/bin/jupyter-nbconvert&quot;, line 4, in &lt;module&gt;
-    from nbconvert.nbconvertapp import main
-  File &quot;/usr/local/lib/python3.11/dist-packages/nbconvert/nbconvertapp.py&quot;, line 193, in &lt;module&gt;
-    class NbConvertApp(JupyterApp):
-  File &quot;/usr/local/lib/python3.11/dist-packages/nbconvert/nbconvertapp.py&quot;, line 252, in NbConvertApp
-    Options include {get_export_names()}.
-                     ^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/local/lib/python3.11/dist-packages/nbconvert/exporters/base.py&quot;, line 135, in get_export_names
-    exporters = sorted(e.name for e in entry_points(group=&quot;nbconvert.exporters&quot;))
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/importlib/metadata/__init__.py&quot;, line 1041, in entry_points
-    return SelectableGroups.load(eps).select(**params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/importlib/metadata/__init__.py&quot;, line 476, in load
-    ordered = sorted(eps, key=by_group)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/importlib/metadata/__init__.py&quot;, line 1039, in &lt;genexpr&gt;
-    dist.entry_points for dist in _unique(distributions())
-    ^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/importlib/metadata/__init__.py&quot;, line 636, in entry_points
-    return EntryPoints._from_text_for(self.read_text(&#39;entry_points.txt&#39;), self)
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/importlib/metadata/__init__.py&quot;, line 939, in read_text
-    return self._path.joinpath(filename).read_text(encoding=&#39;utf-8&#39;)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/pathlib.py&quot;, line 763, in joinpath
-    return self._make_child(args)
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/pathlib.py&quot;, line 531, in _make_child
-    drv, root, parts = self._parse_args(args)
-                       ^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/pathlib.py&quot;, line 502, in _parse_args
-    return cls._flavour.parse_parts(parts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/pathlib.py&quot;, line 74, in parse_parts
-    parsed.append(sys.intern(rel))
-                  ^^^^^^^^^^^^^^^
-KeyboardInterrupt
-^C
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
-<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;data.html&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-50-00bd2ecc6019&gt;</span> in <span class="ni">&lt;cell line: 0&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;data.html&quot;</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.11/dist-packages/google/colab/files.py</span> in <span class="ni">download</span><span class="nt">(filename)</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>   <span class="k">if</span> <span class="ow">not</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Cannot find file: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">233</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>  <span class="c1"># pylint: disable=undefined-variable</span>
-<span class="g g-Whitespace">    </span><span class="mi">234</span> 
-<span class="g g-Whitespace">    </span><span class="mi">235</span>   <span class="n">comm_manager</span> <span class="o">=</span> <span class="n">_IPython</span><span class="o">.</span><span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">comm_manager</span>
-
-<span class="ne">FileNotFoundError</span>: Cannot find file: data.html
-</pre></div>
-</div>
 </div>
 </div>
 <section id="algoritma-k-nearest-neighbor-knn">

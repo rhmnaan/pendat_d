@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pemahaman Data (Data Understanding) &#8212; My sample book</title>
+    <title>Proyek UTS Penambangan Data (A) &#8212; My sample book</title>
   
   
   
@@ -195,10 +195,7 @@
 <li class="toctree-l1"><a class="reference internal" href="outlier_detection.html">Outlier Detection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="naive_bays.html"><strong>Naive Bays</strong></a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Pemahaman Data (Data Understanding)</strong></a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Proyek UTS Penambangan Data (A)</a></li>
 </ul>
 
     </div>
@@ -384,7 +381,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pemahaman Data (Data Understanding)</h1>
+    <h1>Proyek UTS Penambangan Data (A)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,29 +391,28 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pemahaman Data (Data Understanding)</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data">Menampilkan Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-5-data-teratas">Menampilkan 5 data teratas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-info-struktur-data">Menampilkan info struktur data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-statistik-deskriptif">Menampilkan statistik deskriptif</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melihat-jumlah-missing-value">Melihat jumlah missing value</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-distribusi-data-target-misal-status">Menampilkan distribusi data target (misal: Status)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemahaman-data-data-understanding"><strong>Pemahaman Data (Data Understanding)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data">Menampilkan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-5-data-teratas">Menampilkan 5 data teratas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-info-struktur-data">Menampilkan info struktur data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-statistik-deskriptif">Menampilkan statistik deskriptif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melihat-jumlah-missing-value">Melihat jumlah missing value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-distribusi-data-target-misal-status">Menampilkan distribusi data target (misal: Status)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hapus-kolom-id-jika-ada">hapus kolom ID jika ada.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isi-missing-values-dengan-modus">Isi missing values dengan modus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kategori-ke-angka">mengubah kategori ke angka</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menormalkan-fitur-numerik-fitur-target-tidak-ikut">menormalkan fitur numerik (fitur target tidak ikut).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hapus-kolom-id-jika-ada">hapus kolom ID jika ada.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isi-missing-values-dengan-modus">Isi missing values dengan modus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kategori-ke-angka">mengubah kategori ke angka</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menormalkan-fitur-numerik-fitur-target-tidak-ikut">menormalkan fitur numerik (fitur target tidak ikut).</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi"><strong>Pemodelan (Model Klasifikasi)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-korelasi">Heatmap Korelasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi"><strong>Pemodelan (Model Klasifikasi)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-korelasi">Heatmap Korelasi</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -427,10 +423,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pemahaman-data-data-understanding">
-<h1><strong>Pemahaman Data (Data Understanding)</strong><a class="headerlink" href="#pemahaman-data-data-understanding" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="proyek-uts-penambangan-data-a">
+<h1><strong>Proyek UTS Penambangan Data (A)</strong><a class="headerlink" href="#proyek-uts-penambangan-data-a" title="Link to this heading">#</a></h1>
+<section id="pemahaman-data-data-understanding">
+<h2><strong>Pemahaman Data (Data Understanding)</strong><a class="headerlink" href="#pemahaman-data-data-understanding" title="Link to this heading">#</a></h2>
 <section id="menampilkan-data">
-<h2>Menampilkan Data<a class="headerlink" href="#menampilkan-data" title="Link to this heading">#</a></h2>
+<h3>Menampilkan Data<a class="headerlink" href="#menampilkan-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Upload file CSV</span>
@@ -521,7 +519,7 @@ document.write(`
 </div>
 </section>
 <section id="menampilkan-5-data-teratas">
-<h2>Menampilkan 5 data teratas<a class="headerlink" href="#menampilkan-5-data-teratas" title="Link to this heading">#</a></h2>
+<h3>Menampilkan 5 data teratas<a class="headerlink" href="#menampilkan-5-data-teratas" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Lihat 5 data teratas</span>
@@ -558,7 +556,7 @@ document.write(`
 </div>
 </section>
 <section id="menampilkan-info-struktur-data">
-<h2>Menampilkan info struktur data<a class="headerlink" href="#menampilkan-info-struktur-data" title="Link to this heading">#</a></h2>
+<h3>Menampilkan info struktur data<a class="headerlink" href="#menampilkan-info-struktur-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Struktur dan tipe data</span>
@@ -603,7 +601,7 @@ None
 </div>
 </section>
 <section id="menampilkan-statistik-deskriptif">
-<h2>Menampilkan statistik deskriptif<a class="headerlink" href="#menampilkan-statistik-deskriptif" title="Link to this heading">#</a></h2>
+<h3>Menampilkan statistik deskriptif<a class="headerlink" href="#menampilkan-statistik-deskriptif" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Statistik deskriptif</span>
@@ -671,7 +669,7 @@ max     721.000000    18.000000    4.000000
 </div>
 </section>
 <section id="melihat-jumlah-missing-value">
-<h2>Melihat jumlah missing value<a class="headerlink" href="#melihat-jumlah-missing-value" title="Link to this heading">#</a></h2>
+<h3>Melihat jumlah missing value<a class="headerlink" href="#melihat-jumlah-missing-value" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Cek missing value</span>
@@ -709,7 +707,7 @@ dtype: int64
 </div>
 </section>
 <section id="menampilkan-distribusi-data-target-misal-status">
-<h2>Menampilkan distribusi data target (misal: Status)<a class="headerlink" href="#menampilkan-distribusi-data-target-misal-status" title="Link to this heading">#</a></h2>
+<h3>Menampilkan distribusi data target (misal: Status)<a class="headerlink" href="#menampilkan-distribusi-data-target-misal-status" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Cek distribusi kolom target (jika ada kolom target seperti &#39;Status&#39;)</span>
@@ -733,9 +731,9 @@ Name: count, dtype: int64
 </section>
 </section>
 <section id="preprocessing-data">
-<h1><strong>Preprocessing Data</strong><a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h1>
+<h2><strong>Preprocessing Data</strong><a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h2>
 <section id="hapus-kolom-id-jika-ada">
-<h2>hapus kolom ID jika ada.<a class="headerlink" href="#hapus-kolom-id-jika-ada" title="Link to this heading">#</a></h2>
+<h3>hapus kolom ID jika ada.<a class="headerlink" href="#hapus-kolom-id-jika-ada" title="Link to this heading">#</a></h3>
 <p>Hapus Kolom ‘ID’: Menghapus kolom ID jika ada, karena tidak berguna untuk model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -759,7 +757,7 @@ Name: count, dtype: int64
 </div>
 </section>
 <section id="isi-missing-values-dengan-modus">
-<h2>Isi missing values dengan modus<a class="headerlink" href="#isi-missing-values-dengan-modus" title="Link to this heading">#</a></h2>
+<h3>Isi missing values dengan modus<a class="headerlink" href="#isi-missing-values-dengan-modus" title="Link to this heading">#</a></h3>
 <p>Isi Missing Values: Mengisi nilai yang hilang dengan modus (nilai yang paling sering muncul).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -803,7 +801,7 @@ dtype: int64
 </div>
 </section>
 <section id="mengubah-kategori-ke-angka">
-<h2>mengubah kategori ke angka<a class="headerlink" href="#mengubah-kategori-ke-angka" title="Link to this heading">#</a></h2>
+<h3>mengubah kategori ke angka<a class="headerlink" href="#mengubah-kategori-ke-angka" title="Link to this heading">#</a></h3>
 <p>Encode Kolom Kategorikal: Mengubah data kategorikal menjadi angka dengan LabelEncoder.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -833,7 +831,7 @@ dtype: int64
 </div>
 </section>
 <section id="menormalkan-fitur-numerik-fitur-target-tidak-ikut">
-<h2>menormalkan fitur numerik (fitur target tidak ikut).<a class="headerlink" href="#menormalkan-fitur-numerik-fitur-target-tidak-ikut" title="Link to this heading">#</a></h2>
+<h3>menormalkan fitur numerik (fitur target tidak ikut).<a class="headerlink" href="#menormalkan-fitur-numerik-fitur-target-tidak-ikut" title="Link to this heading">#</a></h3>
 <p>Standarisasi Fitur Numerik: Menormalkan fitur numerik dengan StandardScaler agar memiliki rata-rata 0 dan deviasi standar 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -878,7 +876,7 @@ Contoh data setelah scaling:
 </section>
 </section>
 <section id="pemodelan-model-klasifikasi">
-<h1><strong>Pemodelan (Model Klasifikasi)</strong><a class="headerlink" href="#pemodelan-model-klasifikasi" title="Link to this heading">#</a></h1>
+<h2><strong>Pemodelan (Model Klasifikasi)</strong><a class="headerlink" href="#pemodelan-model-klasifikasi" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Bagi data menjadi data latih dan data uji</p></li>
 <li><p>Bangun model klasifikasi (di sini kita pakai Random Forest karena cocok untuk data tabular)</p></li>
@@ -912,7 +910,7 @@ Contoh data setelah scaling:
 </div>
 </section>
 <section id="evaluasi-model">
-<h1><strong>Evaluasi Model</strong><a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h1>
+<h2><strong>Evaluasi Model</strong><a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Prediksi data uji</p></li>
 <li><p>Hitung metrik evaluasi: akurasi, precision, recall, f1-score</p></li>
@@ -997,7 +995,7 @@ Precision is ill-defined and being set to 0.0 in labels with no predicted sample
 <p>Makanya semua metrik untuk kelas 1 jadi 0.00.</p>
 <p>support = 4 artinya ada 4 data asli dari kelas 1 di data uji, tapi model tidak memprediksi satupun sebagai kelas 1.</p>
 <section id="heatmap-korelasi">
-<h2>Heatmap Korelasi<a class="headerlink" href="#heatmap-korelasi" title="Link to this heading">#</a></h2>
+<h3>Heatmap Korelasi<a class="headerlink" href="#heatmap-korelasi" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
@@ -1011,6 +1009,7 @@ Precision is ill-defined and being set to 0.0 in labels with no predicted sample
 <img alt="_images/93638b363874151f26b592cecc76497a3f8d8c80c39b73c3edbbe1c9953e5a27.png" src="_images/93638b363874151f26b592cecc76497a3f8d8c80c39b73c3edbbe1c9953e5a27.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1069,29 +1068,28 @@ Precision is ill-defined and being set to 0.0 in labels with no predicted sample
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pemahaman Data (Data Understanding)</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data">Menampilkan Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-5-data-teratas">Menampilkan 5 data teratas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-info-struktur-data">Menampilkan info struktur data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-statistik-deskriptif">Menampilkan statistik deskriptif</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melihat-jumlah-missing-value">Melihat jumlah missing value</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-distribusi-data-target-misal-status">Menampilkan distribusi data target (misal: Status)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemahaman-data-data-understanding"><strong>Pemahaman Data (Data Understanding)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data">Menampilkan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-5-data-teratas">Menampilkan 5 data teratas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-info-struktur-data">Menampilkan info struktur data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-statistik-deskriptif">Menampilkan statistik deskriptif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melihat-jumlah-missing-value">Melihat jumlah missing value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-distribusi-data-target-misal-status">Menampilkan distribusi data target (misal: Status)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hapus-kolom-id-jika-ada">hapus kolom ID jika ada.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isi-missing-values-dengan-modus">Isi missing values dengan modus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kategori-ke-angka">mengubah kategori ke angka</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menormalkan-fitur-numerik-fitur-target-tidak-ikut">menormalkan fitur numerik (fitur target tidak ikut).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hapus-kolom-id-jika-ada">hapus kolom ID jika ada.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isi-missing-values-dengan-modus">Isi missing values dengan modus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kategori-ke-angka">mengubah kategori ke angka</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menormalkan-fitur-numerik-fitur-target-tidak-ikut">menormalkan fitur numerik (fitur target tidak ikut).</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi"><strong>Pemodelan (Model Klasifikasi)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-korelasi">Heatmap Korelasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi"><strong>Pemodelan (Model Klasifikasi)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-korelasi">Heatmap Korelasi</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

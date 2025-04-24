@@ -7,12 +7,11 @@ title: My website
 chapters:
 - file: data_understanding
   title: Data Understanding
-  sections:
-  - file: outlier_detection
-    title: Outlier Detection
-  - file: naive_bays
-    title: Membandingkan Data dengan Naive bayes
-- file: Proyek
+- file: outlier_detection
+  title: Outlier Detection
+- file: naive_bays
+  title: Membandingkan Data dengan Naive bayes
+- file: proyek
   title: Proyek UTS Penambangan Data (A)
 
    

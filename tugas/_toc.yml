@@ -12,6 +12,8 @@ chapters:
     title: Outlier Detection
   - file: naive_bays
     title: Membandingkan Data dengan Naive bayes
+- file: Proyek
+  title: Proyek UTS Penambangan Data (A)
 
    
 

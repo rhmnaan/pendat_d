@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>K Means &#8212; My sample book</title>
+    <title>Clustering &#8212; My sample book</title>
   
   
   
@@ -57,7 +57,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'kmeans';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'clustering';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Proyek UTS Penambangan Data (A)" href="proyek.html" />
@@ -179,7 +181,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="data_understanding.html">Data Understanding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_understanding.html"><strong>Data Understanding</strong></a></li>
 
 
 
@@ -193,10 +195,12 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="outlier_detection.html">Outlier Detection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="naive_bays.html">Naive Bays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naive_bays.html"><strong>Naive Bays</strong></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="proyek.html">Proyek UTS Penambangan Data (A)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset Iris Menggunakan K Means</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clustering</a></li>
+
+
 </ul>
 
     </div>
@@ -268,7 +272,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fkmeans.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fclustering.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +302,7 @@
       
       
       
-      <li><a href="_sources/kmeans.ipynb" target="_blank"
+      <li><a href="_sources/clustering.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +386,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>K Means</h1>
+    <h1>Clustering</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -392,6 +396,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Clustering</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-clustering"><strong>Pengertian Clustering</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means"><strong>K Means</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-algoritma-k-means"><strong>Langkah-langkah Algoritma K Means</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-rumus-yang-digunakan"><strong>Rumus-rumus yang digunakan</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimpor-file-csv-import-data"><strong>Mengimpor File CSV (Import Data)</strong></a></li>
@@ -424,6 +433,39 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fuzzy-c-means"><strong>Fuzzy C-Means</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-formal">Pengertian Formal:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-fcm">Langkah-langkah FCM:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-update-derajat-keanggotaan"><strong>Rumus update derajat keanggotaan</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keterangan">Keterangan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catatan">Catatan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-update-pusat-cluster"><strong>Rumus update pusat cluster</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Keterangan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penjelasan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi-teori">Referensi Teori:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-tujuan-objective-function"><strong>Fungsi tujuan (objective function)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Keterangan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan">Tujuan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Referensi:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-library">install library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-fuzzy-c-means-clustering-pada-dataset-iris-dengan-normalisasi-dan-tampilan-matriks-keanggotaan">Implementasi Fuzzy C-Means Clustering pada Dataset Iris dengan Normalisasi dan Tampilan Matriks Keanggotaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kode-fuzzy-c-means-clustering">Penjelasan Kode Fuzzy C-Means Clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-hasil-clustering-dengan-mapping-cluster-ke-label-asli-dan-perhitungan-akurasi">Evaluasi Hasil Clustering dengan Mapping Cluster ke Label Asli dan Perhitungan Akurasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-clustering-3-cluster-petallengthcm-vs-petalwidthcm-dengan-centroid">Visualisasi Clustering 3 Cluster: PetalLengthCm vs PetalWidthCm dengan Centroid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-sebelum-dan-sesudah-clustering">visualisasi sebelum dan sesudah clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot-dengan-warna-cluster-dan-warna-label-asli">Pairplot dengan warna cluster dan warna label asli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -434,7 +476,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="k-means">
+  <section class="tex2jax_ignore mathjax_ignore" id="clustering">
+<h1>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">#</a></h1>
+<section id="pengertian-clustering">
+<h2><strong>Pengertian Clustering</strong><a class="headerlink" href="#pengertian-clustering" title="Link to this heading">#</a></h2>
+<p><strong>Clustering</strong> adalah teknik dalam analisis data yang digunakan untuk mengelompokkan sekumpulan data menjadi beberapa kelompok (cluster) berdasarkan kemiripan atau karakteristik yang dimiliki data tersebut. Data dalam satu kelompok memiliki sifat atau pola yang mirip satu sama lain, sementara data di kelompok berbeda memiliki perbedaan yang signifikan.</p>
+<p>Clustering sangat berguna untuk menemukan pola tersembunyi dalam data tanpa perlu label atau kategori sebelumnya (unsupervised learning). Contohnya, clustering dapat digunakan untuk mengelompokkan pelanggan berdasarkan perilaku belanja, segmentasi pasar, analisis citra, atau mengelompokkan dokumen dengan topik yang sama.</p>
+<p>Dengan clustering, kita bisa memahami struktur data lebih baik, memudahkan pengambilan keputusan, dan membantu pengembangan strategi bisnis atau penelitian secara lebih efektif.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-means">
 <h1><strong>K Means</strong><a class="headerlink" href="#k-means" title="Link to this heading">#</a></h1>
 <section id="langkah-langkah-algoritma-k-means">
 <h2><strong>Langkah-langkah Algoritma K Means</strong><a class="headerlink" href="#langkah-langkah-algoritma-k-means" title="Link to this heading">#</a></h2>
@@ -3376,6 +3427,1393 @@ Inertia adalah ukuran seberapa tersebar data dalam klaster. Nilai inertia yang l
 </section>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="fuzzy-c-means">
+<h1><strong>Fuzzy C-Means</strong><a class="headerlink" href="#fuzzy-c-means" title="Link to this heading">#</a></h1>
+<p><strong>Fuzzy C-Means (FCM)</strong> adalah salah satu algoritma clustering yang termasuk dalam metode <em>soft clustering</em>, di mana setiap data tidak hanya dimiliki oleh satu cluster secara mutlak, tetapi dapat menjadi anggota dari beberapa cluster dengan derajat keanggotaan (<em>membership degree</em>) tertentu antara 0 dan 1. Tujuan utama FCM adalah meminimalkan fungsi objektif yang merepresentasikan jarak berbobot antara data dan pusat cluster, dengan mempertimbangkan nilai keanggotaan fuzzy dari setiap data terhadap setiap cluster.</p>
+<section id="pengertian-formal">
+<h2>Pengertian Formal:<a class="headerlink" href="#pengertian-formal" title="Link to this heading">#</a></h2>
+<p>Fuzzy C-Means (FCM) mengelompokkan data ke dalam sejumlah cluster dengan meminimalkan fungsi objektif berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+J_m = \sum_{i=1}^{N} \sum_{j=1}^{C} u_{ij}^m \|x_i - c_j\|^2
+\]</div>
+<p>dengan:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span> adalah data ke-i,</p></li>
+<li><p><span class="math notranslate nohighlight">\(c_j\)</span> adalah pusat cluster ke-j,</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_{ij}\)</span> adalah derajat keanggotaan dari <span class="math notranslate nohighlight">\(x_i\)</span> terhadap cluster <span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> adalah parameter <em>fuzziness</em> (biasanya <span class="math notranslate nohighlight">\(m &gt; 1\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> adalah jumlah data,</p></li>
+<li><p><span class="math notranslate nohighlight">\(C\)</span> adalah jumlah cluster,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\|x_i - c_j\|\)</span> adalah jarak Euclidean antara data dan pusat cluster.</p></li>
+</ul>
+</section>
+<section id="langkah-langkah-fcm">
+<h2>Langkah-langkah FCM:<a class="headerlink" href="#langkah-langkah-fcm" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Tentukan jumlah cluster <span class="math notranslate nohighlight">\(C\)</span>, nilai parameter <em>fuzziness</em> <span class="math notranslate nohighlight">\(m\)</span>, dan batas konvergensi.</p></li>
+<li><p>Inisialisasi matriks keanggotaan <span class="math notranslate nohighlight">\(U = [u_{ij}]\)</span> secara acak.</p></li>
+<li><p>Hitung pusat cluster <span class="math notranslate nohighlight">\(c_j\)</span> berdasarkan derajat keanggotaan.</p></li>
+<li><p>Perbarui nilai <span class="math notranslate nohighlight">\(u_{ij}\)</span> berdasarkan jarak antara data ke pusat cluster.</p></li>
+<li><p>Ulangi langkah 3–4 sampai perubahan nilai <span class="math notranslate nohighlight">\(U\)</span> sangat kecil atau mencapai batas iterasi.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="referensi">
+<h2>Referensi:<a class="headerlink" href="#referensi" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Bezdek, J.C. (1981). <em>Pattern Recognition with Fuzzy Objective Function Algorithms</em>. Springer.</p></li>
+<li><p>Duda, R. O., Hart, P. E., &amp; Stork, D. G. (2001). <em>Pattern Classification</em> (2nd ed.). Wiley-Interscience.</p></li>
+<li><p>Pham, D. L., Xu, C., &amp; Prince, J. L. (2000). “Current methods in medical image segmentation.” <em>Annual Review of Biomedical Engineering</em>, 2(1), 315–337. DOI: <a class="reference external" href="https://doi.org/10.1146/annurev.bioeng.2.1.315">10.1146/annurev.bioeng.2.1.315</a></p></li>
+</ol>
+</section>
+<section id="rumus-update-derajat-keanggotaan">
+<h2><strong>Rumus update derajat keanggotaan</strong><a class="headerlink" href="#rumus-update-derajat-keanggotaan" title="Link to this heading">#</a></h2>
+<p>Rumus <strong>update derajat keanggotaan</strong> <span class="math notranslate nohighlight">\(u_{ij}\)</span> dalam algoritma <strong>Fuzzy C-Means (FCM)</strong> adalah sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+u_{ij} = \frac{1}{\sum_{k=1}^{C} \left( \frac{\|x_i - c_j\|}{\|x_i - c_k\|} \right)^{\frac{2}{m-1}}}
+\]</div>
+<section id="keterangan">
+<h3>Keterangan:<a class="headerlink" href="#keterangan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(u_{ij}\)</span>: derajat keanggotaan data ke-<span class="math notranslate nohighlight">\(i\)</span> terhadap cluster ke-<span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: data ke-<span class="math notranslate nohighlight">\(i\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(c_j\)</span>: pusat cluster ke-<span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(C\)</span>: jumlah cluster,</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span>: parameter fuzziness (biasanya <span class="math notranslate nohighlight">\(m = 2\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\|x_i - c_j\|\)</span>: jarak (biasanya Euclidean) antara data <span class="math notranslate nohighlight">\(x_i\)</span> dan pusat cluster <span class="math notranslate nohighlight">\(c_j\)</span>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="catatan">
+<h3>Catatan:<a class="headerlink" href="#catatan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Semakin dekat jarak data <span class="math notranslate nohighlight">\(x_i\)</span> ke pusat cluster <span class="math notranslate nohighlight">\(c_j\)</span>, maka nilai <span class="math notranslate nohighlight">\(u_{ij}\)</span> akan semakin besar.</p></li>
+<li><p>Karena ini <em>soft clustering</em>, nilai <span class="math notranslate nohighlight">\(u_{ij}\)</span> berada dalam rentang 0 hingga 1 dan untuk setiap data <span class="math notranslate nohighlight">\(x_i\)</span>, jumlah seluruh derajat keanggotaannya terhadap semua cluster harus bernilai 1:</p></li>
+</ul>
+</section>
+</section>
+<section id="rumus-update-pusat-cluster">
+<h2><strong>Rumus update pusat cluster</strong><a class="headerlink" href="#rumus-update-pusat-cluster" title="Link to this heading">#</a></h2>
+<p>Rumus <strong>update pusat cluster</strong> <span class="math notranslate nohighlight">\(c_j\)</span> dalam algoritma <strong>Fuzzy C-Means (FCM)</strong> adalah sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+c_j = \frac{\sum_{i=1}^{N} u_{ij}^m \cdot x_i}{\sum_{i=1}^{N} u_{ij}^m}
+\]</div>
+<section id="id1">
+<h3>Keterangan:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_j\)</span>: pusat cluster ke-<span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: data ke-<span class="math notranslate nohighlight">\(i\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_{ij}\)</span>: derajat keanggotaan data <span class="math notranslate nohighlight">\(x_i\)</span> terhadap cluster <span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span>: parameter <em>fuzziness</em> (biasanya <span class="math notranslate nohighlight">\(m = 2\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span>: jumlah total data.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h3>Penjelasan:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pusat cluster dihitung sebagai rata-rata berbobot dari data, di mana bobotnya adalah derajat keanggotaan yang dipangkatkan dengan <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+<li><p>Semakin tinggi keanggotaan suatu data terhadap sebuah cluster, semakin besar kontribusinya terhadap posisi pusat cluster tersebut.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="referensi-teori">
+<h3>Referensi Teori:<a class="headerlink" href="#referensi-teori" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Bezdek, J.C. (1981). <em>Pattern Recognition with Fuzzy Objective Function Algorithms</em>. Springer.</p></li>
+<li><p>Ross, T.J. (2010). <em>Fuzzy Logic with Engineering Applications</em>. Wiley.</p></li>
+</ul>
+</section>
+</section>
+<section id="fungsi-tujuan-objective-function">
+<h2><strong>Fungsi tujuan (objective function)</strong><a class="headerlink" href="#fungsi-tujuan-objective-function" title="Link to this heading">#</a></h2>
+<p>Berikut adalah <strong>fungsi tujuan (objective function)</strong> dari algoritma <strong>Fuzzy C-Means (FCM)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+J_m = \sum_{i=1}^{N} \sum_{j=1}^{C} u_{ij}^m \cdot \|x_i - c_j\|^2
+\]</div>
+<hr class="docutils" />
+<section id="id3">
+<h3>Keterangan:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(J_m\)</span>: fungsi tujuan (nilai yang akan diminimalkan),</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span>: jumlah data,</p></li>
+<li><p><span class="math notranslate nohighlight">\(C\)</span>: jumlah cluster,</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_{ij}\)</span>: derajat keanggotaan data ke-<span class="math notranslate nohighlight">\(i\)</span> terhadap cluster ke-<span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span>: parameter <em>fuzziness</em> (biasanya <span class="math notranslate nohighlight">\(m &gt; 1\)</span>, sering digunakan <span class="math notranslate nohighlight">\(m = 2\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: data ke-<span class="math notranslate nohighlight">\(i\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(c_j\)</span>: pusat cluster ke-<span class="math notranslate nohighlight">\(j\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\|x_i - c_j\|\)</span>: jarak Euclidean antara data <span class="math notranslate nohighlight">\(x_i\)</span> dan pusat cluster <span class="math notranslate nohighlight">\(c_j\)</span>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="tujuan">
+<h3>Tujuan:<a class="headerlink" href="#tujuan" title="Link to this heading">#</a></h3>
+<p>FCM bertujuan <strong>meminimalkan</strong> nilai <span class="math notranslate nohighlight">\(J_m\)</span>, yang berarti:</p>
+<ul class="simple">
+<li><p>Data dikelompokkan ke pusat cluster terdekat,</p></li>
+<li><p>Keanggotaan fuzzy diperhitungkan dalam pembobotan jarak,</p></li>
+<li><p>Solusi optimal adalah ketika pusat cluster dan derajat keanggotaan menghasilkan nilai <span class="math notranslate nohighlight">\(J_m\)</span> minimum.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h3>Referensi:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Bezdek, J.C. (1981). <em>Pattern Recognition with Fuzzy Objective Function Algorithms</em>. Springer.</p></li>
+<li><p>Ross, T. J. (2010). <em>Fuzzy Logic with Engineering Applications</em> (3rd ed.). Wiley.</p></li>
+</ul>
+</section>
+<section id="install-library">
+<h3>install library<a class="headerlink" href="#install-library" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">fuzzy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scikit-fuzzy
+  Downloading scikit_fuzzy-0.5.0-py2.py3-none-any.whl.metadata (2.6 kB)
+Downloading scikit_fuzzy-0.5.0-py2.py3-none-any.whl (920 kB)
+?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/920.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">235.5/920.8 kB</span> <span class=" -Color -Color-Red">6.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">920.8/920.8 kB</span> <span class=" -Color -Color-Red">13.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: scikit-fuzzy
+Successfully installed scikit-fuzzy-0.5.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="implementasi-fuzzy-c-means-clustering-pada-dataset-iris-dengan-normalisasi-dan-tampilan-matriks-keanggotaan">
+<h3>Implementasi Fuzzy C-Means Clustering pada Dataset Iris dengan Normalisasi dan Tampilan Matriks Keanggotaan<a class="headerlink" href="#implementasi-fuzzy-c-means-clustering-pada-dataset-iris-dengan-normalisasi-dan-tampilan-matriks-keanggotaan" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+
+<span class="c1"># Unggah file CSV</span>
+<span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+
+<span class="c1"># Ambil nama file yang diunggah</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">uploaded</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Baca file CSV dengan delimiter titik koma</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Pilih fitur numerik (4 fitur)</span>
+<span class="n">numeric_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">]</span>
+
+<span class="c1"># Normalisasi kolom numerik</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">numeric_columns</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">numeric_columns</span><span class="p">])</span>
+
+<span class="c1"># Konversi data ke numpy array</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">numeric_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Jumlah cluster 3</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># parameter fuzziness</span>
+
+<span class="c1"># Inisialisasi matriks keanggotaan U secara acak dan normalisasi tiap baris</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">U</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hitung_centroid</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">U_m</span> <span class="o">=</span> <span class="n">U</span> <span class="o">**</span> <span class="n">m</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="n">U_m</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">U_m</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update_U</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">U_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+            <span class="n">denom_sum</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">dist_ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-10</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+                <span class="n">dist_ik</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-10</span>
+                <span class="n">denom_sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">dist_ij</span> <span class="o">/</span> <span class="n">dist_ik</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">U_new</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">denom_sum</span>
+    <span class="k">return</span> <span class="n">U_new</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hitung_objektif</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">obj</span> <span class="o">+=</span> <span class="p">(</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">**</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dist</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span>
+
+<span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-5</span>
+<span class="n">max_iter</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tolerance konvergensi:&quot;</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="n">hitung_centroid</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="n">U_new</span> <span class="o">=</span> <span class="n">update_U</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+
+    <span class="n">obj_val</span> <span class="o">=</span> <span class="n">hitung_objektif</span><span class="p">(</span><span class="n">U_new</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="n">norm_change</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">U_new</span> <span class="o">-</span> <span class="n">U</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iterasi </span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> - Pusat Cluster:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+        <span class="n">c_coords</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">centroids</span><span class="p">[</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">centroids</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Cluster </span><span class="si">{</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: (</span><span class="si">{</span><span class="n">c_coords</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Tampilkan hanya 5 baris pertama keanggotaan U supaya output ringkas</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iterasi </span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> - Derajat Keanggotaan (U) (5 Baris Pertama):&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Data    u1      u2      u3&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">N</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">5d</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">U_new</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">c</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iterasi </span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> - Nilai Fungsi Objektif: </span><span class="si">{</span><span class="n">obj_val</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iterasi </span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> - Perubahan norma U: </span><span class="si">{</span><span class="n">norm_change</span><span class="si">:</span><span class="s2">.8f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">norm_change</span> <span class="o">&lt;</span> <span class="n">tolerance</span> <span class="ow">or</span> <span class="n">iteration</span> <span class="o">&gt;=</span> <span class="n">max_iter</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Konvergen pada iterasi ke-</span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> dengan toleransi </span><span class="si">{</span><span class="n">tolerance</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">U_new</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pusat akhir (centroids):&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+    <span class="n">c_coords</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">centroids</span><span class="p">[</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">centroids</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cluster </span><span class="si">{</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: (</span><span class="si">{</span><span class="n">c_coords</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks Keanggotaan Akhir dan Cluster Dominan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Data &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numeric_columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   u</span><span class="si">{</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Cluster Dominan&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">x_vals</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">numeric_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">cluster_dominan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">U_new</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">5d</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x_vals</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">val</span><span class="si">:</span><span class="s2">15.4f</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">U_new</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">c</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;              </span><span class="si">{</span><span class="n">cluster_dominan</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+     <input type="file" id="files-3d924db1-87be-4908-9a91-a05d79fae82e" name="files[]" multiple disabled
+        style="border:none" />
+     <output id="result-3d924db1-87be-4908-9a91-a05d79fae82e">
+      Upload widget is only available when the cell has been executed in the
+      current browser session. Please rerun this cell to enable.
+      </output>
+      <script>// Copyright 2017 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Helpers for google.colab Python module.
+ */
+(function(scope) {
+function span(text, styleAttributes = {}) {
+  const element = document.createElement('span');
+  element.textContent = text;
+  for (const key of Object.keys(styleAttributes)) {
+    element.style[key] = styleAttributes[key];
+  }
+  return element;
+}
+
+// Max number of bytes which will be uploaded at a time.
+const MAX_PAYLOAD_SIZE = 100 * 1024;
+
+function _uploadFiles(inputId, outputId) {
+  const steps = uploadFilesStep(inputId, outputId);
+  const outputElement = document.getElementById(outputId);
+  // Cache steps on the outputElement to make it available for the next call
+  // to uploadFilesContinue from Python.
+  outputElement.steps = steps;
+
+  return _uploadFilesContinue(outputId);
+}
+
+// This is roughly an async generator (not supported in the browser yet),
+// where there are multiple asynchronous steps and the Python side is going
+// to poll for completion of each step.
+// This uses a Promise to block the python side on completion of each step,
+// then passes the result of the previous step as the input to the next step.
+function _uploadFilesContinue(outputId) {
+  const outputElement = document.getElementById(outputId);
+  const steps = outputElement.steps;
+
+  const next = steps.next(outputElement.lastPromiseValue);
+  return Promise.resolve(next.value.promise).then((value) => {
+    // Cache the last promise value to make it available to the next
+    // step of the generator.
+    outputElement.lastPromiseValue = value;
+    return next.value.response;
+  });
+}
+
+/**
+ * Generator function which is called between each async step of the upload
+ * process.
+ * @param {string} inputId Element ID of the input file picker element.
+ * @param {string} outputId Element ID of the output display.
+ * @return {!Iterable<!Object>} Iterable of next steps.
+ */
+function* uploadFilesStep(inputId, outputId) {
+  const inputElement = document.getElementById(inputId);
+  inputElement.disabled = false;
+
+  const outputElement = document.getElementById(outputId);
+  outputElement.innerHTML = '';
+
+  const pickedPromise = new Promise((resolve) => {
+    inputElement.addEventListener('change', (e) => {
+      resolve(e.target.files);
+    });
+  });
+
+  const cancel = document.createElement('button');
+  inputElement.parentElement.appendChild(cancel);
+  cancel.textContent = 'Cancel upload';
+  const cancelPromise = new Promise((resolve) => {
+    cancel.onclick = () => {
+      resolve(null);
+    };
+  });
+
+  // Wait for the user to pick the files.
+  const files = yield {
+    promise: Promise.race([pickedPromise, cancelPromise]),
+    response: {
+      action: 'starting',
+    }
+  };
+
+  cancel.remove();
+
+  // Disable the input element since further picks are not allowed.
+  inputElement.disabled = true;
+
+  if (!files) {
+    return {
+      response: {
+        action: 'complete',
+      }
+    };
+  }
+
+  for (const file of files) {
+    const li = document.createElement('li');
+    li.append(span(file.name, {fontWeight: 'bold'}));
+    li.append(span(
+        `(${file.type || 'n/a'}) - ${file.size} bytes, ` +
+        `last modified: ${
+            file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() :
+                                    'n/a'} - `));
+    const percent = span('0% done');
+    li.appendChild(percent);
+
+    outputElement.appendChild(li);
+
+    const fileDataPromise = new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        resolve(e.target.result);
+      };
+      reader.readAsArrayBuffer(file);
+    });
+    // Wait for the data to be ready.
+    let fileData = yield {
+      promise: fileDataPromise,
+      response: {
+        action: 'continue',
+      }
+    };
+
+    // Use a chunked sending to avoid message size limits. See b/62115660.
+    let position = 0;
+    do {
+      const length = Math.min(fileData.byteLength - position, MAX_PAYLOAD_SIZE);
+      const chunk = new Uint8Array(fileData, position, length);
+      position += length;
+
+      const base64 = btoa(String.fromCharCode.apply(null, chunk));
+      yield {
+        response: {
+          action: 'append',
+          file: file.name,
+          data: base64,
+        },
+      };
+
+      let percentDone = fileData.byteLength === 0 ?
+          100 :
+          Math.round((position / fileData.byteLength) * 100);
+      percent.textContent = `${percentDone}% done`;
+
+    } while (position < fileData.byteLength);
+  }
+
+  // All done.
+  yield {
+    response: {
+      action: 'complete',
+    }
+  };
+}
+
+scope.google = scope.google || {};
+scope.google.colab = scope.google.colab || {};
+scope.google.colab._files = {
+  _uploadFiles,
+  _uploadFilesContinue,
+};
+})(self);
+</script> </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saving Iris.csv to Iris (9).csv
+Tolerance konvergensi: 1e-05 
+
+Iterasi 1 - Pusat Cluster:
+ Cluster 1: (0.1802, -0.0720, 0.1483, 0.1583)
+ Cluster 2: (0.0467, -0.0083, 0.0589, 0.0458)
+ Cluster 3: (-0.2199, 0.1054, -0.2360, -0.2325)
+Iterasi 1 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.2503 0.2929 0.4567 
+    2 0.2478 0.2905 0.4617 
+    3 0.2504 0.2926 0.4571 
+    4 0.2515 0.2936 0.4549 
+    5 0.2564 0.2973 0.4463 
+Iterasi 1 - Nilai Fungsi Objektif: 193.208591
+Iterasi 1 - Perubahan norma U: 4.24178391
+
+Iterasi 2 - Pusat Cluster:
+ Cluster 1: (0.3230, -0.1717, 0.3693, 0.3524)
+ Cluster 2: (0.0917, -0.0762, 0.1339, 0.1277)
+ Cluster 3: (-0.5324, 0.3232, -0.6438, -0.6194)
+Iterasi 2 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.1295 0.1732 0.6973 
+    2 0.1342 0.1823 0.6835 
+    3 0.1343 0.1799 0.6858 
+    4 0.1414 0.1892 0.6693 
+    5 0.1452 0.1906 0.6642 
+Iterasi 2 - Nilai Fungsi Objektif: 162.465743
+Iterasi 2 - Perubahan norma U: 2.49024064
+
+Iterasi 3 - Pusat Cluster:
+ Cluster 1: (0.5513, -0.2789, 0.6261, 0.6041)
+ Cluster 2: (0.1900, -0.2837, 0.3385, 0.3149)
+ Cluster 3: (-0.9192, 0.6449, -1.1459, -1.1054)
+Iterasi 3 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0194 0.0263 0.9543 
+    2 0.0593 0.0852 0.8555 
+    3 0.0324 0.0452 0.9224 
+    4 0.0521 0.0733 0.8746 
+    5 0.0351 0.0467 0.9182 
+Iterasi 3 - Nilai Fungsi Objektif: 118.041429
+Iterasi 3 - Perubahan norma U: 2.96136453
+
+Iterasi 4 - Pusat Cluster:
+ Cluster 1: (0.7612, -0.2584, 0.7984, 0.8063)
+ Cluster 2: (0.1839, -0.4832, 0.4227, 0.3626)
+ Cluster 3: (-1.0103, 0.7603, -1.2677, -1.2241)
+Iterasi 4 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0072 0.0104 0.9824 
+    2 0.0548 0.0893 0.8559 
+    3 0.0227 0.0350 0.9423 
+    4 0.0430 0.0679 0.8891 
+    5 0.0175 0.0245 0.9580 
+Iterasi 4 - Nilai Fungsi Objektif: 108.665825
+Iterasi 4 - Perubahan norma U: 1.48853614
+
+Iterasi 5 - Pusat Cluster:
+ Cluster 1: (0.9184, -0.1258, 0.8913, 0.9252)
+ Cluster 2: (0.0952, -0.6165, 0.3880, 0.3058)
+ Cluster 3: (-1.0140, 0.7911, -1.2785, -1.2340)
+Iterasi 5 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0055 0.0086 0.9860 
+    2 0.0516 0.0995 0.8489 
+    3 0.0217 0.0384 0.9399 
+    4 0.0405 0.0747 0.8848 
+    5 0.0143 0.0216 0.9640 
+Iterasi 5 - Nilai Fungsi Objektif: 103.799935
+Iterasi 5 - Perubahan norma U: 0.99897978
+
+Iterasi 6 - Pusat Cluster:
+ Cluster 1: (1.0128, -0.0244, 0.9416, 0.9924)
+ Cluster 2: (0.0237, -0.7152, 0.3540, 0.2648)
+ Cluster 3: (-1.0125, 0.8054, -1.2819, -1.2369)
+Iterasi 6 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0047 0.0078 0.9875 
+    2 0.0496 0.1064 0.8440 
+    3 0.0212 0.0409 0.9379 
+    4 0.0391 0.0795 0.8814 
+    5 0.0130 0.0204 0.9666 
+Iterasi 6 - Nilai Fungsi Objektif: 101.744912
+Iterasi 6 - Perubahan norma U: 0.50562391
+
+Iterasi 7 - Pusat Cluster:
+ Cluster 1: (1.0531, 0.0226, 0.9622, 1.0197)
+ Cluster 2: (-0.0104, -0.7689, 0.3374, 0.2474)
+ Cluster 3: (-1.0107, 0.8147, -1.2836, -1.2382)
+Iterasi 7 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0043 0.0073 0.9884 
+    2 0.0490 0.1100 0.8409 
+    3 0.0212 0.0423 0.9365 
+    4 0.0388 0.0820 0.8791 
+    5 0.0123 0.0196 0.9681 
+Iterasi 7 - Nilai Fungsi Objektif: 101.305089
+Iterasi 7 - Perubahan norma U: 0.20723068
+
+Iterasi 8 - Pusat Cluster:
+ Cluster 1: (1.0667, 0.0399, 0.9690, 1.0283)
+ Cluster 2: (-0.0243, -0.7935, 0.3306, 0.2407)
+ Cluster 3: (-1.0093, 0.8200, -1.2840, -1.2385)
+Iterasi 8 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0041 0.0070 0.9889 
+    2 0.0491 0.1117 0.8392 
+    3 0.0214 0.0430 0.9356 
+    4 0.0389 0.0833 0.8778 
+    5 0.0119 0.0191 0.9690 
+Iterasi 8 - Nilai Fungsi Objektif: 101.235769
+Iterasi 8 - Perubahan norma U: 0.08131342
+
+Iterasi 9 - Pusat Cluster:
+ Cluster 1: (1.0703, 0.0455, 0.9707, 1.0303)
+ Cluster 2: (-0.0301, -0.8043, 0.3276, 0.2378)
+ Cluster 3: (-1.0084, 0.8226, -1.2842, -1.2385)
+Iterasi 9 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0041 0.0068 0.9891 
+    2 0.0492 0.1125 0.8383 
+    3 0.0215 0.0434 0.9351 
+    4 0.0390 0.0839 0.8770 
+    5 0.0118 0.0189 0.9693 
+Iterasi 9 - Nilai Fungsi Objektif: 101.225028
+Iterasi 9 - Perubahan norma U: 0.03490679
+
+Iterasi 10 - Pusat Cluster:
+ Cluster 1: (1.0708, 0.0472, 0.9708, 1.0304)
+ Cluster 2: (-0.0329, -0.8092, 0.3262, 0.2363)
+ Cluster 3: (-1.0079, 0.8239, -1.2842, -1.2385)
+Iterasi 10 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9892 
+    2 0.0493 0.1129 0.8378 
+    3 0.0216 0.0436 0.9348 
+    4 0.0391 0.0842 0.8766 
+    5 0.0117 0.0187 0.9695 
+Iterasi 10 - Nilai Fungsi Objektif: 101.223016
+Iterasi 10 - Perubahan norma U: 0.01779179
+
+Iterasi 11 - Pusat Cluster:
+ Cluster 1: (1.0705, 0.0475, 0.9705, 1.0301)
+ Cluster 2: (-0.0344, -0.8115, 0.3253, 0.2354)
+ Cluster 3: (-1.0077, 0.8246, -1.2842, -1.2385)
+Iterasi 11 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0493 0.1131 0.8375 
+    3 0.0216 0.0437 0.9347 
+    4 0.0392 0.0844 0.8764 
+    5 0.0117 0.0187 0.9696 
+Iterasi 11 - Nilai Fungsi Objektif: 101.222506
+Iterasi 11 - Perubahan norma U: 0.01040971
+
+Iterasi 12 - Pusat Cluster:
+ Cluster 1: (1.0701, 0.0474, 0.9703, 1.0297)
+ Cluster 2: (-0.0352, -0.8126, 0.3248, 0.2349)
+ Cluster 3: (-1.0076, 0.8249, -1.2842, -1.2385)
+Iterasi 12 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1133 0.8374 
+    3 0.0216 0.0438 0.9346 
+    4 0.0392 0.0845 0.8763 
+    5 0.0117 0.0187 0.9696 
+Iterasi 12 - Nilai Fungsi Objektif: 101.222340
+Iterasi 12 - Perubahan norma U: 0.00646765
+
+Iterasi 13 - Pusat Cluster:
+ Cluster 1: (1.0698, 0.0473, 0.9701, 1.0295)
+ Cluster 2: (-0.0357, -0.8133, 0.3245, 0.2345)
+ Cluster 3: (-1.0075, 0.8251, -1.2842, -1.2385)
+Iterasi 13 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1133 0.8373 
+    3 0.0217 0.0438 0.9346 
+    4 0.0393 0.0845 0.8762 
+    5 0.0117 0.0187 0.9696 
+Iterasi 13 - Nilai Fungsi Objektif: 101.222278
+Iterasi 13 - Perubahan norma U: 0.00408835
+
+Iterasi 14 - Pusat Cluster:
+ Cluster 1: (1.0696, 0.0472, 0.9699, 1.0293)
+ Cluster 2: (-0.0360, -0.8136, 0.3243, 0.2343)
+ Cluster 3: (-1.0075, 0.8252, -1.2842, -1.2385)
+Iterasi 14 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8372 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8762 
+    5 0.0117 0.0187 0.9697 
+Iterasi 14 - Nilai Fungsi Objektif: 101.222255
+Iterasi 14 - Perubahan norma U: 0.00259208
+
+Iterasi 15 - Pusat Cluster:
+ Cluster 1: (1.0694, 0.0471, 0.9698, 1.0292)
+ Cluster 2: (-0.0362, -0.8139, 0.3242, 0.2342)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 15 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8372 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8762 
+    5 0.0117 0.0186 0.9697 
+Iterasi 15 - Nilai Fungsi Objektif: 101.222245
+Iterasi 15 - Perubahan norma U: 0.00164250
+
+Iterasi 16 - Pusat Cluster:
+ Cluster 1: (1.0693, 0.0471, 0.9698, 1.0291)
+ Cluster 2: (-0.0364, -0.8140, 0.3241, 0.2341)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 16 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8372 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 16 - Nilai Fungsi Objektif: 101.222241
+Iterasi 16 - Perubahan norma U: 0.00103972
+
+Iterasi 17 - Pusat Cluster:
+ Cluster 1: (1.0692, 0.0470, 0.9697, 1.0290)
+ Cluster 2: (-0.0364, -0.8141, 0.3241, 0.2340)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 17 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 17 - Nilai Fungsi Objektif: 101.222240
+Iterasi 17 - Perubahan norma U: 0.00065762
+
+Iterasi 18 - Pusat Cluster:
+ Cluster 1: (1.0692, 0.0470, 0.9697, 1.0290)
+ Cluster 2: (-0.0365, -0.8141, 0.3240, 0.2340)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 18 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 18 - Nilai Fungsi Objektif: 101.222239
+Iterasi 18 - Perubahan norma U: 0.00041572
+
+Iterasi 19 - Pusat Cluster:
+ Cluster 1: (1.0692, 0.0470, 0.9697, 1.0290)
+ Cluster 2: (-0.0365, -0.8141, 0.3240, 0.2340)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 19 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 19 - Nilai Fungsi Objektif: 101.222239
+Iterasi 19 - Perubahan norma U: 0.00026272
+
+Iterasi 20 - Pusat Cluster:
+ Cluster 1: (1.0692, 0.0470, 0.9697, 1.0290)
+ Cluster 2: (-0.0365, -0.8142, 0.3240, 0.2340)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 20 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 20 - Nilai Fungsi Objektif: 101.222239
+Iterasi 20 - Perubahan norma U: 0.00016600
+
+Iterasi 21 - Pusat Cluster:
+ Cluster 1: (1.0692, 0.0470, 0.9697, 1.0290)
+ Cluster 2: (-0.0365, -0.8142, 0.3240, 0.2340)
+ Cluster 3: (-1.0075, 0.8253, -1.2842, -1.2385)
+Iterasi 21 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 21 - Nilai Fungsi Objektif: 101.222239
+Iterasi 21 - Perubahan norma U: 0.00010487
+
+Iterasi 22 - Pusat Cluster:
+ Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+ Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2340)
+ Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+Iterasi 22 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 22 - Nilai Fungsi Objektif: 101.222239
+Iterasi 22 - Perubahan norma U: 0.00006625
+
+Iterasi 23 - Pusat Cluster:
+ Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+ Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2340)
+ Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+Iterasi 23 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 23 - Nilai Fungsi Objektif: 101.222239
+Iterasi 23 - Perubahan norma U: 0.00004185
+
+Iterasi 24 - Pusat Cluster:
+ Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+ Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2340)
+ Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+Iterasi 24 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 24 - Nilai Fungsi Objektif: 101.222239
+Iterasi 24 - Perubahan norma U: 0.00002644
+
+Iterasi 25 - Pusat Cluster:
+ Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+ Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2339)
+ Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+Iterasi 25 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 25 - Nilai Fungsi Objektif: 101.222239
+Iterasi 25 - Perubahan norma U: 0.00001670
+
+Iterasi 26 - Pusat Cluster:
+ Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+ Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2339)
+ Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+Iterasi 26 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 26 - Nilai Fungsi Objektif: 101.222239
+Iterasi 26 - Perubahan norma U: 0.00001055
+
+Iterasi 27 - Pusat Cluster:
+ Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+ Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2339)
+ Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+Iterasi 27 - Derajat Keanggotaan (U) (5 Baris Pertama):
+ Data    u1      u2      u3
+    1 0.0040 0.0067 0.9893 
+    2 0.0494 0.1134 0.8371 
+    3 0.0217 0.0438 0.9345 
+    4 0.0393 0.0846 0.8761 
+    5 0.0117 0.0186 0.9697 
+Iterasi 27 - Nilai Fungsi Objektif: 101.222239
+Iterasi 27 - Perubahan norma U: 0.00000666
+
+Konvergen pada iterasi ke-27 dengan toleransi 1e-05
+
+Pusat akhir (centroids):
+Cluster 1: (1.0691, 0.0470, 0.9697, 1.0289)
+Cluster 2: (-0.0366, -0.8142, 0.3240, 0.2339)
+Cluster 3: (-1.0074, 0.8253, -1.2842, -1.2385)
+
+Matriks Keanggotaan Akhir dan Cluster Dominan:
+ Data   SepalLengthCm    SepalWidthCm   PetalLengthCm    PetalWidthCm    u1   u2   u3  Cluster Dominan
+    1         -0.9007          1.0321         -1.3413         -1.3130 0.0040 0.0067 0.9893               3
+    2         -1.1430         -0.1250         -1.3413         -1.3130 0.0494 0.1134 0.8371               3
+    3         -1.3854          0.3378         -1.3981         -1.3130 0.0217 0.0438 0.9345               3
+    4         -1.5065          0.1064         -1.2844         -1.3130 0.0393 0.0846 0.8761               3
+    5         -1.0218          1.2635         -1.3413         -1.3130 0.0117 0.0186 0.9697               3
+    6         -0.5372          1.9577         -1.1707         -1.0500 0.0831 0.1064 0.8105               3
+    7         -1.5065          0.8007         -1.3413         -1.1815 0.0141 0.0258 0.9601               3
+    8         -1.0218          0.8007         -1.2844         -1.3130 0.0004 0.0007 0.9988               3
+    9         -1.7489         -0.3564         -1.3413         -1.3130 0.0772 0.1758 0.7471               3
+   10         -1.1430          0.1064         -1.2844         -1.4444 0.0322 0.0694 0.8983               3
+   11         -0.5372          1.4949         -1.2844         -1.3130 0.0400 0.0577 0.9024               3
+   12         -1.2642          0.8007         -1.2275         -1.3130 0.0046 0.0083 0.9871               3
+   13         -1.2642         -0.1250         -1.3413         -1.4444 0.0502 0.1122 0.8376               3
+   14         -1.8700         -0.1250         -1.5119         -1.4444 0.0662 0.1382 0.7956               3
+   15         -0.0525          2.1891         -1.4550         -1.3130 0.1203 0.1420 0.7377               3
+   16         -0.1737          3.1147         -1.2844         -1.0500 0.1837 0.1900 0.6263               3
+   17         -0.5372          1.9577         -1.3981         -1.0500 0.0787 0.1014 0.8199               3
+   18         -0.9007          1.0321         -1.3413         -1.1815 0.0040 0.0067 0.9893               3
+   19         -0.1737          1.7263         -1.1707         -1.1815 0.0879 0.1135 0.7985               3
+   20         -0.9007          1.7263         -1.2844         -1.1815 0.0443 0.0626 0.8931               3
+   21         -0.5372          0.8007         -1.1707         -1.3130 0.0173 0.0306 0.9521               3
+   22         -0.9007          1.4949         -1.2844         -1.0500 0.0298 0.0444 0.9257               3
+   23         -1.5065          1.2635         -1.5687         -1.3130 0.0246 0.0396 0.9357               3
+   24         -0.9007          0.5693         -1.1707         -0.9186 0.0147 0.0295 0.9558               3
+   25         -1.2642          0.8007         -1.0569         -1.3130 0.0078 0.0144 0.9779               3
+   26         -1.0218         -0.1250         -1.2275         -1.3130 0.0513 0.1209 0.8278               3
+   27         -1.0218          0.8007         -1.2275         -1.0500 0.0028 0.0051 0.9921               3
+   28         -0.7795          1.0321         -1.2844         -1.3130 0.0066 0.0110 0.9824               3
+   29         -0.7795          0.8007         -1.3413         -1.3130 0.0041 0.0073 0.9886               3
+   30         -1.3854          0.3378         -1.2275         -1.3130 0.0221 0.0457 0.9322               3
+   31         -1.2642          0.1064         -1.2275         -1.3130 0.0335 0.0738 0.8927               3
+   32         -0.5372          0.8007         -1.2844         -1.0500 0.0194 0.0343 0.9463               3
+   33         -0.7795          2.4205         -1.2844         -1.4444 0.1009 0.1245 0.7746               3
+   34         -0.4160          2.6519         -1.3413         -1.3130 0.1332 0.1524 0.7144               3
+   35         -1.1430          0.1064         -1.2844         -1.4444 0.0322 0.0694 0.8983               3
+   36         -1.0218          0.3378         -1.4550         -1.3130 0.0164 0.0330 0.9506               3
+   37         -0.4160          1.0321         -1.3981         -1.3130 0.0268 0.0429 0.9303               3
+   38         -1.1430          0.1064         -1.2844         -1.4444 0.0322 0.0694 0.8983               3
+   39         -1.7489         -0.1250         -1.3981         -1.3130 0.0620 0.1348 0.8032               3
+   40         -0.9007          0.8007         -1.2844         -1.3130 0.0012 0.0021 0.9967               3
+   41         -1.0218          1.0321         -1.3981         -1.1815 0.0037 0.0063 0.9900               3
+   42         -1.6277         -1.7448         -1.3981         -1.1815 0.1538 0.3856 0.4605               3
+   43         -1.7489          0.3378         -1.3981         -1.3130 0.0374 0.0744 0.8881               3
+   44         -1.0218          1.0321         -1.2275         -0.7871 0.0177 0.0304 0.9519               3
+   45         -0.9007          1.7263         -1.0569         -1.0500 0.0526 0.0739 0.8735               3
+   46         -1.2642         -0.1250         -1.3413         -1.1815 0.0515 0.1196 0.8289               3
+   47         -0.9007          1.7263         -1.2275         -1.3130 0.0437 0.0620 0.8943               3
+   48         -1.5065          0.3378         -1.3413         -1.3130 0.0260 0.0527 0.9212               3
+   49         -0.6583          1.4949         -1.2844         -1.3130 0.0337 0.0493 0.9169               3
+   50         -1.0218          0.5693         -1.3413         -1.3130 0.0048 0.0091 0.9861               3
+   51          1.4015          0.3378          0.5353          0.2647 0.7328 0.2061 0.0611               1
+   52          0.6745          0.3378          0.4216          0.3962 0.6202 0.3123 0.0675               1
+   53          1.2803          0.1064          0.6490          0.3962 0.8010 0.1627 0.0363               1
+   54         -0.4160         -1.7448          0.1372          0.1332 0.1221 0.8001 0.0777               2
+   55          0.7957         -0.5878          0.4784          0.3962 0.3982 0.5614 0.0404               2
+   56         -0.1737         -0.5878          0.4216          0.1332 0.0283 0.9602 0.0115               2
+   57          0.5533          0.5693          0.5353          0.5276 0.6585 0.2694 0.0722               1
+   58         -1.1430         -1.5134         -0.2608         -0.2612 0.1435 0.6553 0.2012               2
+   59          0.9168         -0.3564          0.4784          0.1332 0.4569 0.4874 0.0557               2
+   60         -0.7795         -0.8192          0.0804          0.2647 0.0921 0.8337 0.0742               2
+   61         -1.0218         -2.4390         -0.1471         -0.2612 0.1871 0.6177 0.1952               2
+   62          0.0687         -0.1250          0.2510          0.3962 0.1986 0.7469 0.0545               2
+   63          0.1898         -1.9762          0.1372         -0.2612 0.1699 0.7300 0.1001               2
+   64          0.3110         -0.3564          0.5353          0.2647 0.1927 0.7739 0.0334               2
+   65         -0.2948         -0.3564         -0.0902          0.1332 0.0963 0.8306 0.0730               2
+   66          1.0380          0.1064          0.3647          0.2647 0.6350 0.3023 0.0626               1
+   67         -0.2948         -0.1250          0.4216          0.3962 0.1708 0.7660 0.0633               2
+   68         -0.0525         -0.8192          0.1941         -0.2612 0.0558 0.9089 0.0353               2
+   69          0.4322         -1.9762          0.4216          0.3962 0.2186 0.7080 0.0733               2
+   70         -0.2948         -1.2820          0.0804         -0.1297 0.0725 0.8755 0.0520               2
+   71          0.0687          0.3378          0.5922          0.7906 0.5293 0.3954 0.0753               1
+   72          0.3110         -0.5878          0.1372          0.1332 0.0786 0.8959 0.0255               2
+   73          0.5533         -1.2820          0.6490          0.3962 0.2075 0.7529 0.0396               2
+   74          0.3110         -0.5878          0.5353          0.0018 0.1056 0.8670 0.0273               2
+   75          0.6745         -0.3564          0.3078          0.1332 0.3004 0.6454 0.0542               2
+   76          0.9168         -0.1250          0.3647          0.2647 0.5471 0.3957 0.0572               1
+   77          1.1592         -0.5878          0.5922          0.2647 0.5485 0.4015 0.0500               1
+   78          1.0380         -0.1250          0.7059          0.6591 0.8773 0.1062 0.0164               1
+   79          0.1898         -0.3564          0.4216          0.3962 0.1490 0.8220 0.0290               2
+   80         -0.1737         -1.0506         -0.1471         -0.2612 0.0811 0.8478 0.0711               2
+   81         -0.4160         -1.5134          0.0235         -0.1297 0.1018 0.8183 0.0799               2
+   82         -0.4160         -1.5134         -0.0334         -0.2612 0.1093 0.7948 0.0959               2
+   83         -0.0525         -0.8192          0.0804          0.0018 0.0282 0.9564 0.0155               2
+   84          0.1898         -0.8192          0.7628          0.5276 0.1500 0.8261 0.0238               2
+   85         -0.5372         -0.1250          0.4216          0.3962 0.1712 0.7443 0.0845               2
+   86          0.1898          0.8007          0.4216          0.5276 0.5153 0.3541 0.1307               1
+   87          1.0380          0.1064          0.5353          0.3962 0.7452 0.2134 0.0414               1
+   88          0.5533         -1.7448          0.3647          0.1332 0.1949 0.7387 0.0664               2
+   89         -0.2948         -0.1250          0.1941          0.1332 0.1353 0.7834 0.0813               2
+   90         -0.4160         -1.2820          0.1372          0.1332 0.0665 0.8917 0.0418               2
+   91         -0.4160         -1.0506          0.3647          0.0018 0.0488 0.9223 0.0290               2
+   92          0.3110         -0.1250          0.4784          0.2647 0.2872 0.6615 0.0513               2
+   93         -0.0525         -1.0506          0.1372          0.0018 0.0327 0.9501 0.0172               2
+   94         -1.0218         -1.7448         -0.2608         -0.2612 0.1495 0.6636 0.1869               2
+   95         -0.2948         -0.8192          0.2510          0.1332 0.0203 0.9690 0.0107               2
+   96         -0.1737         -0.1250          0.2510          0.0018 0.1377 0.7834 0.0789               2
+   97         -0.1737         -0.3564          0.2510          0.1332 0.0720 0.8936 0.0344               2
+   98          0.4322         -0.3564          0.3078          0.1332 0.1872 0.7699 0.0429               2
+   99         -0.9007         -1.2820         -0.4314         -0.1297 0.1288 0.6912 0.1799               2
+  100         -0.1737         -0.5878          0.1941          0.1332 0.0278 0.9585 0.0138               2
+  101          0.5533          0.5693          1.2745          1.7109 0.7893 0.1619 0.0488               1
+  102         -0.0525         -0.8192          0.7628          0.9221 0.2347 0.7265 0.0388               2
+  103          1.5227         -0.1250          1.2177          1.1850 0.9207 0.0641 0.0152               1
+  104          0.5533         -0.3564          1.0471          0.7906 0.7193 0.2543 0.0264               1
+  105          0.7957         -0.1250          1.1608          1.3165 0.9200 0.0677 0.0123               1
+  106          2.1285         -0.1250          1.6157          1.1850 0.7876 0.1622 0.0502               1
+  107         -1.1430         -1.2820          0.4216          0.6591 0.1669 0.7251 0.1080               2
+  108          1.7650         -0.3564          1.4451          0.7906 0.8129 0.1505 0.0366               1
+  109          1.0380         -1.2820          1.1608          0.7906 0.5320 0.4152 0.0529               1
+  110          1.6438          1.2635          1.3314          1.7109 0.7471 0.1739 0.0790               1
+  111          0.7957          0.3378          0.7628          1.0535 0.9208 0.0648 0.0144               1
+  112          0.6745         -0.8192          0.8765          0.9221 0.5608 0.4043 0.0349               1
+  113          1.1592         -0.1250          0.9902          1.1850 0.9776 0.0188 0.0037               1
+  114         -0.1737         -1.2820          0.7059          1.0535 0.2252 0.7217 0.0531               2
+  115         -0.0525         -0.5878          0.7628          1.5794 0.4739 0.4629 0.0632               1
+  116          0.6745          0.3378          0.8765          1.4480 0.8726 0.1026 0.0248               1
+  117          0.7957         -0.1250          0.9902          0.7906 0.9123 0.0767 0.0110               1
+  118          2.2497          1.7263          1.6726          1.3165 0.6640 0.2168 0.1192               1
+  119          2.2497         -1.0506          1.7863          1.4480 0.6673 0.2581 0.0746               1
+  120          0.1898         -1.9762          0.7059          0.3962 0.2116 0.7175 0.0709               2
+  121          1.2803          0.3378          1.1040          1.4480 0.9257 0.0581 0.0162               1
+  122         -0.2948         -0.5878          0.6490          1.0535 0.2598 0.6867 0.0535               2
+  123          2.2497         -0.5878          1.6726          1.0535 0.7241 0.2136 0.0624               1
+  124          0.5533         -0.8192          0.6490          0.7906 0.3801 0.5855 0.0344               2
+  125          1.0380          0.5693          1.1040          1.1850 0.9183 0.0634 0.0183               1
+  126          1.6438          0.3378          1.2745          0.7906 0.8797 0.0926 0.0277               1
+  127          0.4322         -0.5878          0.5922          0.7906 0.3802 0.5871 0.0327               2
+  128          0.3110         -0.1250          0.6490          0.7906 0.5470 0.4132 0.0398               1
+  129          0.6745         -0.5878          1.0471          1.1850 0.7500 0.2226 0.0274               1
+  130          1.6438         -0.1250          1.1608          0.5276 0.8357 0.1325 0.0318               1
+  131          1.8862         -0.5878          1.3314          0.9221 0.7770 0.1799 0.0431               1
+  132          2.4920          1.7263          1.5020          1.0535 0.6490 0.2233 0.1277               1
+  133          0.6745         -0.5878          1.0471          1.3165 0.7541 0.2168 0.0291               1
+  134          0.5533         -0.5878          0.7628          0.3962 0.3451 0.6209 0.0340               2
+  135          0.3110         -1.0506          1.0471          0.2647 0.2190 0.7409 0.0401               2
+  136          2.2497         -0.1250          1.3314          1.4480 0.7820 0.1651 0.0529               1
+  137          0.5533          0.8007          1.0471          1.5794 0.7761 0.1677 0.0561               1
+  138          0.6745          0.1064          0.9902          0.7906 0.8929 0.0918 0.0153               1
+  139          0.1898         -0.1250          0.5922          0.7906 0.4537 0.5007 0.0456               2
+  140          1.2803          0.1064          0.9334          1.1850 0.9769 0.0187 0.0044               1
+  141          1.0380          0.1064          1.0471          1.5794 0.9177 0.0664 0.0159               1
+  142          1.2803          0.1064          0.7628          1.4480 0.9274 0.0582 0.0144               1
+  143         -0.0525         -0.8192          0.7628          0.9221 0.2347 0.7265 0.0388               2
+  144          1.1592          0.3378          1.2177          1.4480 0.9229 0.0605 0.0165               1
+  145          1.0380          0.5693          1.1040          1.7109 0.8549 0.1104 0.0347               1
+  146          1.0380         -0.1250          0.8196          1.4480 0.9243 0.0631 0.0126               1
+  147          0.5533         -1.2820          0.7059          0.9221 0.3427 0.6106 0.0467               2
+  148          0.7957         -0.1250          0.8196          1.0535 0.9343 0.0571 0.0086               1
+  149          0.4322          0.8007          0.9334          1.4480 0.7534 0.1855 0.0610               1
+  150          0.0687         -0.1250          0.7628          0.7906 0.4440 0.5076 0.0484               2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="penjelasan-kode-fuzzy-c-means-clustering">
+<h3>Penjelasan Kode Fuzzy C-Means Clustering<a class="headerlink" href="#penjelasan-kode-fuzzy-c-means-clustering" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Import Library dan Upload File</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+
+<span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">uploaded</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mengimpor library yang diperlukan: numpy untuk operasi numerik, pandas untuk manipulasi data, StandardScaler untuk normalisasi data, dan files dari Google Colab untuk upload file.</p></li>
+<li><p>Mengupload file CSV dari lokal pengguna.</p></li>
+<li><p>Membaca file CSV dengan delimiter ; menjadi dataframe df.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Persiapan Data</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeric_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">]</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">numeric_columns</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">numeric_columns</span><span class="p">])</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">numeric_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># jumlah cluster</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># parameter fuzziness</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Memilih kolom fitur numerik untuk clustering.</p></li>
+<li><p>Melakukan normalisasi fitur agar memiliki mean 0 dan standar deviasi 1.</p></li>
+<li><p>Menyimpan data fitur ke array numpy X.</p></li>
+<li><p>Mendefinisikan jumlah data (N), jumlah cluster (C), dan parameter fuzziness (m) untuk FCM.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Inisialisasi Matriks Keanggotaan (U)</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">U</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Membuat matriks keanggotaan U secara acak, berukuran (jumlah data x jumlah cluster).</p>
+<p>Menormalisasi setiap baris agar jumlah keanggotaan per data sama dengan 1.</p>
+<ol class="arabic simple" start="4">
+<li><p>Fungsi Hitung Centroid</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">hitung_centroid</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">U_m</span> <span class="o">=</span> <span class="n">U</span> <span class="o">**</span> <span class="n">m</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="n">U_m</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">U_m</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Menghitung pusat cluster (centroids) berdasarkan keanggotaan fuzzy dan parameter fuzziness.</p></li>
+<li><p>Rumus centroid fuzzy C-means: centroid adalah rata-rata tertimbang oleh keanggotaan pangkat m.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Fungsi Update Matriks Keanggotaan</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update_U</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">U_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+            <span class="n">denom_sum</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">dist_ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-10</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+                <span class="n">dist_ik</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-10</span>
+                <span class="n">denom_sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">dist_ij</span> <span class="o">/</span> <span class="n">dist_ik</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">U_new</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">denom_sum</span>
+    <span class="k">return</span> <span class="n">U_new</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Memperbarui derajat keanggotaan tiap data ke masing-masing cluster berdasarkan jarak ke centroid.</p></li>
+<li><p>Rumus fuzzy C-means menggunakan rasio jarak pangkat tertentu.</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>Fungsi Hitung Fungsi Objektif</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">hitung_objektif</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">obj</span> <span class="o">+=</span> <span class="p">(</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">**</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">dist</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Menghitung nilai fungsi objektif untuk evaluasi konvergensi.</p></li>
+<li><p>Fungsi objektif fuzzy C-means mengukur total jarak berbobot.</p></li>
+</ul>
+<ol class="arabic simple" start="7">
+<li><p>Loop Iterasi Clustering</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-5</span>
+<span class="n">max_iter</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="n">hitung_centroid</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="n">U_new</span> <span class="o">=</span> <span class="n">update_U</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    
+    <span class="n">obj_val</span> <span class="o">=</span> <span class="n">hitung_objektif</span><span class="p">(</span><span class="n">U_new</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="n">norm_change</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">U_new</span> <span class="o">-</span> <span class="n">U</span><span class="p">)</span>
+    
+    <span class="c1"># Tampilkan hasil tiap iterasi</span>
+    <span class="o">...</span>
+    
+    <span class="k">if</span> <span class="n">norm_change</span> <span class="o">&lt;</span> <span class="n">tolerance</span> <span class="ow">or</span> <span class="n">iteration</span> <span class="o">&gt;=</span> <span class="n">max_iter</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Konvergen pada iterasi ke-</span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2"> dengan toleransi </span><span class="si">{</span><span class="n">tolerance</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">U_new</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Melakukan iterasi update centroid dan matriks keanggotaan.</p></li>
+<li><p>Mengecek perubahan matriks keanggotaan (norm_change) untuk menghentikan iterasi jika sudah konvergen atau mencapai iterasi maksimum.</p></li>
+</ul>
+<ol class="arabic simple" start="8">
+<li><p>Menampilkan Hasil Akhir</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pusat akhir (centroids):&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks Keanggotaan Akhir dan Cluster Dominan:&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Menampilkan koordinat centroid akhir.</p></li>
+<li><p>Menampilkan matriks keanggotaan fuzzy akhir per data.</p></li>
+<li><p>Menentukan cluster dominan tiap data berdasarkan keanggotaan tertinggi.</p></li>
+</ul>
+</section>
+<section id="evaluasi-hasil-clustering-dengan-mapping-cluster-ke-label-asli-dan-perhitungan-akurasi">
+<h3>Evaluasi Hasil Clustering dengan Mapping Cluster ke Label Asli dan Perhitungan Akurasi<a class="headerlink" href="#evaluasi-hasil-clustering-dengan-mapping-cluster-ke-label-asli-dan-perhitungan-akurasi" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ... kode clustering sebelumnya tetap</span>
+
+<span class="c1"># Asumsi kolom label asli di df bernama &#39;Species&#39;</span>
+
+<span class="n">cluster_dominan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">U_new</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">cluster_dominan</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
+    <span class="n">labels_c</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="s1">&#39;Species&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels_c</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">mapping</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mapping</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels_c</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mapping cluster ke label asli berdasarkan majority:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Cluster </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">mapping</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">hasil_cek</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">label_asli</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;Species&#39;</span><span class="p">]</span>
+    <span class="n">cluster_label</span> <span class="o">=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cluster_dominan</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">hasil_cek</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label_asli</span> <span class="o">==</span> <span class="n">cluster_label</span><span class="p">)</span>
+
+<span class="n">jumlah_sesuai</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">hasil_cek</span><span class="p">)</span>
+<span class="n">jumlah_tidak_sesuai</span> <span class="o">=</span> <span class="n">N</span> <span class="o">-</span> <span class="n">jumlah_sesuai</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah data asli: </span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah data cluster sesuai label asli: </span><span class="si">{</span><span class="n">jumlah_sesuai</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah data cluster tidak sesuai label asli: </span><span class="si">{</span><span class="n">jumlah_tidak_sesuai</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data yang tidak sesuai cluster dengan label asli:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Index&#39;</span><span class="si">:</span><span class="s2">&gt;5</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Label Asli&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Cluster Dominan&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Cluster Label&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">hasil_cek</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">5d</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Species&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">cluster_dominan</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cluster_dominan</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hitung akurasi dan error akurasi</span>
+<span class="n">akurasi</span> <span class="o">=</span> <span class="n">jumlah_sesuai</span> <span class="o">/</span> <span class="n">N</span>
+<span class="n">error_akurasi</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">akurasi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi clustering: </span><span class="si">{</span><span class="n">akurasi</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">akurasi</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error akurasi clustering: </span><span class="si">{</span><span class="n">error_akurasi</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">error_akurasi</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mapping cluster ke label asli berdasarkan majority:
+ Cluster 0: Iris-virginica
+ Cluster 1: Iris-versicolor
+ Cluster 2: Iris-setosa
+
+Jumlah data asli: 150
+Jumlah data cluster sesuai label asli: 126
+Jumlah data cluster tidak sesuai label asli: 24
+
+Data yang tidak sesuai cluster dengan label asli:
+Index      Label Asli Cluster Dominan   Cluster Label
+   51 Iris-versicolor               0  Iris-virginica
+   52 Iris-versicolor               0  Iris-virginica
+   53 Iris-versicolor               0  Iris-virginica
+   57 Iris-versicolor               0  Iris-virginica
+   66 Iris-versicolor               0  Iris-virginica
+   71 Iris-versicolor               0  Iris-virginica
+   76 Iris-versicolor               0  Iris-virginica
+   77 Iris-versicolor               0  Iris-virginica
+   78 Iris-versicolor               0  Iris-virginica
+   86 Iris-versicolor               0  Iris-virginica
+   87 Iris-versicolor               0  Iris-virginica
+  102  Iris-virginica               1 Iris-versicolor
+  107  Iris-virginica               1 Iris-versicolor
+  114  Iris-virginica               1 Iris-versicolor
+  120  Iris-virginica               1 Iris-versicolor
+  122  Iris-virginica               1 Iris-versicolor
+  124  Iris-virginica               1 Iris-versicolor
+  127  Iris-virginica               1 Iris-versicolor
+  134  Iris-virginica               1 Iris-versicolor
+  135  Iris-virginica               1 Iris-versicolor
+  139  Iris-virginica               1 Iris-versicolor
+  143  Iris-virginica               1 Iris-versicolor
+  147  Iris-virginica               1 Iris-versicolor
+  150  Iris-virginica               1 Iris-versicolor
+
+Akurasi clustering: 0.8400 (84.00%)
+Error akurasi clustering: 0.1600 (16.00%)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisasi-clustering-3-cluster-petallengthcm-vs-petalwidthcm-dengan-centroid">
+<h3>Visualisasi Clustering 3 Cluster: PetalLengthCm vs PetalWidthCm dengan Centroid<a class="headerlink" href="#visualisasi-clustering-3-cluster-petallengthcm-vs-petalwidthcm-dengan-centroid" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1"># Buat dataframe hasil cluster untuk visualisasi</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_dominan</span>
+
+<span class="c1"># Visualisasi scatter plot 2 fitur: PetalLengthCm vs PetalWidthCm</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Cluster&#39;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span>
+
+<span class="c1"># Visualisasi centroid cluster di plot (centroids sudah ada dari clustering)</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">centroid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">centroids</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroid</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>  <span class="c1"># centroid kolom ke-2 dan ke-3 fitur PetalLengthCm dan PetalWidthCm</span>
+                <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Centroid </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Visualisasi Clustering 3 Cluster (PetalLengthCm vs PetalWidthCm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;PetalLengthCm (scaled)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PetalWidthCm (scaled)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/baaabf0f6f6ffeb9457ade78a373cbefdb8b795c8ecd9bdfb920122338f64a77.png" src="_images/baaabf0f6f6ffeb9457ade78a373cbefdb8b795c8ecd9bdfb920122338f64a77.png" />
+</div>
+</div>
+</section>
+<section id="visualisasi-sebelum-dan-sesudah-clustering">
+<h3>visualisasi sebelum dan sesudah clustering<a class="headerlink" href="#visualisasi-sebelum-dan-sesudah-clustering" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1"># Tambahkan kolom cluster ke dataframe</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_dominan</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>  <span class="c1"># agar warna ter-handle sebagai kategori string</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Visualisasi Sebelum Clustering (dengan warna berdasarkan Species asli)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;Set1&#39;</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sebelum Clustering (Berdasarkan Species Asli)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;PetalLengthCm (scaled)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PetalWidthCm (scaled)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Species&#39;</span><span class="p">)</span>
+
+<span class="c1"># Visualisasi Sesudah Clustering (berdasarkan cluster dominan)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Cluster&#39;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sesudah Clustering (3 Cluster Fuzzy)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;PetalLengthCm (scaled)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PetalWidthCm (scaled)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Cluster&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d399ccc20a329558dd4e107effc8c1e757fe9c234a8ab999ec8a4f7e473be4e1.png" src="_images/d399ccc20a329558dd4e107effc8c1e757fe9c234a8ab999ec8a4f7e473be4e1.png" />
+</div>
+</div>
+</section>
+<section id="pairplot-dengan-warna-cluster-dan-warna-label-asli">
+<h3>Pairplot dengan warna cluster dan warna label asli<a class="headerlink" href="#pairplot-dengan-warna-cluster-dan-warna-label-asli" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Tambahkan kolom cluster dan label asli (species) ke dataframe (kalau belum)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_dominan</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="c1"># Pairplot berdasarkan label asli (Species)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="n">numeric_columns</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;Set1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Pairplot berdasarkan Species asli&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Pairplot berdasarkan hasil clustering</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="n">numeric_columns</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Cluster&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Pairplot berdasarkan Cluster hasil clustering&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/66db17e643a49302198e8706bfe2d72d7c17f4c515129e8f8c289ed5ae8b3b46.png" src="_images/66db17e643a49302198e8706bfe2d72d7c17f4c515129e8f8c289ed5ae8b3b46.png" />
+<img alt="_images/c2ebe6c7d10edbc372ed81eaea1453630d3b30887bc24cd0e914387e19aa7de2.png" src="_images/c2ebe6c7d10edbc372ed81eaea1453630d3b30887bc24cd0e914387e19aa7de2.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3432,6 +4870,11 @@ Inertia adalah ukuran seberapa tersebar data dalam klaster. Nilai inertia yang l
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Clustering</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-clustering"><strong>Pengertian Clustering</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means"><strong>K Means</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-algoritma-k-means"><strong>Langkah-langkah Algoritma K Means</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-rumus-yang-digunakan"><strong>Rumus-rumus yang digunakan</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimpor-file-csv-import-data"><strong>Mengimpor File CSV (Import Data)</strong></a></li>
@@ -3464,6 +4907,39 @@ Inertia adalah ukuran seberapa tersebar data dalam klaster. Nilai inertia yang l
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fuzzy-c-means"><strong>Fuzzy C-Means</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-formal">Pengertian Formal:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-fcm">Langkah-langkah FCM:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-update-derajat-keanggotaan"><strong>Rumus update derajat keanggotaan</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keterangan">Keterangan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catatan">Catatan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-update-pusat-cluster"><strong>Rumus update pusat cluster</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Keterangan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penjelasan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi-teori">Referensi Teori:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-tujuan-objective-function"><strong>Fungsi tujuan (objective function)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Keterangan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan">Tujuan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Referensi:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-library">install library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-fuzzy-c-means-clustering-pada-dataset-iris-dengan-normalisasi-dan-tampilan-matriks-keanggotaan">Implementasi Fuzzy C-Means Clustering pada Dataset Iris dengan Normalisasi dan Tampilan Matriks Keanggotaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kode-fuzzy-c-means-clustering">Penjelasan Kode Fuzzy C-Means Clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-hasil-clustering-dengan-mapping-cluster-ke-label-asli-dan-perhitungan-akurasi">Evaluasi Hasil Clustering dengan Mapping Cluster ke Label Asli dan Perhitungan Akurasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-clustering-3-cluster-petallengthcm-vs-petalwidthcm-dengan-centroid">Visualisasi Clustering 3 Cluster: PetalLengthCm vs PetalWidthCm dengan Centroid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-sebelum-dan-sesudah-clustering">visualisasi sebelum dan sesudah clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot-dengan-warna-cluster-dan-warna-label-asli">Pairplot dengan warna cluster dan warna label asli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

@@ -13,8 +13,8 @@ chapters:
   title: Membandingkan Data dengan Naive bayes
 - file: proyek
   title: Proyek UTS Penambangan Data (A)
-- file: kmeans
-  title: Dataset Iris Menggunakan K Means
+- file: clustering
+  title: Clustering
 
    
 

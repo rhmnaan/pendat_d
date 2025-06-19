@@ -17,6 +17,8 @@ chapters:
   title: Clustering
 - file: KBinsDiscretizer
   title: KBinsDiscretizer
+- file: tugasPraUas
+  title: Tugas Pra-Uas
 
     
 

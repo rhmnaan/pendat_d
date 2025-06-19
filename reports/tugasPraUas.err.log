@@ -18,40 +18,39 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# 1. Mount Google Drive
-from google.colab import drive
-drive.mount('/content/drive')
-
-# 2. Import pustaka yang dibutuhkan
+from ucimlrepo import fetch_ucirepo
 import pandas as pd
-from google.colab import files
 
-# 3. Upload file CSV (delimiter ;)
-uploaded = files.upload()
+# Mengambil dataset Wine Quality (ID: 109)
+wine = fetch_ucirepo(id=109)
 
-# 4. Baca nama file dan parsing dengan delimiter titik koma
-filename = next(iter(uploaded))
-df = pd.read_csv(filename, delimiter=';')
+# Menyimpan fitur dan target ke DataFrame
+X = wine.data.features
+y = wine.data.targets
 
-# 5. Tampilkan 5 baris pertama
-print("📄 Data Iris:")
-display(df.head())
+# Menampilkan beberapa baris awal data
+print("Fitur (X):")
+print(X.head())
 
-# 6. Simpan kembali dengan format standar CSV (pakai koma) ke Google Drive
-output_path = '/content/drive/MyDrive/iris_cleaned.csv'
-df.to_csv(output_path, index=False)
+print("\nTarget (y):")
+print(y.head())
 
-print(f"✅ File berhasil disimpan ke Google Drive: {output_path}")
+# Menampilkan metadata dataset
+print("\nMetadata Dataset:")
+print(wine.metadata)
+
+# Menampilkan informasi variabel
+print("\nInformasi Variabel:")
+print(wine.variables)
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
-[32m      1[39m [38;5;66;03m# 1. Mount Google Drive[39;00m
-[32m----> [39m[32m2[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mgoogle[39;00m[34;01m.[39;00m[34;01mcolab[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m drive
-[32m      3[39m drive.mount([33m'[39m[33m/content/drive[39m[33m'[39m)
-[32m      5[39m [38;5;66;03m# 2. Import pustaka yang dibutuhkan[39;00m
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mucimlrepo[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m fetch_ucirepo
+[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mpd[39;00m
+[32m      4[39m [38;5;66;03m# Mengambil dataset Wine Quality (ID: 109)[39;00m
 
-[31mModuleNotFoundError[39m: No module named 'google'
+[31mModuleNotFoundError[39m: No module named 'ucimlrepo'
 

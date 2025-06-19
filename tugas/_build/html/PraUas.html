@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pendahuluan &#8212; My sample book</title>
+    <title>Klasifikasi Varietas Berdasarkan Analisis Kimia &#8212; My sample book</title>
   
   
   
@@ -205,27 +205,7 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="KBinsDiscretizer.html">KBinsDiscretizer</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Pendahuluan</strong></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Pra-Uas</a></li>
 </ul>
 
     </div>
@@ -411,7 +391,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pendahuluan</h1>
+    <h1>Klasifikasi Varietas Berdasarkan Analisis Kimia</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -421,83 +401,82 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pendahuluan</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas">Mengambil dan Menampilkan Dataset Wine Quality dari UCI dengan ucimlrepo dan pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-x-dan-target-y-digabung">Fitur X dan target y digabung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-setiap-fitur-variabel-dataset-anggur"><strong>Penjelasan Setiap Fitur (Variabel) Dataset Anggur</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-target-output">Variabel Target (Output):</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data"><strong>Visualisasi Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan"><strong>Pendahuluan</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas">Mengambil dan Menampilkan Dataset Wine Quality dari UCI dengan ucimlrepo dan pandas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-x-dan-target-y-digabung">Fitur X dan target y digabung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-setiap-fitur-variabel-dataset-anggur"><strong>Penjelasan Setiap Fitur (Variabel) Dataset Anggur</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-target-output">Variabel Target (Output):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data"><strong>Visualisasi Data</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-standardisasi-standardscaler">1. Rumus untuk Standardisasi (StandardScaler)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-reduksi-dimensi-pca-principal-component-analysis">2. Rumus untuk Reduksi Dimensi (PCA - Principal Component Analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-standardisasi-standardscaler">1. Rumus untuk Standardisasi (StandardScaler)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-reduksi-dimensi-pca-principal-component-analysis">2. Rumus untuk Reduksi Dimensi (PCA - Principal Component Analysis)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-menggunakan-local-outlier-factor-lof"><strong>deteksi outlier menggunakan Local Outlier Factor (LOF)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan">menggunakan <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi <em>outlier</em> pada data anggur, dan ingin memahami konsep-konsep di baliknya secara berurutan. Ini adalah pilihan yang sangat baik karena LOF adalah metode yang kuat untuk mendeteksi <em>outlier</em> berbasis kepadatan.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-lof">Konsep LOF</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-distance-dan-k-neighbors">1. K-distance dan K-neighbors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reachability-distance-rd">2. Reachability Distance (RD)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-reachability-density-lrd">3. Local Reachability Density (LRD)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-outlier-factor-lof">4. Local Outlier Factor (LOF)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pengecekan-ulang-apakah-data-masih-memiliki-outlier"><strong>pengecekan ulang apakah data masih memiliki outlier</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-outlier-dengan-iqr"><strong>Menghapus Outlier dengan IQR</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-matematika-deteksi-outlier-dengan-metode-iqr">Rumus Matematika Deteksi Outlier dengan Metode IQR</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-splitting"><strong>Data Splitting</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-k-nearest-neighbors-knn"><strong>Klasifikasi dengan K-Nearest Neighbors (KNN)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-knn">🧭 <strong>Tujuan KNN:</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-knn-manual-dengan-jarak-euclidean">✅ <strong>Langkah-Langkah KNN (Manual dengan Jarak Euclidean)</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih"><strong>Langkah 1: Hitung Jarak Euclidean antara data uji dan semua data latih</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil"><strong>Langkah 2: Urutkan data latih berdasarkan jarak terkecil</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-ambil-k-tetangga-terdekat"><strong>Langkah 3: Ambil k tetangga terdekat</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga"><strong>Langkah 4: Lakukan voting mayoritas dari label k tetangga</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-prediksi-selesai"><strong>Langkah 5: Prediksi selesai</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-naive-bayes-gaussiannb"><strong>Klasifikasi dengan Naive Bayes (GaussianNB)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes-classifier">📘 <strong>Naive Bayes Classifier</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-rumus-naive-bayes">✅ <strong>Langkah-langkah &amp; Rumus Naive Bayes</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-probabilitas-prior-tiap-kelas">🔹 <strong>Langkah 1: Hitung Probabilitas Prior Tiap Kelas</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur">🔹 <strong>Langkah 2: Hitung Probabilitas Likelihood untuk Tiap Fitur</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal">Untuk data numerik (Gaussian Naive Bayes), digunakan distribusi normal:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-kategorikal-multinomial-bernoulli-naive-bayes">Untuk data kategorikal (Multinomial/ Bernoulli Naive Bayes):</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior">🔹 <strong>Langkah 3: Gunakan Teorema Bayes untuk Probabilitas Posterior</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi">🔹 <strong>Langkah 4: Pilih Kelas dengan Probabilitas Posterior Tertinggi</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-singkat">🔁 Ringkasan Singkat:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-decision-tree"><strong>Klasifikasi dengan Decision Tree</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">🌳 <strong>4. Decision Tree</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-decision-tree">✅ <strong>Langkah-langkah Decision Tree</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-rumus-penting">🧠 Rumus-Rumus Penting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">🔹 1. <strong>Entropy</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gini-impurity">🔹 2. <strong>Gini Impurity</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-gain-ig">🔹 3. <strong>Information Gain (IG)</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-langkah-recursive-decision-tree">🧭 Ringkasan Langkah Recursive Decision Tree</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-knn"><strong>Penerapan ke KNN</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-naive-bayes"><strong>Penerapan ke Naive Bayes</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-decision-tree"><strong>Penerapan ke Decision Tree</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-menggunakan-local-outlier-factor-lof"><strong>deteksi outlier menggunakan Local Outlier Factor (LOF)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan">menggunakan <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi <em>outlier</em> pada data anggur, dan ingin memahami konsep-konsep di baliknya secara berurutan. Ini adalah pilihan yang sangat baik karena LOF adalah metode yang kuat untuk mendeteksi <em>outlier</em> berbasis kepadatan.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-lof">Konsep LOF</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#k-distance-dan-k-neighbors">1. K-distance dan K-neighbors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reachability-distance-rd">2. Reachability Distance (RD)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local-reachability-density-lrd">3. Local Reachability Density (LRD)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local-outlier-factor-lof">4. Local Outlier Factor (LOF)</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengecekan-ulang-apakah-data-masih-memiliki-outlier"><strong>pengecekan ulang apakah data masih memiliki outlier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-outlier-dengan-iqr"><strong>Menghapus Outlier dengan IQR</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-matematika-deteksi-outlier-dengan-metode-iqr">Rumus Matematika Deteksi Outlier dengan Metode IQR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-splitting"><strong>Data Splitting</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-k-nearest-neighbors-knn"><strong>Klasifikasi dengan K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-knn">🧭 <strong>Tujuan KNN:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-knn-manual-dengan-jarak-euclidean">✅ <strong>Langkah-Langkah KNN (Manual dengan Jarak Euclidean)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih"><strong>Langkah 1: Hitung Jarak Euclidean antara data uji dan semua data latih</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil"><strong>Langkah 2: Urutkan data latih berdasarkan jarak terkecil</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-ambil-k-tetangga-terdekat"><strong>Langkah 3: Ambil k tetangga terdekat</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga"><strong>Langkah 4: Lakukan voting mayoritas dari label k tetangga</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-prediksi-selesai"><strong>Langkah 5: Prediksi selesai</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-naive-bayes-gaussiannb"><strong>Klasifikasi dengan Naive Bayes (GaussianNB)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes-classifier">📘 <strong>Naive Bayes Classifier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-rumus-naive-bayes">✅ <strong>Langkah-langkah &amp; Rumus Naive Bayes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-probabilitas-prior-tiap-kelas">🔹 <strong>Langkah 1: Hitung Probabilitas Prior Tiap Kelas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur">🔹 <strong>Langkah 2: Hitung Probabilitas Likelihood untuk Tiap Fitur</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal">Untuk data numerik (Gaussian Naive Bayes), digunakan distribusi normal:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-kategorikal-multinomial-bernoulli-naive-bayes">Untuk data kategorikal (Multinomial/ Bernoulli Naive Bayes):</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior">🔹 <strong>Langkah 3: Gunakan Teorema Bayes untuk Probabilitas Posterior</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi">🔹 <strong>Langkah 4: Pilih Kelas dengan Probabilitas Posterior Tertinggi</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-singkat">🔁 Ringkasan Singkat:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-decision-tree"><strong>Klasifikasi dengan Decision Tree</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">🌳 <strong>4. Decision Tree</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-decision-tree">✅ <strong>Langkah-langkah Decision Tree</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-rumus-penting">🧠 Rumus-Rumus Penting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">🔹 1. <strong>Entropy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gini-impurity">🔹 2. <strong>Gini Impurity</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-gain-ig">🔹 3. <strong>Information Gain (IG)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-langkah-recursive-decision-tree">🧭 Ringkasan Langkah Recursive Decision Tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-knn"><strong>Penerapan ke KNN</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-naive-bayes"><strong>Penerapan ke Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-decision-tree"><strong>Penerapan ke Decision Tree</strong></a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -508,16 +487,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<h1><p><strong>Klasifikasi Varietas Berdasarkan Analisis Kimia</strong></p></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-varietas-berdasarkan-analisis-kimia">
+<h1><strong>Klasifikasi Varietas Berdasarkan Analisis Kimia</strong><a class="headerlink" href="#klasifikasi-varietas-berdasarkan-analisis-kimia" title="Link to this heading">#</a></h1>
 <section id="pendahuluan">
-<h1><strong>Pendahuluan</strong><a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h1>
+<h2><strong>Pendahuluan</strong><a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h2>
 <p>Dalam dunia analisis data dan pembelajaran mesin, memahami data adalah langkah fundamental sebelum memulai proyek apa pun. Dataset Anggur (Wine Dataset) dari UCI Machine Learning Repository adalah contoh klasik yang sangat populer untuk tujuan edukasi dan penelitian. Dataset ini menawarkan studi kasus yang menarik tentang bagaimana karakteristik kimia dapat digunakan untuk mengidentifikasi dan mengklasifikasikan jenis suatu produk.</p>
 </section>
 <section id="data-understanding">
-<h1><strong>Data Understanding</strong><a class="headerlink" href="#data-understanding" title="Link to this heading">#</a></h1>
+<h2><strong>Data Understanding</strong><a class="headerlink" href="#data-understanding" title="Link to this heading">#</a></h2>
 </section>
 <section id="integrasi-data">
-<h1><strong>Integrasi Data</strong><a class="headerlink" href="#integrasi-data" title="Link to this heading">#</a></h1>
+<h2><strong>Integrasi Data</strong><a class="headerlink" href="#integrasi-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>ucimlrepo
@@ -542,7 +522,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\python313\lib\site-packages (fr
 </div>
 </div>
 <section id="mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas">
-<h2>Mengambil dan Menampilkan Dataset Wine Quality dari UCI dengan ucimlrepo dan pandas<a class="headerlink" href="#mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas" title="Link to this heading">#</a></h2>
+<h3>Mengambil dan Menampilkan Dataset Wine Quality dari UCI dengan ucimlrepo dan pandas<a class="headerlink" href="#mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
@@ -587,7 +567,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\python313\lib\site-packages (fr
 </div>
 </section>
 <section id="fitur-x-dan-target-y-digabung">
-<h2>Fitur X dan target y digabung<a class="headerlink" href="#fitur-x-dan-target-y-digabung" title="Link to this heading">#</a></h2>
+<h3>Fitur X dan target y digabung<a class="headerlink" href="#fitur-x-dan-target-y-digabung" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
@@ -637,7 +617,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\python313\lib\site-packages (fr
 </section>
 <hr class="docutils" />
 <section id="penjelasan-setiap-fitur-variabel-dataset-anggur">
-<h2><strong>Penjelasan Setiap Fitur (Variabel) Dataset Anggur</strong><a class="headerlink" href="#penjelasan-setiap-fitur-variabel-dataset-anggur" title="Link to this heading">#</a></h2>
+<h3><strong>Penjelasan Setiap Fitur (Variabel) Dataset Anggur</strong><a class="headerlink" href="#penjelasan-setiap-fitur-variabel-dataset-anggur" title="Link to this heading">#</a></h3>
 <p>Setiap fitur ini adalah pengukuran kuantitatif dari komposisi kimia sampel anggur.</p>
 <ol class="arabic simple">
 <li><p><strong>Alcohol (Alkohol)</strong></p>
@@ -722,7 +702,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\python313\lib\site-packages (fr
 </section>
 <hr class="docutils" />
 <section id="variabel-target-output">
-<h2>Variabel Target (Output):<a class="headerlink" href="#variabel-target-output" title="Link to this heading">#</a></h2>
+<h3>Variabel Target (Output):<a class="headerlink" href="#variabel-target-output" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>class (Kelas/Varietas)</strong></p>
 <ul>
@@ -733,7 +713,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\python313\lib\site-packages (fr
 </ul>
 </section>
 <section id="eksplorasi-data">
-<h2><strong>Eksplorasi Data</strong><a class="headerlink" href="#eksplorasi-data" title="Link to this heading">#</a></h2>
+<h3><strong>Eksplorasi Data</strong><a class="headerlink" href="#eksplorasi-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
@@ -903,7 +883,7 @@ max        3.000000
 </div>
 </section>
 <section id="visualisasi-data">
-<h2><strong>Visualisasi Data</strong><a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h2>
+<h3><strong>Visualisasi Data</strong><a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- 6. Mengidentifikasi Outlier (Menggunakan Box Plot) ---</span>
@@ -1108,7 +1088,7 @@ Visualisasi Distribusi Kelas Target:
 </section>
 </section>
 <section id="preprocessing-data">
-<h1><strong>Preprocessing Data</strong><a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h1>
+<h2><strong>Preprocessing Data</strong><a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <p>Kode pra-pemrosesan yang saya berikan menggunakan dua rumus matematika utama yang sangat umum dalam <em>machine learning</em>:</p>
 <ol class="arabic simple">
@@ -1117,7 +1097,7 @@ Visualisasi Distribusi Kelas Target:
 </ol>
 <hr class="docutils" />
 <section id="rumus-untuk-standardisasi-standardscaler">
-<h2>1. Rumus untuk Standardisasi (StandardScaler)<a class="headerlink" href="#rumus-untuk-standardisasi-standardscaler" title="Link to this heading">#</a></h2>
+<h3>1. Rumus untuk Standardisasi (StandardScaler)<a class="headerlink" href="#rumus-untuk-standardisasi-standardscaler" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">StandardScaler</span></code> mengubah setiap nilai fitur (variabel) <span class="math notranslate nohighlight">\(x\)</span> ke dalam skala standar dengan rumus <strong>Z-score</strong>:</p>
 <div class="math notranslate nohighlight">
 \[z = \frac{x - \mu}{\sigma}\]</div>
@@ -1132,7 +1112,7 @@ Visualisasi Distribusi Kelas Target:
 </section>
 <hr class="docutils" />
 <section id="rumus-untuk-reduksi-dimensi-pca-principal-component-analysis">
-<h2>2. Rumus untuk Reduksi Dimensi (PCA - Principal Component Analysis)<a class="headerlink" href="#rumus-untuk-reduksi-dimensi-pca-principal-component-analysis" title="Link to this heading">#</a></h2>
+<h3>2. Rumus untuk Reduksi Dimensi (PCA - Principal Component Analysis)<a class="headerlink" href="#rumus-untuk-reduksi-dimensi-pca-principal-component-analysis" title="Link to this heading">#</a></h3>
 <p>PCA adalah teknik yang lebih kompleks yang melibatkan aljabar linier. Ini tidak hanya satu rumus sederhana, melainkan serangkaian langkah matematis untuk mengubah fitur-fitur asli yang mungkin saling berkorelasi menjadi satu set fitur baru yang tidak berkorelasi, yang disebut <strong>komponen utama (principal components)</strong>.</p>
 <p>Langkah-langkah utamanya secara konseptual adalah:</p>
 <ol class="arabic simple">
@@ -1346,16 +1326,16 @@ Misalnya: scaler.fit(X_train) kemudian scaler.transform(X_train) dan scaler.tran
 </section>
 </section>
 <section id="deteksi-outlier-menggunakan-local-outlier-factor-lof">
-<h1><strong>deteksi outlier menggunakan Local Outlier Factor (LOF)</strong><a class="headerlink" href="#deteksi-outlier-menggunakan-local-outlier-factor-lof" title="Link to this heading">#</a></h1>
-<hr class="docutils" />
+<h2><strong>deteksi outlier menggunakan Local Outlier Factor (LOF)</strong><a class="headerlink" href="#deteksi-outlier-menggunakan-local-outlier-factor-lof" title="Link to this heading">#</a></h2>
 </section>
+<hr class="docutils" />
 <section id="menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan">
-<h1>menggunakan <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi <em>outlier</em> pada data anggur, dan ingin memahami konsep-konsep di baliknya secara berurutan. Ini adalah pilihan yang sangat baik karena LOF adalah metode yang kuat untuk mendeteksi <em>outlier</em> berbasis kepadatan.<a class="headerlink" href="#menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan" title="Link to this heading">#</a></h1>
+<h2>menggunakan <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi <em>outlier</em> pada data anggur, dan ingin memahami konsep-konsep di baliknya secara berurutan. Ini adalah pilihan yang sangat baik karena LOF adalah metode yang kuat untuk mendeteksi <em>outlier</em> berbasis kepadatan.<a class="headerlink" href="#menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan" title="Link to this heading">#</a></h2>
 <section id="konsep-lof">
-<h2>Konsep LOF<a class="headerlink" href="#konsep-lof" title="Link to this heading">#</a></h2>
+<h3>Konsep LOF<a class="headerlink" href="#konsep-lof" title="Link to this heading">#</a></h3>
 <p>LOF adalah algoritma deteksi <em>outlier</em> yang menilai anomali suatu objek dengan mengukur seberapa terpencilnya objek tersebut terhadap lingkungannya sendiri. Ia membandingkan kepadatan lokal objek dengan kepadatan lokal tetangganya.</p>
 <section id="k-distance-dan-k-neighbors">
-<h3>1. K-distance dan K-neighbors<a class="headerlink" href="#k-distance-dan-k-neighbors" title="Link to this heading">#</a></h3>
+<h4>1. K-distance dan K-neighbors<a class="headerlink" href="#k-distance-dan-k-neighbors" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Konsep:</strong></p>
 <ul>
@@ -1367,7 +1347,7 @@ Misalnya: scaler.fit(X_train) kemudian scaler.transform(X_train) dan scaler.tran
 </ul>
 </section>
 <section id="reachability-distance-rd">
-<h3>2. Reachability Distance (RD)<a class="headerlink" href="#reachability-distance-rd" title="Link to this heading">#</a></h3>
+<h4>2. Reachability Distance (RD)<a class="headerlink" href="#reachability-distance-rd" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Konsep:</strong></p>
 <ul>
@@ -1385,7 +1365,7 @@ Misalnya: scaler.fit(X_train) kemudian scaler.transform(X_train) dan scaler.tran
 </ul>
 </section>
 <section id="local-reachability-density-lrd">
-<h3>3. Local Reachability Density (LRD)<a class="headerlink" href="#local-reachability-density-lrd" title="Link to this heading">#</a></h3>
+<h4>3. Local Reachability Density (LRD)<a class="headerlink" href="#local-reachability-density-lrd" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Konsep:</strong></p>
 <ul>
@@ -1400,7 +1380,7 @@ $<span class="math notranslate nohighlight">\(LRD(O) = 1 / \left( \frac{\sum_{P 
 </ul>
 </section>
 <section id="local-outlier-factor-lof">
-<h3>4. Local Outlier Factor (LOF)<a class="headerlink" href="#local-outlier-factor-lof" title="Link to this heading">#</a></h3>
+<h4>4. Local Outlier Factor (LOF)<a class="headerlink" href="#local-outlier-factor-lof" title="Link to this heading">#</a></h4>
 <ul>
 <li><p><strong>Konsep:</strong></p>
 <ul>
@@ -1546,7 +1526,7 @@ Indeks baris outlier yang terdeteksi oleh LOF: [59, 69, 73, 95, 121, 158]
 </section>
 </section>
 <section id="pengecekan-ulang-apakah-data-masih-memiliki-outlier">
-<h1><strong>pengecekan ulang apakah data masih memiliki outlier</strong><a class="headerlink" href="#pengecekan-ulang-apakah-data-masih-memiliki-outlier" title="Link to this heading">#</a></h1>
+<h2><strong>pengecekan ulang apakah data masih memiliki outlier</strong><a class="headerlink" href="#pengecekan-ulang-apakah-data-masih-memiliki-outlier" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
@@ -1779,12 +1759,12 @@ Keputusan untuk menangani (menghapus, mengubah, atau membiarkan) outlier ini aka
 </div>
 </section>
 <section id="menghapus-outlier-dengan-iqr">
-<h1><strong>Menghapus Outlier dengan IQR</strong><a class="headerlink" href="#menghapus-outlier-dengan-iqr" title="Link to this heading">#</a></h1>
+<h2><strong>Menghapus Outlier dengan IQR</strong><a class="headerlink" href="#menghapus-outlier-dengan-iqr" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <p>Kode Python  untuk mendeteksi dan menghapus <em>outlier</em> menggunakan metode <strong>Interquartile Range (IQR)</strong> didasarkan pada rumus matematika berikut:</p>
 <hr class="docutils" />
 <section id="rumus-matematika-deteksi-outlier-dengan-metode-iqr">
-<h2>Rumus Matematika Deteksi Outlier dengan Metode IQR<a class="headerlink" href="#rumus-matematika-deteksi-outlier-dengan-metode-iqr" title="Link to this heading">#</a></h2>
+<h3>Rumus Matematika Deteksi Outlier dengan Metode IQR<a class="headerlink" href="#rumus-matematika-deteksi-outlier-dengan-metode-iqr" title="Link to this heading">#</a></h3>
 <p>Metode IQR mendefinisikan <em>outlier</em> sebagai titik data yang berada di luar batas bawah (lower bound) atau batas atas (upper bound) yang dihitung berdasarkan kuartil data.</p>
 <ol class="arabic simple">
 <li><p><strong>Kuartil Pertama (Q1):</strong>
@@ -1838,7 +1818,7 @@ Jumlah data setelah outlier dihapus: 161
 </section>
 </section>
 <section id="data-splitting">
-<h1><strong>Data Splitting</strong><a class="headerlink" href="#data-splitting" title="Link to this heading">#</a></h1>
+<h2><strong>Data Splitting</strong><a class="headerlink" href="#data-splitting" title="Link to this heading">#</a></h2>
 <p>pembagian data menjadi set pelatihan dan pengujian</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1889,19 +1869,19 @@ Name: proportion, dtype: float64
 </div>
 </section>
 <section id="klasifikasi-dengan-k-nearest-neighbors-knn">
-<h1><strong>Klasifikasi dengan K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#klasifikasi-dengan-k-nearest-neighbors-knn" title="Link to this heading">#</a></h1>
+<h2><strong>Klasifikasi dengan K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#klasifikasi-dengan-k-nearest-neighbors-knn" title="Link to this heading">#</a></h2>
 <p>Berikut adalah <strong>langkah-langkah lengkap algoritma K-Nearest Neighbors (KNN)</strong> menggunakan <strong>jarak Euclidean</strong>, termasuk <strong>rumus-rumus manualnya</strong> sampai prediksi selesai.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="tujuan-knn">
-<h1>🧭 <strong>Tujuan KNN:</strong><a class="headerlink" href="#tujuan-knn" title="Link to this heading">#</a></h1>
+<h2>🧭 <strong>Tujuan KNN:</strong><a class="headerlink" href="#tujuan-knn" title="Link to this heading">#</a></h2>
 <p>Mengklasifikasikan suatu data uji (data baru) berdasarkan <strong>mayoritas kelas</strong> dari <strong>k tetangga terdekat</strong> di data latih.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="langkah-langkah-knn-manual-dengan-jarak-euclidean">
-<h1>✅ <strong>Langkah-Langkah KNN (Manual dengan Jarak Euclidean)</strong><a class="headerlink" href="#langkah-langkah-knn-manual-dengan-jarak-euclidean" title="Link to this heading">#</a></h1>
+<h2>✅ <strong>Langkah-Langkah KNN (Manual dengan Jarak Euclidean)</strong><a class="headerlink" href="#langkah-langkah-knn-manual-dengan-jarak-euclidean" title="Link to this heading">#</a></h2>
 <section id="langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih">
-<h2><strong>Langkah 1: Hitung Jarak Euclidean antara data uji dan semua data latih</strong><a class="headerlink" href="#langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih" title="Link to this heading">#</a></h2>
+<h3><strong>Langkah 1: Hitung Jarak Euclidean antara data uji dan semua data latih</strong><a class="headerlink" href="#langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih" title="Link to this heading">#</a></h3>
 <p>Untuk setiap data latih <span class="math notranslate nohighlight">\(x_i\)</span>, hitung jarak ke data uji <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1918,7 +1898,7 @@ d(x, x_i) = \sqrt{ \sum_{j=1}^{n} (x_j - x_{ij})^2 }
 </section>
 <hr class="docutils" />
 <section id="langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil">
-<h2><strong>Langkah 2: Urutkan data latih berdasarkan jarak terkecil</strong><a class="headerlink" href="#langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil" title="Link to this heading">#</a></h2>
+<h3><strong>Langkah 2: Urutkan data latih berdasarkan jarak terkecil</strong><a class="headerlink" href="#langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>Setelah semua jarak dihitung, urutkan dari jarak terkecil ke terbesar.</p></li>
 <li><p>Contoh:</p>
@@ -1934,14 +1914,14 @@ d(x, x_i) = \sqrt{ \sum_{j=1}^{n} (x_j - x_{ij})^2 }
 </section>
 <hr class="docutils" />
 <section id="langkah-3-ambil-k-tetangga-terdekat">
-<h2><strong>Langkah 3: Ambil k tetangga terdekat</strong><a class="headerlink" href="#langkah-3-ambil-k-tetangga-terdekat" title="Link to this heading">#</a></h2>
+<h3><strong>Langkah 3: Ambil k tetangga terdekat</strong><a class="headerlink" href="#langkah-3-ambil-k-tetangga-terdekat" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Misal <span class="math notranslate nohighlight">\(k = 3\)</span>, maka ambil 3 data latih dengan jarak terkecil.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga">
-<h2><strong>Langkah 4: Lakukan voting mayoritas dari label k tetangga</strong><a class="headerlink" href="#langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga" title="Link to this heading">#</a></h2>
+<h3><strong>Langkah 4: Lakukan voting mayoritas dari label k tetangga</strong><a class="headerlink" href="#langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>Misalnya label dari 3 tetangga:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">:</span> <span class="n">Class</span> <span class="n">A</span>
@@ -1961,7 +1941,7 @@ d(x, x_i) = \sqrt{ \sum_{j=1}^{n} (x_j - x_{ij})^2 }
 </section>
 <hr class="docutils" />
 <section id="langkah-5-prediksi-selesai">
-<h2><strong>Langkah 5: Prediksi selesai</strong><a class="headerlink" href="#langkah-5-prediksi-selesai" title="Link to this heading">#</a></h2>
+<h3><strong>Langkah 5: Prediksi selesai</strong><a class="headerlink" href="#langkah-5-prediksi-selesai" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Data uji diklasifikasikan ke kelas hasil voting mayoritas.</p></li>
 </ul>
@@ -2042,20 +2022,20 @@ weighted avg       0.77      0.76      0.74        33
 </section>
 </section>
 <section id="klasifikasi-dengan-naive-bayes-gaussiannb">
-<h1><strong>Klasifikasi dengan Naive Bayes (GaussianNB)</strong><a class="headerlink" href="#klasifikasi-dengan-naive-bayes-gaussiannb" title="Link to this heading">#</a></h1>
+<h2><strong>Klasifikasi dengan Naive Bayes (GaussianNB)</strong><a class="headerlink" href="#klasifikasi-dengan-naive-bayes-gaussiannb" title="Link to this heading">#</a></h2>
 <p>Berikut adalah <strong>langkah-langkah lengkap Naive Bayes</strong> untuk klasifikasi, lengkap dengan <strong>rumus-rumus pada setiap langkah</strong>, khususnya untuk <strong>Gaussian Naive Bayes</strong> (fitur numerik).</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="naive-bayes-classifier">
-<h1>📘 <strong>Naive Bayes Classifier</strong><a class="headerlink" href="#naive-bayes-classifier" title="Link to this heading">#</a></h1>
+<h2>📘 <strong>Naive Bayes Classifier</strong><a class="headerlink" href="#naive-bayes-classifier" title="Link to this heading">#</a></h2>
 <p>Naive Bayes adalah algoritma probabilistik yang menggunakan <strong>Teorema Bayes</strong> dengan asumsi fitur saling bebas (independen) satu sama lain.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="langkah-langkah-rumus-naive-bayes">
-<h1>✅ <strong>Langkah-langkah &amp; Rumus Naive Bayes</strong><a class="headerlink" href="#langkah-langkah-rumus-naive-bayes" title="Link to this heading">#</a></h1>
+<h2>✅ <strong>Langkah-langkah &amp; Rumus Naive Bayes</strong><a class="headerlink" href="#langkah-langkah-rumus-naive-bayes" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <section id="langkah-1-hitung-probabilitas-prior-tiap-kelas">
-<h2>🔹 <strong>Langkah 1: Hitung Probabilitas Prior Tiap Kelas</strong><a class="headerlink" href="#langkah-1-hitung-probabilitas-prior-tiap-kelas" title="Link to this heading">#</a></h2>
+<h3>🔹 <strong>Langkah 1: Hitung Probabilitas Prior Tiap Kelas</strong><a class="headerlink" href="#langkah-1-hitung-probabilitas-prior-tiap-kelas" title="Link to this heading">#</a></h3>
 <p>Rumus prior:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2070,9 +2050,9 @@ Jika dari 100 data, 60 kelas “A” dan 40 kelas “B”, maka:</p>
 </section>
 <hr class="docutils" />
 <section id="langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur">
-<h2>🔹 <strong>Langkah 2: Hitung Probabilitas Likelihood untuk Tiap Fitur</strong><a class="headerlink" href="#langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur" title="Link to this heading">#</a></h2>
+<h3>🔹 <strong>Langkah 2: Hitung Probabilitas Likelihood untuk Tiap Fitur</strong><a class="headerlink" href="#langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur" title="Link to this heading">#</a></h3>
 <section id="untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal">
-<h3>Untuk data numerik (Gaussian Naive Bayes), digunakan distribusi normal:<a class="headerlink" href="#untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal" title="Link to this heading">#</a></h3>
+<h4>Untuk data numerik (Gaussian Naive Bayes), digunakan distribusi normal:<a class="headerlink" href="#untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 P(x_j \mid C_k) = \frac{1}{\sqrt{2\pi\sigma_{k,j}^2}} \cdot \exp\left( -\frac{(x_j - \mu_{k,j})^2}{2\sigma_{k,j}^2} \right)
@@ -2085,7 +2065,7 @@ P(x_j \mid C_k) = \frac{1}{\sqrt{2\pi\sigma_{k,j}^2}} \cdot \exp\left( -\frac{(x
 </ul>
 </section>
 <section id="untuk-data-kategorikal-multinomial-bernoulli-naive-bayes">
-<h3>Untuk data kategorikal (Multinomial/ Bernoulli Naive Bayes):<a class="headerlink" href="#untuk-data-kategorikal-multinomial-bernoulli-naive-bayes" title="Link to this heading">#</a></h3>
+<h4>Untuk data kategorikal (Multinomial/ Bernoulli Naive Bayes):<a class="headerlink" href="#untuk-data-kategorikal-multinomial-bernoulli-naive-bayes" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 P(x_j \mid C_k) = \frac{\text{jumlah kejadian fitur } x_j \text{ di kelas } C_k}{\text{jumlah total fitur di kelas } C_k}
@@ -2094,7 +2074,7 @@ P(x_j \mid C_k) = \frac{\text{jumlah kejadian fitur } x_j \text{ di kelas } C_k}
 </section>
 <hr class="docutils" />
 <section id="langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior">
-<h2>🔹 <strong>Langkah 3: Gunakan Teorema Bayes untuk Probabilitas Posterior</strong><a class="headerlink" href="#langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior" title="Link to this heading">#</a></h2>
+<h3>🔹 <strong>Langkah 3: Gunakan Teorema Bayes untuk Probabilitas Posterior</strong><a class="headerlink" href="#langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
 P(C_k \mid X) = \frac{P(X \mid C_k) \cdot P(C_k)}{P(X)}
@@ -2110,16 +2090,16 @@ P(C_k \mid X) \propto P(C_k) \cdot \prod_{j=1}^{n} P(x_j \mid C_k)
 </section>
 <hr class="docutils" />
 <section id="langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi">
-<h2>🔹 <strong>Langkah 4: Pilih Kelas dengan Probabilitas Posterior Tertinggi</strong><a class="headerlink" href="#langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi" title="Link to this heading">#</a></h2>
+<h3>🔹 <strong>Langkah 4: Pilih Kelas dengan Probabilitas Posterior Tertinggi</strong><a class="headerlink" href="#langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
 \hat{C} = \arg\max_{C_k} P(C_k) \cdot \prod_{j=1}^{n} P(x_j \mid C_k)
 \]</div>
+</section>
+</section>
 <hr class="docutils" />
-</section>
-</section>
 <section id="ringkasan-singkat">
-<h1>🔁 Ringkasan Singkat:<a class="headerlink" href="#ringkasan-singkat" title="Link to this heading">#</a></h1>
+<h2>🔁 Ringkasan Singkat:<a class="headerlink" href="#ringkasan-singkat" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Langkah</p></th>
@@ -2220,14 +2200,14 @@ weighted avg       0.95      0.94      0.94        33
 </div>
 </section>
 <section id="klasifikasi-dengan-decision-tree">
-<h1><strong>Klasifikasi dengan Decision Tree</strong><a class="headerlink" href="#klasifikasi-dengan-decision-tree" title="Link to this heading">#</a></h1>
+<h2><strong>Klasifikasi dengan Decision Tree</strong><a class="headerlink" href="#klasifikasi-dengan-decision-tree" title="Link to this heading">#</a></h2>
 </section>
 <section id="decision-tree">
-<h1>🌳 <strong>4. Decision Tree</strong><a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h1>
+<h2>🌳 <strong>4. Decision Tree</strong><a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h2>
 <p><strong>Decision Tree</strong> (pohon keputusan) adalah metode klasifikasi yang membagi data secara rekursif berdasarkan fitur yang paling informatif (berdasarkan Gini atau Entropy).</p>
 <hr class="docutils" />
 <section id="langkah-langkah-decision-tree">
-<h2>✅ <strong>Langkah-langkah Decision Tree</strong><a class="headerlink" href="#langkah-langkah-decision-tree" title="Link to this heading">#</a></h2>
+<h3>✅ <strong>Langkah-langkah Decision Tree</strong><a class="headerlink" href="#langkah-langkah-decision-tree" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Hitung impurity (ketidakmurnian)</strong> untuk seluruh dataset</p></li>
 <li><p><strong>Evaluasi semua fitur dan semua nilai split</strong></p></li>
@@ -2242,14 +2222,14 @@ weighted avg       0.95      0.94      0.94        33
 </ul>
 </li>
 </ol>
+</section>
+</section>
 <hr class="docutils" />
-</section>
-</section>
 <section id="rumus-rumus-penting">
-<h1>🧠 Rumus-Rumus Penting<a class="headerlink" href="#rumus-rumus-penting" title="Link to this heading">#</a></h1>
+<h2>🧠 Rumus-Rumus Penting<a class="headerlink" href="#rumus-rumus-penting" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <section id="entropy">
-<h2>🔹 1. <strong>Entropy</strong><a class="headerlink" href="#entropy" title="Link to this heading">#</a></h2>
+<h3>🔹 1. <strong>Entropy</strong><a class="headerlink" href="#entropy" title="Link to this heading">#</a></h3>
 <p>Mengukur ketidakpastian suatu dataset:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2262,7 +2242,7 @@ Entropy(S) = -\sum_{i=1}^{C} p_i \log_2 p_i
 </section>
 <hr class="docutils" />
 <section id="gini-impurity">
-<h2>🔹 2. <strong>Gini Impurity</strong><a class="headerlink" href="#gini-impurity" title="Link to this heading">#</a></h2>
+<h3>🔹 2. <strong>Gini Impurity</strong><a class="headerlink" href="#gini-impurity" title="Link to this heading">#</a></h3>
 <p>Alternatif Entropy (umumnya digunakan pada CART):</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2271,7 +2251,7 @@ Gini(S) = 1 - \sum_{i=1}^{C} p_i^2
 </section>
 <hr class="docutils" />
 <section id="information-gain-ig">
-<h2>🔹 3. <strong>Information Gain (IG)</strong><a class="headerlink" href="#information-gain-ig" title="Link to this heading">#</a></h2>
+<h3>🔹 3. <strong>Information Gain (IG)</strong><a class="headerlink" href="#information-gain-ig" title="Link to this heading">#</a></h3>
 <p>Selisih impurity sebelum dan sesudah split (dipakai saat pakai entropy):</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2282,11 +2262,11 @@ IG(S, A) = Entropy(S) - \sum_{v \in Values(A)} \frac{|S_v|}{|S|} \cdot Entropy(S
 <li><p><span class="math notranslate nohighlight">\(A\)</span>: atribut/faktor yang ingin diuji</p></li>
 <li><p><span class="math notranslate nohighlight">\(S_v\)</span>: subset data saat fitur <span class="math notranslate nohighlight">\(A = v\)</span></p></li>
 </ul>
+</section>
+</section>
 <hr class="docutils" />
-</section>
-</section>
 <section id="ringkasan-langkah-recursive-decision-tree">
-<h1>🧭 Ringkasan Langkah Recursive Decision Tree<a class="headerlink" href="#ringkasan-langkah-recursive-decision-tree" title="Link to this heading">#</a></h1>
+<h2>🧭 Ringkasan Langkah Recursive Decision Tree<a class="headerlink" href="#ringkasan-langkah-recursive-decision-tree" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Langkah</p></th>
@@ -2388,7 +2368,7 @@ weighted avg       0.94      0.94      0.94        33
 </div>
 </section>
 <section id="evaluasi-model">
-<h1><strong>Evaluasi Model</strong><a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h1>
+<h2><strong>Evaluasi Model</strong><a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
@@ -2415,7 +2395,7 @@ weighted avg       0.94      0.94      0.94        33
 </div>
 </div>
 <section id="penerapan-ke-knn">
-<h2><strong>Penerapan ke KNN</strong><a class="headerlink" href="#penerapan-ke-knn" title="Link to this heading">#</a></h2>
+<h3><strong>Penerapan ke KNN</strong><a class="headerlink" href="#penerapan-ke-knn" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluasi_lengkap</span><span class="p">(</span><span class="s2">&quot;K-Nearest Neighbors&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">)</span>
@@ -2435,7 +2415,7 @@ F1-Score    : 0.7351
 </div>
 </section>
 <section id="penerapan-ke-naive-bayes">
-<h2><strong>Penerapan ke Naive Bayes</strong><a class="headerlink" href="#penerapan-ke-naive-bayes" title="Link to this heading">#</a></h2>
+<h3><strong>Penerapan ke Naive Bayes</strong><a class="headerlink" href="#penerapan-ke-naive-bayes" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluasi_lengkap</span><span class="p">(</span><span class="s2">&quot;Naive Bayes&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">)</span>
@@ -2455,7 +2435,7 @@ F1-Score    : 0.9390
 </div>
 </section>
 <section id="penerapan-ke-decision-tree">
-<h2><strong>Penerapan ke Decision Tree</strong><a class="headerlink" href="#penerapan-ke-decision-tree" title="Link to this heading">#</a></h2>
+<h3><strong>Penerapan ke Decision Tree</strong><a class="headerlink" href="#penerapan-ke-decision-tree" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluasi_lengkap</span><span class="p">(</span><span class="s2">&quot;Decision Tree&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">)</span>
@@ -2473,6 +2453,7 @@ F1-Score    : 0.9395
 <img alt="_images/0221cc215e1adb23816bcfad129201edf690db3464344a06274bfcd4c8da342b.png" src="_images/0221cc215e1adb23816bcfad129201edf690db3464344a06274bfcd4c8da342b.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -2531,83 +2512,82 @@ F1-Score    : 0.9395
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pendahuluan</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas">Mengambil dan Menampilkan Dataset Wine Quality dari UCI dengan ucimlrepo dan pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-x-dan-target-y-digabung">Fitur X dan target y digabung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-setiap-fitur-variabel-dataset-anggur"><strong>Penjelasan Setiap Fitur (Variabel) Dataset Anggur</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-target-output">Variabel Target (Output):</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data"><strong>Visualisasi Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan"><strong>Pendahuluan</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-dan-menampilkan-dataset-wine-quality-dari-uci-dengan-ucimlrepo-dan-pandas">Mengambil dan Menampilkan Dataset Wine Quality dari UCI dengan ucimlrepo dan pandas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitur-x-dan-target-y-digabung">Fitur X dan target y digabung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-setiap-fitur-variabel-dataset-anggur"><strong>Penjelasan Setiap Fitur (Variabel) Dataset Anggur</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-target-output">Variabel Target (Output):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data"><strong>Visualisasi Data</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-standardisasi-standardscaler">1. Rumus untuk Standardisasi (StandardScaler)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-reduksi-dimensi-pca-principal-component-analysis">2. Rumus untuk Reduksi Dimensi (PCA - Principal Component Analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data"><strong>Preprocessing Data</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-standardisasi-standardscaler">1. Rumus untuk Standardisasi (StandardScaler)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-untuk-reduksi-dimensi-pca-principal-component-analysis">2. Rumus untuk Reduksi Dimensi (PCA - Principal Component Analysis)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-menggunakan-local-outlier-factor-lof"><strong>deteksi outlier menggunakan Local Outlier Factor (LOF)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan">menggunakan <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi <em>outlier</em> pada data anggur, dan ingin memahami konsep-konsep di baliknya secara berurutan. Ini adalah pilihan yang sangat baik karena LOF adalah metode yang kuat untuk mendeteksi <em>outlier</em> berbasis kepadatan.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-lof">Konsep LOF</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-distance-dan-k-neighbors">1. K-distance dan K-neighbors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reachability-distance-rd">2. Reachability Distance (RD)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-reachability-density-lrd">3. Local Reachability Density (LRD)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-outlier-factor-lof">4. Local Outlier Factor (LOF)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pengecekan-ulang-apakah-data-masih-memiliki-outlier"><strong>pengecekan ulang apakah data masih memiliki outlier</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-outlier-dengan-iqr"><strong>Menghapus Outlier dengan IQR</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-matematika-deteksi-outlier-dengan-metode-iqr">Rumus Matematika Deteksi Outlier dengan Metode IQR</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-splitting"><strong>Data Splitting</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-k-nearest-neighbors-knn"><strong>Klasifikasi dengan K-Nearest Neighbors (KNN)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-knn">🧭 <strong>Tujuan KNN:</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-knn-manual-dengan-jarak-euclidean">✅ <strong>Langkah-Langkah KNN (Manual dengan Jarak Euclidean)</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih"><strong>Langkah 1: Hitung Jarak Euclidean antara data uji dan semua data latih</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil"><strong>Langkah 2: Urutkan data latih berdasarkan jarak terkecil</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-ambil-k-tetangga-terdekat"><strong>Langkah 3: Ambil k tetangga terdekat</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga"><strong>Langkah 4: Lakukan voting mayoritas dari label k tetangga</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-prediksi-selesai"><strong>Langkah 5: Prediksi selesai</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-naive-bayes-gaussiannb"><strong>Klasifikasi dengan Naive Bayes (GaussianNB)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes-classifier">📘 <strong>Naive Bayes Classifier</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-rumus-naive-bayes">✅ <strong>Langkah-langkah &amp; Rumus Naive Bayes</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-probabilitas-prior-tiap-kelas">🔹 <strong>Langkah 1: Hitung Probabilitas Prior Tiap Kelas</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur">🔹 <strong>Langkah 2: Hitung Probabilitas Likelihood untuk Tiap Fitur</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal">Untuk data numerik (Gaussian Naive Bayes), digunakan distribusi normal:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-kategorikal-multinomial-bernoulli-naive-bayes">Untuk data kategorikal (Multinomial/ Bernoulli Naive Bayes):</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior">🔹 <strong>Langkah 3: Gunakan Teorema Bayes untuk Probabilitas Posterior</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi">🔹 <strong>Langkah 4: Pilih Kelas dengan Probabilitas Posterior Tertinggi</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-singkat">🔁 Ringkasan Singkat:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-decision-tree"><strong>Klasifikasi dengan Decision Tree</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">🌳 <strong>4. Decision Tree</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-decision-tree">✅ <strong>Langkah-langkah Decision Tree</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-rumus-penting">🧠 Rumus-Rumus Penting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">🔹 1. <strong>Entropy</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gini-impurity">🔹 2. <strong>Gini Impurity</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-gain-ig">🔹 3. <strong>Information Gain (IG)</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-langkah-recursive-decision-tree">🧭 Ringkasan Langkah Recursive Decision Tree</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-knn"><strong>Penerapan ke KNN</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-naive-bayes"><strong>Penerapan ke Naive Bayes</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-decision-tree"><strong>Penerapan ke Decision Tree</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-menggunakan-local-outlier-factor-lof"><strong>deteksi outlier menggunakan Local Outlier Factor (LOF)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-local-outlier-factor-lof-untuk-mendeteksi-outlier-pada-data-anggur-dan-ingin-memahami-konsep-konsep-di-baliknya-secara-berurutan-ini-adalah-pilihan-yang-sangat-baik-karena-lof-adalah-metode-yang-kuat-untuk-mendeteksi-outlier-berbasis-kepadatan">menggunakan <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi <em>outlier</em> pada data anggur, dan ingin memahami konsep-konsep di baliknya secara berurutan. Ini adalah pilihan yang sangat baik karena LOF adalah metode yang kuat untuk mendeteksi <em>outlier</em> berbasis kepadatan.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-lof">Konsep LOF</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#k-distance-dan-k-neighbors">1. K-distance dan K-neighbors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reachability-distance-rd">2. Reachability Distance (RD)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local-reachability-density-lrd">3. Local Reachability Density (LRD)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local-outlier-factor-lof">4. Local Outlier Factor (LOF)</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengecekan-ulang-apakah-data-masih-memiliki-outlier"><strong>pengecekan ulang apakah data masih memiliki outlier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-outlier-dengan-iqr"><strong>Menghapus Outlier dengan IQR</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-matematika-deteksi-outlier-dengan-metode-iqr">Rumus Matematika Deteksi Outlier dengan Metode IQR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-splitting"><strong>Data Splitting</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-k-nearest-neighbors-knn"><strong>Klasifikasi dengan K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-knn">🧭 <strong>Tujuan KNN:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-knn-manual-dengan-jarak-euclidean">✅ <strong>Langkah-Langkah KNN (Manual dengan Jarak Euclidean)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-jarak-euclidean-antara-data-uji-dan-semua-data-latih"><strong>Langkah 1: Hitung Jarak Euclidean antara data uji dan semua data latih</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-urutkan-data-latih-berdasarkan-jarak-terkecil"><strong>Langkah 2: Urutkan data latih berdasarkan jarak terkecil</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-ambil-k-tetangga-terdekat"><strong>Langkah 3: Ambil k tetangga terdekat</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-lakukan-voting-mayoritas-dari-label-k-tetangga"><strong>Langkah 4: Lakukan voting mayoritas dari label k tetangga</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-prediksi-selesai"><strong>Langkah 5: Prediksi selesai</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-naive-bayes-gaussiannb"><strong>Klasifikasi dengan Naive Bayes (GaussianNB)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes-classifier">📘 <strong>Naive Bayes Classifier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-rumus-naive-bayes">✅ <strong>Langkah-langkah &amp; Rumus Naive Bayes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-probabilitas-prior-tiap-kelas">🔹 <strong>Langkah 1: Hitung Probabilitas Prior Tiap Kelas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-probabilitas-likelihood-untuk-tiap-fitur">🔹 <strong>Langkah 2: Hitung Probabilitas Likelihood untuk Tiap Fitur</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-numerik-gaussian-naive-bayes-digunakan-distribusi-normal">Untuk data numerik (Gaussian Naive Bayes), digunakan distribusi normal:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-data-kategorikal-multinomial-bernoulli-naive-bayes">Untuk data kategorikal (Multinomial/ Bernoulli Naive Bayes):</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gunakan-teorema-bayes-untuk-probabilitas-posterior">🔹 <strong>Langkah 3: Gunakan Teorema Bayes untuk Probabilitas Posterior</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-pilih-kelas-dengan-probabilitas-posterior-tertinggi">🔹 <strong>Langkah 4: Pilih Kelas dengan Probabilitas Posterior Tertinggi</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-singkat">🔁 Ringkasan Singkat:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-decision-tree"><strong>Klasifikasi dengan Decision Tree</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">🌳 <strong>4. Decision Tree</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-decision-tree">✅ <strong>Langkah-langkah Decision Tree</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-rumus-penting">🧠 Rumus-Rumus Penting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">🔹 1. <strong>Entropy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gini-impurity">🔹 2. <strong>Gini Impurity</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-gain-ig">🔹 3. <strong>Information Gain (IG)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-langkah-recursive-decision-tree">🧭 Ringkasan Langkah Recursive Decision Tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi Model</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-knn"><strong>Penerapan ke KNN</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-naive-bayes"><strong>Penerapan ke Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-ke-decision-tree"><strong>Penerapan ke Decision Tree</strong></a></li>
+</ul>
+</li>
+</ul>
   </nav></div>
 
 </div></div>

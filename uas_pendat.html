@@ -59,9 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'uas';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'uas_pendat';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Klasifikasi Varietas Berdasarkan Analisis Kimia" href="PraUas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -181,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="data_understanding.html"><strong>Data Understanding</strong></a></li>
 
 
@@ -207,6 +206,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="KBinsDiscretizer.html">KBinsDiscretizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PraUas.html">Tugas Pra-Uas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">UAS</a></li>
 </ul>
 
     </div>
@@ -278,7 +278,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fuas.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fuas_pendat.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="_sources/uas.ipynb" target="_blank"
+      <li><a href="_sources/uas_pendat.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -461,9 +461,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>2. Gaussian Naive Bayes</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>3. Decision Tree</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-dari-evaluasi-cross-validation"><strong>Kesimpulan dari Evaluasi Cross-Validation:</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-prediksi-risiko-kesehatan-ibu">Aplikasi Prediksi Risiko Kesehatan Ibu</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-prediksi-risiko-kesehatan-ibu">Aplikasi Prediksi Risiko Kesehatan Ibu</a></li>
 </ul>
             </nav>
         </div>
@@ -1914,14 +1914,14 @@ weighted avg       0.86      0.85      0.85       203
 <p>KNN menempati posisi kedua dengan akurasi yang moderat dan konsistensi yang cukup baik. Sementara itu, Gaussian Naive Bayes memiliki akurasi terendah dan sedikit lebih tidak konsisten.</p>
 <p>Evaluasi dengan cross-validation ini memberikan gambaran yang lebih robust tentang kinerja model dibandingkan hanya dengan satu kali pembagian data pelatihan dan pengujian, karena mengurangi risiko kebetulan yang mungkin terjadi pada satu pembagian data tertentu.</p>
 </section>
+</section>
 <section id="aplikasi-prediksi-risiko-kesehatan-ibu">
-<h3>Aplikasi Prediksi Risiko Kesehatan Ibu<a class="headerlink" href="#aplikasi-prediksi-risiko-kesehatan-ibu" title="Link to this heading">#</a></h3>
+<h2>Aplikasi Prediksi Risiko Kesehatan Ibu<a class="headerlink" href="#aplikasi-prediksi-risiko-kesehatan-ibu" title="Link to this heading">#</a></h2>
 <p>Anda dapat mencoba aplikasi web interaktif ini secara langsung melalui link berikut:</p>
-<p><a class="reference external" href="https://prediksi-risiko-kesehatan-ibu-xqpqmydaee7jdx4xzrvnyb.streamlit.app/">Akses Aplikasi Streamlit di Sini</a></p>
+<p><a class="reference external" href="https://prediksi-risiko-kesehatan-ibu-bp2b69vf2sjptrxw4upnhe.streamlit.app/">Akses Aplikasi Streamlit di Sini</a></p>
 <hr class="docutils" />
 <p><strong>Catatan:</strong> Kode sumber lengkap untuk aplikasi ini dapat ditemukan di repositori GitHub saya:
 <a class="reference external" href="https://github.com/rhmnaan/Prediksi-Risiko-Kesehatan-Ibu.git">Repositori GitHub Proyek</a></p>
-</section>
 </section>
 </section>
 
@@ -1955,6 +1955,15 @@ weighted avg       0.86      0.85      0.85       203
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="PraUas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Klasifikasi Varietas Berdasarkan Analisis Kimia</strong></p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -2030,9 +2039,9 @@ weighted avg       0.86      0.85      0.85       203
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>2. Gaussian Naive Bayes</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>3. Decision Tree</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-dari-evaluasi-cross-validation"><strong>Kesimpulan dari Evaluasi Cross-Validation:</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-prediksi-risiko-kesehatan-ibu">Aplikasi Prediksi Risiko Kesehatan Ibu</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-prediksi-risiko-kesehatan-ibu">Aplikasi Prediksi Risiko Kesehatan Ibu</a></li>
 </ul>
   </nav></div>
 

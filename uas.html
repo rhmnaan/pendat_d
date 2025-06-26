@@ -1,0 +1,2090 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Maternal Health Risk &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'uas';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introducing
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data_understanding.html"><strong>Data Understanding</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="outlier_detection.html">Outlier Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naive_bays.html"><strong>Naive Bays</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="proyek.html">Proyek UTS Penambangan Data (A)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clustering.html"><strong>Clustering</strong></a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="KBinsDiscretizer.html">KBinsDiscretizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PraUas.html">Tugas Pra-Uas</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fuas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/uas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Maternal Health Risk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">Pendahuluan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kolom-fitur-pada-dataset-maternal-health-risk">Penjelasan Kolom (Fitur) pada Dataset “Maternal Health Risk”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-data-mining-pada-dataset-maternal-health-risk">Tujuan Data Mining pada Dataset “Maternal Health Risk”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impor-library">Impor Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unggah-dataset">Unggah Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding">Data Understanding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data">Menampilkan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informasi-dataset">Informasi Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif-fitur-numerik">Statistik Deskriptif Fitur Numerik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengecekan-nilai-hilang-dataset">Pengecekan Nilai Hilang Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-kolom-target">Distribusi Kolom Target</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-fitur-numerik">Distribusi Fitur Numerik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-korelasi-fitur-numerik">Matriks Korelasi Fitur Numerik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-fitur-numerik">Deteksi Outlier Fitur Numerik</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">Data Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-nilai-hilang">Penanganan Nilai Hilang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-outlier">Penanganan Outlier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encoding-variabel-target">Encoding Variabel Target</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pemisahan-fitur-dan-target">Pemisahan Fitur dan Target</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-scaling">Feature Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pemisahan-data-latih-dan-uji">Pemisahan Data Latih dan Uji</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model">Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbors-knn">📌 1. <strong>K-Nearest Neighbors (KNN)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">🔍 <strong>Penjelasan:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-jarak-euclidean">🔹 Rumus Jarak Euclidean:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-prediksi">🔹 Langkah Prediksi:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">📌 2. <strong>Naive Bayes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🔍 <strong>Penjelasan:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">🔹 Teorema Bayes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asumsi-naive-fitur-independen">🔹 Asumsi Naive (fitur independen):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-klasifikasi-memilih-kelas-dengan-posterior-tertinggi">🔹 Rumus klasifikasi (memilih kelas dengan posterior tertinggi):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-fitur-numerik-gaussian-naive-bayes">🔹 Untuk fitur numerik – Gaussian Naive Bayes:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">📌 3. <strong>Decision Tree</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🔍 <strong>Penjelasan:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-ukuran-ketidakpastian">🔹 Entropy (ukuran ketidakpastian):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-gain-id3">🔹 Information Gain (ID3):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gain-ratio-c4-5">🔹 Gain Ratio (C4.5):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gini-index-cart">🔹 Gini Index (CART):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pelatihan-dan-evaluasi-model-klasifikasi-knn-naive-bayes-decision-tree">Pelatihan dan Evaluasi Model Klasifikasi (KNN, Naive Bayes, Decision Tree)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>1. K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-naive-bayes"><strong>2. Gaussian Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>3. Decision Tree</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-perbandingan-model"><strong>Kesimpulan Perbandingan Model:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-dan-perbandingan-model">Evaluasi dan Perbandingan Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-dan-perbandingan-model-lanjutan-dengan-cross-validation">Evaluasi dan Perbandingan Model Lanjutan dengan Cross-Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>1. K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>2. Gaussian Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>3. Decision Tree</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-dari-evaluasi-cross-validation"><strong>Kesimpulan dari Evaluasi Cross-Validation:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-prediksi-risiko-kesehatan-ibu">Aplikasi Prediksi Risiko Kesehatan Ibu</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="maternal-health-risk">
+<h1>Maternal Health Risk<a class="headerlink" href="#maternal-health-risk" title="Link to this heading">#</a></h1>
+<section id="pendahuluan">
+<h2>Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h2>
+<p>Kesehatan ibu adalah salah satu indikator kunci kesejahteraan masyarakat dan menjadi perhatian utama dalam bidang kesehatan global. Komplikasi selama kehamilan dan persalinan masih menjadi penyebab signifikan morbiditas dan mortalitas ibu, terutama di negara berkembang. Mengidentifikasi ibu hamil yang berisiko tinggi sejak dini dapat memungkinkan intervensi medis yang tepat waktu dan strategi pencegahan, yang pada gilirannya dapat menyelamatkan nyawa dan meningkatkan kualitas hidup.</p>
+<p>Dalam upaya untuk memprediksi dan mengidentifikasi risiko kesehatan ibu, data klinis dan demografis seringkali dikumpulkan. Dataset “Maternal Health Risk” merupakan kumpulan data yang dirancang untuk membantu dalam tugas ini. Dataset ini berisi berbagai fitur fisiologis dan demografis dari ibu hamil, yang bertujuan untuk memprediksi tingkat risiko kesehatan yang mungkin mereka alami. Dengan menganalisis data ini, para profesional kesehatan dan peneliti dapat mengembangkan model prediktif yang lebih baik untuk skrining awal dan manajemen risiko.</p>
+<p>Dataset ini sangat relevan dalam aplikasi kecerdasan buatan dan data mining, karena memungkinkan penerapan algoritma klasifikasi untuk mengkategorikan ibu hamil ke dalam tingkat risiko yang berbeda (misalnya, rendah, menengah, tinggi) berdasarkan karakteristik mereka. Pemahaman yang mendalam tentang setiap kolom data adalah kunci untuk analisis yang akurat dan membangun model yang efektif.</p>
+</section>
+<section id="penjelasan-kolom-fitur-pada-dataset-maternal-health-risk">
+<h2>Penjelasan Kolom (Fitur) pada Dataset “Maternal Health Risk”<a class="headerlink" href="#penjelasan-kolom-fitur-pada-dataset-maternal-health-risk" title="Link to this heading">#</a></h2>
+<p>Dataset “Maternal Health Risk” terdiri dari beberapa kolom (fitur) yang mewakili berbagai aspek kondisi kesehatan dan demografi seorang ibu hamil. Berikut adalah penjelasan untuk setiap kolom yang biasanya terdapat dalam dataset ini, beserta tujuannya:</p>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Age</span></code> (Usia)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Numerik (Integer/Float)</p></li>
+<li><p><strong>Tujuan:</strong> Merupakan salah satu faktor demografi dan biologis penting. Usia ibu dapat berkorelasi dengan berbagai risiko kehamilan, seperti kehamilan pada usia terlalu muda (remaja) atau terlalu tua (geriatri) yang seringkali membawa komplikasi lebih tinggi.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">SystolicBP</span></code> (Tekanan Darah Sistolik)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Numerik (Integer)</p></li>
+<li><p><strong>Tujuan:</strong> Mengukur tekanan darah ketika jantung berdetak (memompa darah). Tekanan darah tinggi (hipertensi) selama kehamilan dapat mengindikasikan kondisi serius seperti preeklampsia atau eklampsia, yang merupakan risiko tinggi bagi ibu dan janin.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">DiastolicBP</span></code> (Tekanan Darah Diastolik)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Numerik (Integer)</p></li>
+<li><p><strong>Tujuan:</strong> Mengukur tekanan darah ketika jantung beristirahat di antara detakan. Bersama dengan tekanan sistolik, ini memberikan gambaran lengkap tentang kondisi tekanan darah ibu, yang vital untuk mendeteksi hipertensi kehamilan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">BS</span></code> (Blood Sugar - Kadar Gula Darah)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Numerik (Float)</p></li>
+<li><p><strong>Tujuan:</strong> Mengukur kadar glukosa dalam darah. Kadar gula darah tinggi dapat mengindikasikan diabetes gestasional (diabetes yang muncul selama kehamilan) atau diabetes yang sudah ada sebelumnya, yang keduanya meningkatkan risiko komplikasi kehamilan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">BodyTemp</span></code> (Suhu Tubuh)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Numerik (Float)</p></li>
+<li><p><strong>Tujuan:</strong> Mengukur suhu tubuh ibu. Suhu tubuh yang tidak normal (misalnya demam atau hipotermia) dapat menjadi indikator infeksi atau kondisi medis lain yang berisiko selama kehamilan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">HeartRate</span></code> (Detak Jantung)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Numerik (Integer)</p></li>
+<li><p><strong>Tujuan:</strong> Mengukur jumlah detak jantung per menit. Detak jantung yang abnormal (terlalu cepat atau terlalu lambat) dapat menunjukkan masalah jantung, stres, anemia, atau kondisi lain yang memerlukan perhatian medis.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">RiskLevel</span></code> (Tingkat Risiko)</strong></p>
+<ul class="simple">
+<li><p><strong>Tipe Data:</strong> Kategorikal (String, e.g., ‘low risk’, ‘mid risk’, ‘high risk’)</p></li>
+<li><p><strong>Tujuan:</strong> Ini adalah <strong>variabel target</strong> atau label kelas yang ingin kita prediksi. Kolom ini mengindikasikan tingkat risiko kesehatan keseluruhan bagi ibu, yang mungkin ditentukan berdasarkan kombinasi faktor-faktor lain dan penilaian klinis. Tujuan utama data mining pada dataset ini adalah untuk memprediksi nilai pada kolom ini.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="tujuan-data-mining-pada-dataset-maternal-health-risk">
+<h2>Tujuan Data Mining pada Dataset “Maternal Health Risk”<a class="headerlink" href="#tujuan-data-mining-pada-dataset-maternal-health-risk" title="Link to this heading">#</a></h2>
+<p>Tujuan utama dari melakukan data mining pada dataset “Maternal Health Risk” adalah untuk <strong>mengembangkan model prediktif yang dapat secara akurat mengidentifikasi tingkat risiko kesehatan seorang ibu hamil berdasarkan fitur-fitur klinis dan demografis yang tersedia.</strong></p>
+<p>Secara lebih rinci, tujuan ini dapat diuraikan sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p><strong>Skrining Dini dan Deteksi Risiko:</strong> Memungkinkan identifikasi dini ibu hamil yang berisiko tinggi. Dengan mengetahui risiko sejak awal, intervensi medis dapat dimulai lebih cepat, mengurangi kemungkinan komplikasi serius atau kematian.</p></li>
+<li><p><strong>Alokasi Sumber Daya:</strong> Membantu fasilitas kesehatan dalam mengalokasikan sumber daya (staf, peralatan, perawatan khusus) secara lebih efisien kepada pasien yang paling membutuhkannya.</p></li>
+<li><p><strong>Pengambilan Keputusan Klinis yang Lebih Baik:</strong> Memberikan alat pendukung keputusan bagi dokter dan perawat untuk membuat penilaian yang lebih informatif mengenai perawatan dan pemantauan yang diperlukan untuk setiap ibu hamil.</p></li>
+<li><p><strong>Pemahaman Faktor Risiko:</strong> Melalui analisis model (terutama model seperti Decision Tree atau Random Forest yang dapat menunjukkan pentingnya fitur), kita dapat memahami fitur-fitur mana yang paling berpengaruh dalam menentukan tingkat risiko. Ini dapat menginformasikan penelitian lebih lanjut atau panduan klinis.</p></li>
+<li><p><strong>Pengembangan Sistem Peringatan:</strong> Model yang dikembangkan dapat diintegrasikan ke dalam sistem informasi kesehatan untuk memberikan peringatan otomatis ketika seorang ibu hamil menunjukkan tanda-tanda risiko tinggi.</p></li>
+<li><p><strong>Peningkatan Hasil Kesehatan Ibu:</strong> Pada akhirnya, semua tujuan di atas bermuara pada satu tujuan besar: meningkatkan hasil kesehatan bagi ibu dan bayi.</p></li>
+</ol>
+<p>Dengan menggunakan algoritma klasifikasi seperti KNN, Naive Bayes, dan Decision Tree, kita berusaha untuk menemukan pola dalam data yang dapat secara otomatis memetakan karakteristik ibu (fitur) ke tingkat risikonya (target). Perbandingan kinerja model-model ini akan membantu menentukan pendekatan mana yang paling efektif untuk tugas prediksi ini.</p>
+</section>
+<section id="impor-library">
+<h2>Impor Library<a class="headerlink" href="#impor-library" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span> <span class="c1"># Untuk penanganan outlier</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">KFold</span> <span class="c1"># Untuk splitting dan validasi silang</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span> <span class="c1"># Untuk scaling dan encoding</span>
+
+<span class="c1"># Model-model yang akan digunakan</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianNB</span> <span class="c1"># Gaussian Naive Bayes untuk data kontinu</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+
+<span class="c1"># Metrik evaluasi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">roc_curve</span><span class="p">,</span> <span class="n">auc</span>
+
+<span class="c1"># Untuk mengunggah file di Google Colab</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span> <span class="c1"># Untuk penanganan outlier</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unggah-dataset">
+<h2>Unggah Dataset<a class="headerlink" href="#unggah-dataset" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+
+<span class="c1"># Memuat dataset ke DataFrame Pandas</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;Maternal Health Risk.csv&#39;</span> <span class="c1"># Pastikan nama file sesuai</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">uploaded</span><span class="p">[</span><span class="n">file_name</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dataset &#39;</span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&#39; berhasil dimuat.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+     <input type="file" id="files-295c8ced-62ea-4194-bced-35d84e37e4d0" name="files[]" multiple disabled
+        style="border:none" />
+     <output id="result-295c8ced-62ea-4194-bced-35d84e37e4d0">
+      Upload widget is only available when the cell has been executed in the
+      current browser session. Please rerun this cell to enable.
+      </output>
+      <script>// Copyright 2017 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Helpers for google.colab Python module.
+ */
+(function(scope) {
+function span(text, styleAttributes = {}) {
+  const element = document.createElement('span');
+  element.textContent = text;
+  for (const key of Object.keys(styleAttributes)) {
+    element.style[key] = styleAttributes[key];
+  }
+  return element;
+}
+
+// Max number of bytes which will be uploaded at a time.
+const MAX_PAYLOAD_SIZE = 100 * 1024;
+
+function _uploadFiles(inputId, outputId) {
+  const steps = uploadFilesStep(inputId, outputId);
+  const outputElement = document.getElementById(outputId);
+  // Cache steps on the outputElement to make it available for the next call
+  // to uploadFilesContinue from Python.
+  outputElement.steps = steps;
+
+  return _uploadFilesContinue(outputId);
+}
+
+// This is roughly an async generator (not supported in the browser yet),
+// where there are multiple asynchronous steps and the Python side is going
+// to poll for completion of each step.
+// This uses a Promise to block the python side on completion of each step,
+// then passes the result of the previous step as the input to the next step.
+function _uploadFilesContinue(outputId) {
+  const outputElement = document.getElementById(outputId);
+  const steps = outputElement.steps;
+
+  const next = steps.next(outputElement.lastPromiseValue);
+  return Promise.resolve(next.value.promise).then((value) => {
+    // Cache the last promise value to make it available to the next
+    // step of the generator.
+    outputElement.lastPromiseValue = value;
+    return next.value.response;
+  });
+}
+
+/**
+ * Generator function which is called between each async step of the upload
+ * process.
+ * @param {string} inputId Element ID of the input file picker element.
+ * @param {string} outputId Element ID of the output display.
+ * @return {!Iterable<!Object>} Iterable of next steps.
+ */
+function* uploadFilesStep(inputId, outputId) {
+  const inputElement = document.getElementById(inputId);
+  inputElement.disabled = false;
+
+  const outputElement = document.getElementById(outputId);
+  outputElement.innerHTML = '';
+
+  const pickedPromise = new Promise((resolve) => {
+    inputElement.addEventListener('change', (e) => {
+      resolve(e.target.files);
+    });
+  });
+
+  const cancel = document.createElement('button');
+  inputElement.parentElement.appendChild(cancel);
+  cancel.textContent = 'Cancel upload';
+  const cancelPromise = new Promise((resolve) => {
+    cancel.onclick = () => {
+      resolve(null);
+    };
+  });
+
+  // Wait for the user to pick the files.
+  const files = yield {
+    promise: Promise.race([pickedPromise, cancelPromise]),
+    response: {
+      action: 'starting',
+    }
+  };
+
+  cancel.remove();
+
+  // Disable the input element since further picks are not allowed.
+  inputElement.disabled = true;
+
+  if (!files) {
+    return {
+      response: {
+        action: 'complete',
+      }
+    };
+  }
+
+  for (const file of files) {
+    const li = document.createElement('li');
+    li.append(span(file.name, {fontWeight: 'bold'}));
+    li.append(span(
+        `(${file.type || 'n/a'}) - ${file.size} bytes, ` +
+        `last modified: ${
+            file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() :
+                                    'n/a'} - `));
+    const percent = span('0% done');
+    li.appendChild(percent);
+
+    outputElement.appendChild(li);
+
+    const fileDataPromise = new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        resolve(e.target.result);
+      };
+      reader.readAsArrayBuffer(file);
+    });
+    // Wait for the data to be ready.
+    let fileData = yield {
+      promise: fileDataPromise,
+      response: {
+        action: 'continue',
+      }
+    };
+
+    // Use a chunked sending to avoid message size limits. See b/62115660.
+    let position = 0;
+    do {
+      const length = Math.min(fileData.byteLength - position, MAX_PAYLOAD_SIZE);
+      const chunk = new Uint8Array(fileData, position, length);
+      position += length;
+
+      const base64 = btoa(String.fromCharCode.apply(null, chunk));
+      yield {
+        response: {
+          action: 'append',
+          file: file.name,
+          data: base64,
+        },
+      };
+
+      let percentDone = fileData.byteLength === 0 ?
+          100 :
+          Math.round((position / fileData.byteLength) * 100);
+      percent.textContent = `${percentDone}% done`;
+
+    } while (position < fileData.byteLength);
+  }
+
+  // All done.
+  yield {
+    response: {
+      action: 'complete',
+    }
+  };
+}
+
+scope.google = scope.google || {};
+scope.google.colab = scope.google.colab || {};
+scope.google.colab._files = {
+  _uploadFiles,
+  _uploadFilesContinue,
+};
+})(self);
+</script> </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saving Maternal Health Risk.csv to Maternal Health Risk.csv
+Dataset &#39;Maternal Health Risk.csv&#39; berhasil dimuat.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-understanding">
+<h2>Data Understanding<a class="headerlink" href="#data-understanding" title="Link to this heading">#</a></h2>
+<section id="menampilkan-data">
+<h3>Menampilkan Data<a class="headerlink" href="#menampilkan-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buat salinan DataFrame untuk EDA agar data asli tidak termodifikasi</span>
+<span class="n">df_eda</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># 1. Menampilkan 5 baris pertama dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- 5 Baris Pertama Dataset ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_eda</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- 5 Baris Pertama Dataset ---
+   Age  SystolicBP  DiastolicBP    BS  BodyTemp  HeartRate  RiskLevel
+0   25         130           80  15.0      98.0         86  high risk
+1   35         140           90  13.0      98.0         70  high risk
+2   29          90           70   8.0     100.0         80  high risk
+3   30         140           85   7.0      98.0         70  high risk
+4   35         120           60   6.1      98.0         76   low risk
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="informasi-dataset">
+<h3>Informasi Dataset<a class="headerlink" href="#informasi-dataset" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Informasi Umum Dataset (tipe data, non-null counts)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Informasi Dataset ---&quot;</span><span class="p">)</span>
+<span class="n">df_eda</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Informasi Dataset ---
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1014 entries, 0 to 1013
+Data columns (total 7 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   Age          1014 non-null   int64  
+ 1   SystolicBP   1014 non-null   int64  
+ 2   DiastolicBP  1014 non-null   int64  
+ 3   BS           1014 non-null   float64
+ 4   BodyTemp     1014 non-null   float64
+ 5   HeartRate    1014 non-null   int64  
+ 6   RiskLevel    1014 non-null   object 
+dtypes: float64(2), int64(4), object(1)
+memory usage: 55.6+ KB
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="statistik-deskriptif-fitur-numerik">
+<h3>Statistik Deskriptif Fitur Numerik<a class="headerlink" href="#statistik-deskriptif-fitur-numerik" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Statistik Deskriptif untuk Fitur Numerik</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Statistik Deskriptif ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_eda</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Statistik Deskriptif ---
+               Age   SystolicBP  DiastolicBP           BS     BodyTemp  \
+count  1014.000000  1014.000000  1014.000000  1014.000000  1014.000000   
+mean     29.871795   113.198225    76.460552     8.725986    98.665089   
+std      13.474386    18.403913    13.885796     3.293532     1.371384   
+min      10.000000    70.000000    49.000000     6.000000    98.000000   
+25%      19.000000   100.000000    65.000000     6.900000    98.000000   
+50%      26.000000   120.000000    80.000000     7.500000    98.000000   
+75%      39.000000   120.000000    90.000000     8.000000    98.000000   
+max      70.000000   160.000000   100.000000    19.000000   103.000000   
+
+         HeartRate  
+count  1014.000000  
+mean     74.301775  
+std       8.088702  
+min       7.000000  
+25%      70.000000  
+50%      76.000000  
+75%      80.000000  
+max      90.000000  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pengecekan-nilai-hilang-dataset">
+<h3>Pengecekan Nilai Hilang Dataset<a class="headerlink" href="#pengecekan-nilai-hilang-dataset" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. **Pengecekan Nilai Hilang (Missing Values) - Lebih Detail**</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Pengecekan Nilai Hilang per Kolom ---&quot;</span><span class="p">)</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="n">df_eda</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">missing_values</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">missing_values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tidak ada nilai hilang yang terdeteksi di dataset.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Ada nilai hilang. Detail di atas.&quot;</span><span class="p">)</span>
+    <span class="c1"># Opsional: Visualisasi missing values jika ada banyak</span>
+    <span class="c1"># plt.figure(figsize=(10, 6))</span>
+    <span class="c1"># sns.heatmap(df_eda.isnull(), cbar=False, cmap=&#39;viridis&#39;)</span>
+    <span class="c1"># plt.title(&#39;Missing Values Heatmap&#39;)</span>
+    <span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Pengecekan Nilai Hilang per Kolom ---
+Age            0
+SystolicBP     0
+DiastolicBP    0
+BS             0
+BodyTemp       0
+HeartRate      0
+RiskLevel      0
+dtype: int64
+
+Tidak ada nilai hilang yang terdeteksi di dataset.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribusi-kolom-target">
+<h3>Distribusi Kolom Target<a class="headerlink" href="#distribusi-kolom-target" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Memahami Distribusi Kolom Target (&#39;RiskLevel&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Distribusi Kolom Target (RiskLevel) ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_eda</span><span class="p">[</span><span class="s1">&#39;RiskLevel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;RiskLevel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_eda</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribusi Tingkat Risiko Kesehatan Ibu&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Distribusi Kolom Target (RiskLevel) ---
+RiskLevel
+low risk     406
+mid risk     336
+high risk    272
+Name: count, dtype: int64
+</pre></div>
+</div>
+<img alt="_images/430f37109ecefba3c72d9926cd3c2ca56d1323ce4760e2678101bad7ed621684.png" src="_images/430f37109ecefba3c72d9926cd3c2ca56d1323ce4760e2678101bad7ed621684.png" />
+</div>
+</div>
+<p>Penjelasan :
+Gambar tersebut adalah sebuah <em>bar chart</em> (diagram batang) yang berjudul “Distribusi Tingkat Risiko Kesehatan Ibu”. Diagram ini menunjukkan jumlah (<em>count</em>) ibu berdasarkan tiga kategori tingkat risiko kesehatan: “high risk” (risiko tinggi), “low risk” (risiko rendah), dan “mid risk” (risiko menengah).</p>
+<p>Dari visualisasi tersebut dapat dilihat:</p>
+<ul class="simple">
+<li><p><strong>Risiko Rendah (low risk)</strong> memiliki jumlah tertinggi, yaitu sekitar 400 ibu.</p></li>
+<li><p><strong>Risiko Menengah (mid risk)</strong> berada di posisi kedua dengan jumlah sekitar 330-340 ibu.</p></li>
+<li><p><strong>Risiko Tinggi (high risk)</strong> memiliki jumlah terendah dibandingkan dua kategori lainnya, yaitu sekitar 270 ibu.</p></li>
+</ul>
+<p>Secara keseluruhan, gambar ini memberikan gambaran tentang sebaran atau proporsi tingkat risiko kesehatan di antara populasi ibu yang diamati, menunjukkan bahwa sebagian besar ibu berada dalam kategori risiko rendah.</p>
+</section>
+<section id="distribusi-fitur-numerik">
+<h3>Distribusi Fitur Numerik<a class="headerlink" href="#distribusi-fitur-numerik" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Distribusi Fitur Numerik</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Distribusi Fitur Numerik ---&quot;</span><span class="p">)</span>
+<span class="n">numeric_cols_eda</span> <span class="o">=</span> <span class="n">df_eda</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="c1"># Hapus &#39;RiskLevel&#39; jika sudah pasti itu target dan bukan fitur numerik (walaupun kadang bisa numerik juga)</span>
+<span class="k">if</span> <span class="s1">&#39;RiskLevel&#39;</span> <span class="ow">in</span> <span class="n">numeric_cols_eda</span><span class="p">:</span>
+    <span class="n">numeric_cols_eda</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;RiskLevel&#39;</span><span class="p">)</span>
+
+<span class="n">df_eda</span><span class="p">[</span><span class="n">numeric_cols_eda</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeric_cols_eda</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeric_cols_eda</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>))
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Distribusi Fitur Numerik&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Distribusi Fitur Numerik ---
+</pre></div>
+</div>
+<img alt="_images/cc79924000bf638233f4cac9072b35ae5f1525ed87689a878aec3a04a932c620.png" src="_images/cc79924000bf638233f4cac9072b35ae5f1525ed87689a878aec3a04a932c620.png" />
+</div>
+</div>
+<p>Penjelasan : Gambar tersebut menampilkan serangkaian histogram yang berjudul “Distribusi Fitur Numerik”. Setiap histogram menunjukkan distribusi nilai untuk fitur numerik yang berbeda, yaitu: Age (Usia), SystolicBP (Tekanan Darah Sistolik), DiastolicBP (Tekanan Darat Diastolik), BS (Gula Darah/Blood Sugar), BodyTemp (Suhu Tubuh), dan HeartRate (Detak Jantung).</p>
+<p>Berikut penjelasan singkat untuk setiap fitur:</p>
+<ol class="arabic simple">
+<li><p><strong>Age (Usia):</strong></p>
+<ul class="simple">
+<li><p>Distribusi usia tampak cenderung mengelompok pada rentang usia muda, sekitar 20-an hingga 30-an tahun, dengan puncak tertinggi di sekitar 20-an tahun.</p></li>
+<li><p>Ada juga sejumlah kasus pada usia yang lebih tua, meskipun jumlahnya berkurang seiring bertambahnya usia.</p></li>
+</ul>
+</li>
+<li><p><strong>SystolicBP (Tekanan Darah Sistolik):</strong></p>
+<ul class="simple">
+<li><p>Distribusi tekanan darah sistolik menunjukkan puncak yang jelas di sekitar 120 mmHg. Ini adalah nilai normal untuk tekanan darah sistolik.</p></li>
+<li><p>Terdapat juga beberapa puncak kecil di rentang lain, menunjukkan variasi dalam data.</p></li>
+</ul>
+</li>
+<li><p><strong>DiastolicBP (Tekanan Darah Diastolik):</strong></p>
+<ul class="simple">
+<li><p>Mirip dengan sistolik, tekanan darah diastolik juga menunjukkan puncak yang signifikan, terutama di sekitar 80 mmHg dan juga di sekitar 70 mmHg. Ini juga merupakan nilai normal untuk tekanan darah diastolik.</p></li>
+</ul>
+</li>
+<li><p><strong>BS (Gula Darah / Blood Sugar):</strong></p>
+<ul class="simple">
+<li><p>Distribusi gula darah menunjukkan puncak yang sangat tinggi pada nilai sekitar 6-7. Ini mungkin mengindikasikan unit pengukuran tertentu (misalnya, mmol/L) dan bahwa sebagian besar data berada dalam rentang normal.</p></li>
+<li><p>Ada juga sebaran kecil pada nilai yang lebih tinggi, yang mungkin menunjukkan kasus-kasus dengan gula darah tinggi.</p></li>
+</ul>
+</li>
+<li><p><strong>BodyTemp (Suhu Tubuh):</strong></p>
+<ul class="simple">
+<li><p>Suhu tubuh memiliki distribusi yang sangat terkonsentrasi di sekitar 98-99 derajat, yang merupakan suhu tubuh normal.</p></li>
+<li><p>Ada sedikit data di luar rentang ini, menunjukkan stabilitas suhu tubuh pada sebagian besar individu.</p></li>
+</ul>
+</li>
+<li><p><strong>HeartRate (Detak Jantung):</strong></p>
+<ul class="simple">
+<li><p>Distribusi detak jantung menunjukkan puncak yang jelas di sekitar 60-an hingga 70-an, yang merupakan rentang detak jantung istirahat normal untuk orang dewasa.</p></li>
+<li><p>Terdapat juga beberapa data di rentang yang lebih rendah maupun lebih tinggi.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="matriks-korelasi-fitur-numerik">
+<h3>Matriks Korelasi Fitur Numerik<a class="headerlink" href="#matriks-korelasi-fitur-numerik" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Heatmap Korelasi Antar Fitur Numerik</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Matriks Korelasi Fitur Numerik ---&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_eda</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Matriks Korelasi Antar Fitur&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Matriks Korelasi Fitur Numerik ---
+</pre></div>
+</div>
+<img alt="_images/71d3e5ebaaccccd8535e07758767dd57c2bbb89f32068e07f55d3033d448bd65.png" src="_images/71d3e5ebaaccccd8535e07758767dd57c2bbb89f32068e07f55d3033d448bd65.png" />
+</div>
+</div>
+<p>Penjelasan : Gambar tersebut adalah sebuah <em>Heatmap</em> Matriks Korelasi Antar Fitur. Matriks ini menunjukkan hubungan linier antara setiap pasang fitur numerik yang ada dalam dataset. Nilai korelasi berkisar dari -1 hingga +1:</p>
+<ul class="simple">
+<li><p><strong>+1:</strong> Korelasi positif sempurna (jika satu fitur meningkat, yang lain juga meningkat secara proporsional).</p></li>
+<li><p><strong>-1:</strong> Korelasi negatif sempurna (jika satu fitur meningkat, yang lain menurun secara proporsional).</p></li>
+<li><p><strong>0:</strong> Tidak ada korelasi linier.</p></li>
+</ul>
+<p>Warna pada heatmap juga mengindikasikan kekuatan dan arah korelasi:</p>
+<ul class="simple">
+<li><p><strong>Merah cerah:</strong> Korelasi positif kuat.</p></li>
+<li><p><strong>Biru cerah:</strong> Korelasi negatif kuat.</p></li>
+<li><p><strong>Putih/warna netral:</strong> Korelasi lemah atau tidak ada.</p></li>
+</ul>
+<p>Mari kita analisis beberapa korelasi penting dari matriks ini:</p>
+<ol class="arabic simple">
+<li><p><strong>SystolicBP (Tekanan Darah Sistolik) dan DiastolicBP (Tekanan Darah Diastolik):</strong></p>
+<ul class="simple">
+<li><p>Korelasi: <strong>0.79</strong> (merah cerah)</p></li>
+<li><p>Penjelasan: Ini adalah korelasi positif yang sangat kuat. Wajar, karena tekanan darah sistolik dan diastolik cenderung bergerak bersama; jika salah satunya tinggi, yang lain juga cenderung tinggi.</p></li>
+</ul>
+</li>
+<li><p><strong>Age (Usia) dengan Tekanan Darah (SystolicBP dan DiastolicBP):</strong></p>
+<ul class="simple">
+<li><p>Age - SystolicBP: <strong>0.42</strong> (merah muda)</p></li>
+<li><p>Age - DiastolicBP: <strong>0.40</strong> (merah muda)</p></li>
+<li><p>Penjelasan: Ada korelasi positif moderat antara usia dengan kedua jenis tekanan darah. Ini menunjukkan bahwa seiring bertambahnya usia, tekanan darah cenderung sedikit meningkat.</p></li>
+</ul>
+</li>
+<li><p><strong>BS (Gula Darah) dengan Tekanan Darah (SystolicBP dan DiastolicBP) dan Age:</strong></p>
+<ul class="simple">
+<li><p>BS - Age: <strong>0.47</strong></p></li>
+<li><p>BS - SystolicBP: <strong>0.43</strong></p></li>
+<li><p>BS - DiastolicBP: <strong>0.42</strong></p></li>
+<li><p>Penjelasan: Ada korelasi positif moderat antara gula darah dengan usia dan juga dengan tekanan darah. Ini menyiratkan bahwa individu yang lebih tua atau memiliki tekanan darah tinggi mungkin juga cenderung memiliki gula darah yang lebih tinggi.</p></li>
+</ul>
+</li>
+<li><p><strong>BodyTemp (Suhu Tubuh) dengan Fitur Lain:</strong></p>
+<ul class="simple">
+<li><p>Korelasi dengan Age, SystolicBP, DiastolicBP, dan BS semuanya negatif dan relatif lemah (sekitar -0.10 hingga -0.29, berwarna biru muda).</p></li>
+<li><p>Penjelasan: Ini menunjukkan bahwa suhu tubuh memiliki sedikit atau bahkan hubungan terbalik yang sangat lemah dengan usia, tekanan darah, dan gula darah.</p></li>
+</ul>
+</li>
+<li><p><strong>HeartRate (Detak Jantung) dengan Fitur Lain:</strong></p>
+<ul class="simple">
+<li><p>Korelasi dengan sebagian besar fitur lainnya sangat lemah dan mendekati nol (misalnya, -0.02 dengan SystolicBP, 0.08 dengan Age).</p></li>
+<li><p>Penjelasan: Detak jantung tampaknya tidak memiliki korelasi linier yang signifikan dengan fitur-fitur lain dalam dataset ini.</p></li>
+</ul>
+</li>
+</ol>
+<p>Secara keseluruhan, matriks korelasi ini sangat berguna untuk memahami hubungan antar variabel dalam dataset, mengidentifikasi variabel yang mungkin saling bergantung (multikolinearitas), dan memberikan wawasan awal untuk pemodelan prediktif.</p>
+</section>
+<section id="deteksi-outlier-fitur-numerik">
+<h3>Deteksi Outlier Fitur Numerik<a class="headerlink" href="#deteksi-outlier-fitur-numerik" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8. **Pengecekan Outlier Berdasarkan Kolom (Menggunakan Boxplot)**</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Pengecekan Outlier per Kolom Numerik ---&quot;</span><span class="p">)</span>
+<span class="c1"># Identifikasi kolom numerik yang akan dicek outliernya</span>
+<span class="c1"># Kolom indeks yang relevan: 0:Age, 1:SystolicBP, 2:DiastolicBP, 3:BS, 4:BodyTemp, 5:HeartRate</span>
+<span class="c1"># Sesuai dengan head() dan info() dari dataset ini.</span>
+<span class="c1"># Pastikan nama kolom sesuai dengan dataset Anda.</span>
+<span class="n">numerical_feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;SystolicBP&#39;</span><span class="p">,</span> <span class="s1">&#39;DiastolicBP&#39;</span><span class="p">,</span> <span class="s1">&#39;BS&#39;</span><span class="p">,</span> <span class="s1">&#39;BodyTemp&#39;</span><span class="p">,</span> <span class="s1">&#39;HeartRate&#39;</span><span class="p">]</span>
+<span class="n">numerical_feature_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="c1"># Indeks kolom yang sesuai</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">numerical_feature_names</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_eda</span><span class="p">[</span><span class="n">col_name</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Boxplot of </span><span class="si">{</span><span class="n">col_name</span><span class="si">}</span><span class="s1"> (Column Index: </span><span class="si">{</span><span class="n">numerical_feature_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Untuk kolom &#39;</span><span class="si">{</span><span class="n">col_name</span><span class="si">}</span><span class="s2">&#39; (indeks </span><span class="si">{</span><span class="n">numerical_feature_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">):&quot;</span><span class="p">)</span>
+    <span class="n">Q1</span> <span class="o">=</span> <span class="n">df_eda</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+    <span class="n">Q3</span> <span class="o">=</span> <span class="n">df_eda</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+    <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+    <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+    <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+    <span class="n">outliers_count</span> <span class="o">=</span> <span class="n">df_eda</span><span class="p">[(</span><span class="n">df_eda</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df_eda</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Batas Bawah IQR: </span><span class="si">{</span><span class="n">lower_bound</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, Batas Atas IQR: </span><span class="si">{</span><span class="n">upper_bound</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Jumlah Outlier (berdasarkan IQR): </span><span class="si">{</span><span class="n">outliers_count</span><span class="si">}</span><span class="s2"> baris.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Pengecekan Outlier per Kolom Numerik ---
+</pre></div>
+</div>
+<img alt="_images/70578f2966806b9f2a184d1d0767fb084e618c86bcd6f8bd0b5ec893b070377d.png" src="_images/70578f2966806b9f2a184d1d0767fb084e618c86bcd6f8bd0b5ec893b070377d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Untuk kolom &#39;Age&#39; (indeks 0):
+  Batas Bawah IQR: -11.00, Batas Atas IQR: 69.00
+  Jumlah Outlier (berdasarkan IQR): 1 baris.
+</pre></div>
+</div>
+<img alt="_images/4dd2f5df17d1285acc8040b81bd9b5709e0b5dfeaa120e80b04796f338cd5833.png" src="_images/4dd2f5df17d1285acc8040b81bd9b5709e0b5dfeaa120e80b04796f338cd5833.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Untuk kolom &#39;SystolicBP&#39; (indeks 1):
+  Batas Bawah IQR: 70.00, Batas Atas IQR: 150.00
+  Jumlah Outlier (berdasarkan IQR): 10 baris.
+</pre></div>
+</div>
+<img alt="_images/70c3c0869d7c57e13b837419394ddac3ef4ae4fb4b83264189516d5113dbd47f.png" src="_images/70c3c0869d7c57e13b837419394ddac3ef4ae4fb4b83264189516d5113dbd47f.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Untuk kolom &#39;DiastolicBP&#39; (indeks 2):
+  Batas Bawah IQR: 27.50, Batas Atas IQR: 127.50
+  Jumlah Outlier (berdasarkan IQR): 0 baris.
+</pre></div>
+</div>
+<img alt="_images/445c84b7cf3574bbb1b4801d69e0a1aa48ad89f11a13423690492cbe438009f6.png" src="_images/445c84b7cf3574bbb1b4801d69e0a1aa48ad89f11a13423690492cbe438009f6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Untuk kolom &#39;BS&#39; (indeks 3):
+  Batas Bawah IQR: 5.25, Batas Atas IQR: 9.65
+  Jumlah Outlier (berdasarkan IQR): 210 baris.
+</pre></div>
+</div>
+<img alt="_images/6d30f0e587405d3df82e04cfbfb66f9e1a74e6e7ee3d9858b853a1d5eb1a9043.png" src="_images/6d30f0e587405d3df82e04cfbfb66f9e1a74e6e7ee3d9858b853a1d5eb1a9043.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Untuk kolom &#39;BodyTemp&#39; (indeks 4):
+  Batas Bawah IQR: 98.00, Batas Atas IQR: 98.00
+  Jumlah Outlier (berdasarkan IQR): 210 baris.
+</pre></div>
+</div>
+<img alt="_images/467dfe8afd7256734a784b2477c3d14df5d9ad73009d8220efba46356a336e7d.png" src="_images/467dfe8afd7256734a784b2477c3d14df5d9ad73009d8220efba46356a336e7d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Untuk kolom &#39;HeartRate&#39; (indeks 5):
+  Batas Bawah IQR: 55.00, Batas Atas IQR: 95.00
+  Jumlah Outlier (berdasarkan IQR): 2 baris.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Penjelasan : Gambar-gambar tersebut adalah serangkaian <em>boxplot</em> (diagram kotak) yang digunakan untuk memvisualisasikan distribusi dan mendeteksi <em>outlier</em> (pencilan) untuk beberapa fitur numerik. Setiap boxplot dilengkapi dengan informasi batas bawah IQR (Interquartile Range), batas atas IQR, dan jumlah outlier yang terdeteksi.</p>
+<p>Berikut adalah penjelasan singkat untuk setiap boxplot:</p>
+<p><strong>1. Boxplot of Age (Usia)</strong></p>
+<ul class="simple">
+<li><p><strong>Visual:</strong> Kotak utama (IQR) berada di rentang usia sekitar 20-40 tahun. Garis tengah (median) berada di sekitar 27-28 tahun. Terdapat satu titik outlier di sisi kanan (usia sekitar 70 tahun).</p></li>
+<li><p><strong>Informasi:</strong></p>
+<ul>
+<li><p>Batas Bawah IQR: -11.00 (nilai ini tidak realistis karena usia tidak bisa negatif, menunjukkan kemungkinan metode perhitungan atau data minimal sangat rendah).</p></li>
+<li><p>Batas Atas IQR: 69.00</p></li>
+<li><p>Jumlah Outlier: 1 baris.</p></li>
+</ul>
+</li>
+<li><p><strong>Penjelasan:</strong> Sebagian besar data usia terkonsentrasi pada rentang yang lebih muda. Ada satu individu dengan usia yang jauh lebih tua dari mayoritas data, yang diidentifikasi sebagai outlier.</p></li>
+</ul>
+<p><strong>2. Boxplot of SystolicBP (Tekanan Darah Sistolik)</strong></p>
+<ul class="simple">
+<li><p><strong>Visual:</strong> Kotak utama (IQR) berada di rentang sekitar 100-120 mmHg. Garis tengah (median) sedikit di atas 110 mmHg. Ada satu titik outlier di sisi kanan (sekitar 160 mmHg).</p></li>
+<li><p><strong>Informasi:</strong> (Tidak ditampilkan batas IQR secara spesifik, hanya jumlah outlier)</p>
+<ul>
+<li><p>Jumlah Outlier: 10 baris.</p></li>
+</ul>
+</li>
+<li><p><strong>Penjelasan:</strong> Mayoritas tekanan darah sistolik berada dalam rentang normal atau sedikit di atasnya. Terdapat satu kasus dengan tekanan darah sistolik yang sangat tinggi, yang dianggap sebagai outlier.</p></li>
+</ul>
+<p><strong>3. Boxplot of DiastolicBP (Tekanan Darah Diastolik)</strong></p>
+<ul class="simple">
+<li><p><strong>Visual:</strong> Kotak utama (IQR) berada di rentang sekitar 70-80 mmHg. Garis tengah (median) di sekitar 75 mmHg. Tidak terlihat ada outlier yang ditampilkan sebagai titik individual di luar “whisker”.</p></li>
+<li><p><strong>Informasi:</strong></p>
+<ul>
+<li><p>Batas Bawah IQR: 27.50</p></li>
+<li><p>Batas Atas IQR: 127.50</p></li>
+<li><p>Jumlah Outlier: 0 baris.</p></li>
+</ul>
+</li>
+<li><p><strong>Penjelasan:</strong> Distribusi tekanan darah diastolik tampak simetris dan terkonsentrasi di sekitar nilai normal, tanpa outlier yang terdeteksi berdasarkan metode IQR.</p></li>
+</ul>
+<p><strong>4. Boxplot of BS (Gula Darah / Blood Sugar)</strong></p>
+<ul class="simple">
+<li><p><strong>Visual:</strong> Kotak utama (IQR) sangat sempit dan berada di rentang yang rendah (sekitar 6-8). Ada banyak titik outlier di sisi kanan, menunjukkan nilai gula darah yang lebih tinggi.</p></li>
+<li><p><strong>Informasi:</strong> (Tidak ditampilkan batas IQR secara spesifik, hanya jumlah outlier)</p>
+<ul>
+<li><p>Jumlah Outlier: 0 baris (ini mungkin hasil yang tidak konsisten dengan visualisasi, atau outlier yang terdeteksi menggunakan metode lain tidak ditampilkan di sini. Secara visual, jelas ada banyak outlier).</p></li>
+</ul>
+</li>
+<li><p><strong>Penjelasan:</strong> Sebagian besar data gula darah terkonsentrasi pada nilai yang rendah/normal. Namun, ada banyak kasus dengan nilai gula darah yang jauh lebih tinggi, yang secara visual jelas merupakan outlier. Perlu dikonfirmasi mengapa “Jumlah Outlier” menunjukkan 0.</p></li>
+</ul>
+<p><strong>5. Boxplot of BodyTemp (Suhu Tubuh)</strong></p>
+<ul class="simple">
+<li><p><strong>Visual:</strong> Kotak utama (IQR) sangat sempit dan terkonsentrasi di sekitar 98-99 derajat. Ada beberapa titik outlier di kedua sisi kotak, menunjukkan suhu yang sedikit di luar rentang normal.</p></li>
+<li><p><strong>Informasi:</strong></p>
+<ul>
+<li><p>Batas Bawah IQR: 98.00</p></li>
+<li><p>Batas Atas IQR: 98.00 (nilai yang sama menunjukkan bahwa 75% data terkumpul sangat rapat)</p></li>
+<li><p>Jumlah Outlier: 210 baris.</p></li>
+</ul>
+</li>
+<li><p><strong>Penjelasan:</strong> Mayoritas data suhu tubuh sangat stabil dan normal. Namun, terdapat banyak outlier, baik yang sedikit lebih rendah maupun sedikit lebih tinggi dari rentang normal, menunjukkan variasi yang signifikan di luar kisaran interkuartil.</p></li>
+</ul>
+<p><strong>6. Boxplot of HeartRate (Detak Jantung)</strong></p>
+<ul class="simple">
+<li><p><strong>Visual:</strong> Kotak utama (IQR) berada di rentang sekitar 65-75 bpm. Garis tengah (median) di sekitar 70 bpm. Terdapat satu titik outlier di sisi kiri (sekitar 10 bpm).</p></li>
+<li><p><strong>Informasi:</strong> (Tidak ditampilkan batas IQR secara spesifik, hanya jumlah outlier)</p>
+<ul>
+<li><p>Jumlah Outlier: 2 baris.</p></li>
+</ul>
+</li>
+<li><p><strong>Penjelasan:</strong> Sebagian besar detak jantung berada dalam rentang normal. Ada satu kasus dengan detak jantung yang sangat rendah, yang diidentifikasi sebagai outlier.</p></li>
+</ul>
+<p>Secara ringkas, boxplot ini membantu mengidentifikasi sebaran data, median, rentang interkuartil, serta keberadaan dan jumlah pencilan untuk setiap variabel numerik, memberikan gambaran cepat tentang anomali atau variasi ekstrem dalam dataset.</p>
+</section>
+</section>
+<section id="data-preprocessing">
+<h2>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h2>
+<section id="penanganan-nilai-hilang">
+<h3>Penanganan Nilai Hilang<a class="headerlink" href="#penanganan-nilai-hilang" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buat salinan DataFrame untuk preprocessing</span>
+<span class="n">df_processed</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># 1. Penanganan Nilai Hilang (jika ada)</span>
+<span class="c1"># Berdasarkan df.isnull().sum() dari EDA.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Penanganan Nilai Hilang ---&quot;</span><span class="p">)</span>
+<span class="n">missing_values_before_imputation</span> <span class="o">=</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">missing_values_before_imputation</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deteksi </span><span class="si">{</span><span class="n">missing_values_before_imputation</span><span class="si">}</span><span class="s2"> nilai hilang. Melakukan imputasi mean untuk kolom numerik...&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+            <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Kolom &#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&#39; diimputasi dengan mean.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nilai hilang telah diatasi.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tidak ada nilai hilang yang terdeteksi, tidak perlu imputasi.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Penanganan Nilai Hilang ---
+Tidak ada nilai hilang yang terdeteksi, tidak perlu imputasi.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="penanganan-outlier">
+<h3>Penanganan Outlier<a class="headerlink" href="#penanganan-outlier" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Penanganan Outlier (penting untuk KNN dan Naive Bayes)</span>
+<span class="c1"># Metode IQR (Interquartile Range) dengan capping.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Penanganan Outlier menggunakan Metode IQR (Capping) ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Identifikasi kolom numerik tempat kita akan menangani outlier</span>
+<span class="c1"># Gunakan daftar nama kolom yang sudah diverifikasi dari EDA</span>
+<span class="n">numerical_cols_for_outlier_handling</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;SystolicBP&#39;</span><span class="p">,</span> <span class="s1">&#39;DiastolicBP&#39;</span><span class="p">,</span> <span class="s1">&#39;BS&#39;</span><span class="p">,</span> <span class="s1">&#39;BodyTemp&#39;</span><span class="p">,</span> <span class="s1">&#39;HeartRate&#39;</span><span class="p">]</span>
+
+<span class="c1"># Pastikan semua kolom ini ada di DataFrame</span>
+<span class="n">numerical_cols_for_outlier_handling</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numerical_cols_for_outlier_handling</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">numerical_cols_for_outlier_handling</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tidak ada kolom numerik yang teridentifikasi untuk penanganan outlier.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Melakukan capping outlier pada kolom: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">numerical_cols_for_outlier_handling</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numerical_cols_for_outlier_handling</span><span class="p">:</span>
+        <span class="n">Q1</span> <span class="o">=</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+        <span class="n">Q3</span> <span class="o">=</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+        <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+        <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+        <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+
+        <span class="c1"># Melakukan capping (mengganti outlier dengan batas atas/bawah)</span>
+        <span class="n">outliers_below</span> <span class="o">=</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">outliers_above</span> <span class="o">=</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+        <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">,</span> <span class="n">df_processed</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Kolom &#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">outliers_below</span><span class="si">}</span><span class="s2"> outlier di bawah, </span><span class="si">{</span><span class="n">outliers_above</span><span class="si">}</span><span class="s2"> outlier di atas. Telah di-capping.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah baris setelah outlier handling: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_processed</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Penanganan Outlier menggunakan Metode IQR (Capping) ---
+Melakukan capping outlier pada kolom: Age, SystolicBP, DiastolicBP, BS, BodyTemp, HeartRate
+  Kolom &#39;Age&#39;: 0 outlier di bawah, 1 outlier di atas. Telah di-capping.
+  Kolom &#39;SystolicBP&#39;: 0 outlier di bawah, 10 outlier di atas. Telah di-capping.
+  Kolom &#39;DiastolicBP&#39;: 0 outlier di bawah, 0 outlier di atas. Telah di-capping.
+  Kolom &#39;BS&#39;: 0 outlier di bawah, 210 outlier di atas. Telah di-capping.
+  Kolom &#39;BodyTemp&#39;: 0 outlier di bawah, 210 outlier di atas. Telah di-capping.
+  Kolom &#39;HeartRate&#39;: 2 outlier di bawah, 0 outlier di atas. Telah di-capping.
+Jumlah baris setelah outlier handling: 1014
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="encoding-variabel-target">
+<h3>Encoding Variabel Target<a class="headerlink" href="#encoding-variabel-target" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Encoding Variabel Target (&#39;RiskLevel&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Encoding Variabel Target ---&quot;</span><span class="p">)</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">df_processed</span><span class="p">[</span><span class="s1">&#39;RiskLevel_encoded&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_processed</span><span class="p">[</span><span class="s1">&#39;RiskLevel&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mapping &#39;RiskLevel&#39;: </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">)))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Encoding Variabel Target ---
+Mapping &#39;RiskLevel&#39;: [&#39;high risk&#39;, &#39;low risk&#39;, &#39;mid risk&#39;] -&gt; [0, 1, 2]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pemisahan-fitur-dan-target">
+<h3>Pemisahan Fitur dan Target<a class="headerlink" href="#pemisahan-fitur-dan-target" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Pemisahan Fitur (X) dan Target (y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;RiskLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;RiskLevel_encoded&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Drop kolom asli dan encoded target</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_processed</span><span class="p">[</span><span class="s1">&#39;RiskLevel_encoded&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="feature-scaling">
+<h3>Feature Scaling<a class="headerlink" href="#feature-scaling" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Feature Scaling (Standardisasi)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Scaling Fitur Menggunakan StandardScaler ---&quot;</span><span class="p">)</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_scaled_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fitur telah di-scale.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Scaling Fitur Menggunakan StandardScaler ---
+Fitur telah di-scale.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pemisahan-data-latih-dan-uji">
+<h3>Pemisahan Data Latih dan Uji<a class="headerlink" href="#pemisahan-data-latih-dan-uji" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Pemisahan Data Latih dan Uji</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Memisahkan Data Latih dan Uji ---&quot;</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_scaled_df</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran data latih X: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y: </span><span class="si">{</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran data uji X: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y: </span><span class="si">{</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Memisahkan Data Latih dan Uji ---
+Ukuran data latih X: (811, 6), y: (811,)
+Ukuran data uji X: (203, 6), y: (203,)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="model">
+<h2>Model<a class="headerlink" href="#model" title="Link to this heading">#</a></h2>
+</section>
+<section id="k-nearest-neighbors-knn">
+<h2>📌 1. <strong>K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#k-nearest-neighbors-knn" title="Link to this heading">#</a></h2>
+<section id="penjelasan">
+<h3>🔍 <strong>Penjelasan:</strong><a class="headerlink" href="#penjelasan" title="Link to this heading">#</a></h3>
+<p>KNN adalah algoritma klasifikasi berbasis instance-based learning, yang tidak memiliki model eksplisit. Saat prediksi dilakukan, algoritma akan:</p>
+<ul class="simple">
+<li><p>Mengukur jarak antara data uji dan seluruh data latih.</p></li>
+<li><p>Memilih <strong>k tetangga terdekat</strong>.</p></li>
+<li><p>Menentukan kelas berdasarkan <strong>voting mayoritas</strong> dari tetangga terdekat.</p></li>
+</ul>
+</section>
+<section id="rumus-jarak-euclidean">
+<h3>🔹 Rumus Jarak Euclidean:<a class="headerlink" href="#rumus-jarak-euclidean" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+d(x, x') = \sqrt{\sum_{i=1}^{n}(x_i - x'_i)^2}
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x\)</span>: vektor fitur data uji</p></li>
+<li><p><span class="math notranslate nohighlight">\(x'\)</span>: vektor fitur data latih</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>: jumlah fitur</p></li>
+</ul>
+</section>
+<section id="langkah-prediksi">
+<h3>🔹 Langkah Prediksi:<a class="headerlink" href="#langkah-prediksi" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Hitung jarak <span class="math notranslate nohighlight">\(d(x, x')\)</span> ke semua data latih.</p></li>
+<li><p>Pilih <strong>k data terdekat</strong> berdasarkan jarak.</p></li>
+<li><p>Ambil kelas dengan <strong>frekuensi terbanyak</strong> dari tetangga tersebut sebagai hasil klasifikasi.</p></li>
+</ol>
+</section>
+</section>
+<section id="naive-bayes">
+<h2>📌 2. <strong>Naive Bayes</strong><a class="headerlink" href="#naive-bayes" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>🔍 <strong>Penjelasan:</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Naive Bayes adalah algoritma klasifikasi berbasis probabilistik yang menggunakan <strong>Teorema Bayes</strong> dengan asumsi bahwa setiap fitur <strong>bersifat independen</strong> terhadap fitur lainnya dalam satu kelas.</p>
+</section>
+<section id="teorema-bayes">
+<h3>🔹 Teorema Bayes:<a class="headerlink" href="#teorema-bayes" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)}
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(C|X)\)</span>: <strong>Posterior probability</strong> (probabilitas kelas <span class="math notranslate nohighlight">\(C\)</span> setelah diketahui fitur <span class="math notranslate nohighlight">\(X\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(X|C)\)</span>: Likelihood (probabilitas munculnya fitur <span class="math notranslate nohighlight">\(X\)</span> jika kelas <span class="math notranslate nohighlight">\(C\)</span> benar)</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(C)\)</span>: Prior probability (peluang awal kelas <span class="math notranslate nohighlight">\(C\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(X)\)</span>: Evidence (probabilitas data <span class="math notranslate nohighlight">\(X\)</span>, biasanya diabaikan dalam perbandingan karena nilainya sama untuk semua kelas)</p></li>
+</ul>
+</section>
+<section id="asumsi-naive-fitur-independen">
+<h3>🔹 Asumsi Naive (fitur independen):<a class="headerlink" href="#asumsi-naive-fitur-independen" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+P(X|C) = \prod_{j=1}^{n} P(x_j|C)
+\]</div>
+</section>
+<section id="rumus-klasifikasi-memilih-kelas-dengan-posterior-tertinggi">
+<h3>🔹 Rumus klasifikasi (memilih kelas dengan posterior tertinggi):<a class="headerlink" href="#rumus-klasifikasi-memilih-kelas-dengan-posterior-tertinggi" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\hat{C} = \arg\max_{C_i} \left( P(C_i) \cdot \prod_{j=1}^{n} P(x_j | C_i) \right)
+\]</div>
+</section>
+<section id="untuk-fitur-numerik-gaussian-naive-bayes">
+<h3>🔹 Untuk fitur numerik – Gaussian Naive Bayes:<a class="headerlink" href="#untuk-fitur-numerik-gaussian-naive-bayes" title="Link to this heading">#</a></h3>
+<p>Jika fitur berupa nilai numerik kontinu, digunakan distribusi Gaussian:</p>
+<div class="math notranslate nohighlight">
+\[
+P(x_j | C_i) = \frac{1}{\sqrt{2\pi \sigma_{C_i,j}^2}} \cdot \exp\left( -\frac{(x_j - \mu_{C_i,j})^2}{2 \sigma_{C_i,j}^2} \right)
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mu_{C_i,j}\)</span>: rata-rata fitur ke-<span class="math notranslate nohighlight">\(j\)</span> untuk kelas <span class="math notranslate nohighlight">\(C_i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{C_i,j}^2\)</span>: variansi fitur ke-<span class="math notranslate nohighlight">\(j\)</span> untuk kelas <span class="math notranslate nohighlight">\(C_i\)</span></p></li>
+</ul>
+</section>
+</section>
+<section id="decision-tree">
+<h2>📌 3. <strong>Decision Tree</strong><a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>🔍 <strong>Penjelasan:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Decision Tree adalah algoritma pembelajaran yang membangun <strong>struktur pohon keputusan</strong> dari data pelatihan. Setiap node merepresentasikan atribut, dan cabangnya adalah nilai atribut. Algoritma memilih atribut terbaik berdasarkan <strong>ukuran impurity</strong>, seperti <strong>entropy</strong> atau <strong>Gini Index</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="entropy-ukuran-ketidakpastian">
+<h3>🔹 Entropy (ukuran ketidakpastian):<a class="headerlink" href="#entropy-ukuran-ketidakpastian" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+Entropy(S) = - \sum_{i=1}^{c} p_i \log_2(p_i)
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(S\)</span>: himpunan data</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_i\)</span>: proporsi data pada kelas ke-<span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c\)</span>: jumlah kelas</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="information-gain-id3">
+<h3>🔹 Information Gain (ID3):<a class="headerlink" href="#information-gain-id3" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+Gain(S, A) = Entropy(S) - \sum_{v \in Values(A)} \frac{|S_v|}{|S|} \cdot Entropy(S_v)
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span>: atribut yang diuji</p></li>
+<li><p><span class="math notranslate nohighlight">\(S_v\)</span>: subset data di mana atribut <span class="math notranslate nohighlight">\(A = v\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="gain-ratio-c4-5">
+<h3>🔹 Gain Ratio (C4.5):<a class="headerlink" href="#gain-ratio-c4-5" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+GainRatio(A) = \frac{Gain(S, A)}{SplitInfo(A)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+SplitInfo(A) = - \sum_{v \in Values(A)} \frac{|S_v|}{|S|} \log_2 \left( \frac{|S_v|}{|S|} \right)
+\]</div>
+<p>Digunakan untuk menghindari <strong>bias</strong> terhadap atribut dengan banyak nilai unik.</p>
+</section>
+<hr class="docutils" />
+<section id="gini-index-cart">
+<h3>🔹 Gini Index (CART):<a class="headerlink" href="#gini-index-cart" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+Gini(S) = 1 - \sum_{i=1}^{c} p_i^2
+\]</div>
+<p>Untuk membagi node berdasarkan atribut <span class="math notranslate nohighlight">\(A\)</span>, digunakan:</p>
+<div class="math notranslate nohighlight">
+\[
+Gini_{split}(A) = \frac{|S_{left}|}{|S|} \cdot Gini(S_{left}) + \frac{|S_{right}|}{|S|} \cdot Gini(S_{right})
+\]</div>
+</section>
+<section id="pelatihan-dan-evaluasi-model-klasifikasi-knn-naive-bayes-decision-tree">
+<h3>Pelatihan dan Evaluasi Model Klasifikasi (KNN, Naive Bayes, Decision Tree)<a class="headerlink" href="#pelatihan-dan-evaluasi-model-klasifikasi-knn-naive-bayes-decision-tree" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi Model</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Melatih Model ---&quot;</span><span class="p">)</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;K-Nearest Neighbors&#39;</span><span class="p">:</span> <span class="n">KNeighborsClassifier</span><span class="p">(),</span>
+    <span class="s1">&#39;Gaussian Naive Bayes&#39;</span><span class="p">:</span> <span class="n">GaussianNB</span><span class="p">(),</span>
+    <span class="s1">&#39;Decision Tree&#39;</span><span class="p">:</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Menyimpan hasil evaluasi</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Melatih </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+    <span class="c1"># Evaluasi langsung setelah pelatihan</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+    <span class="n">results</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;accuracy&#39;</span><span class="p">:</span> <span class="n">accuracy</span><span class="p">,</span>
+        <span class="s1">&#39;report&#39;</span><span class="p">:</span> <span class="n">report</span><span class="p">,</span>
+        <span class="s1">&#39;confusion_matrix&#39;</span><span class="p">:</span> <span class="n">cm</span><span class="p">,</span>
+        <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="n">model</span>
+    <span class="p">}</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> - Akurasi: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Laporan Klasifikasi untuk </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="si">{</span><span class="n">report</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Confusion Matrix untuk </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="si">{</span><span class="n">cm</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Visualisasi Confusion Matrix</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+                <span class="n">xticklabels</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Confusion Matrix - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Prediksi&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Aktual&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Melatih Model ---
+
+Melatih K-Nearest Neighbors...
+K-Nearest Neighbors - Akurasi: 0.7143
+Laporan Klasifikasi untuk K-Nearest Neighbors:
+              precision    recall  f1-score   support
+
+   high risk       0.91      0.78      0.84        55
+    low risk       0.68      0.75      0.71        81
+    mid risk       0.62      0.61      0.62        67
+
+    accuracy                           0.71       203
+   macro avg       0.74      0.72      0.72       203
+weighted avg       0.72      0.71      0.72       203
+
+Confusion Matrix untuk K-Nearest Neighbors:
+[[43  6  6]
+ [ 1 61 19]
+ [ 3 23 41]]
+</pre></div>
+</div>
+<img alt="_images/2150ecc03b933465503265979e1a6c45c03ed1fc2e296e6c063510200bec39a1.png" src="_images/2150ecc03b933465503265979e1a6c45c03ed1fc2e296e6c063510200bec39a1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Melatih Gaussian Naive Bayes...
+Gaussian Naive Bayes - Akurasi: 0.6059
+Laporan Klasifikasi untuk Gaussian Naive Bayes:
+              precision    recall  f1-score   support
+
+   high risk       0.91      0.76      0.83        55
+    low risk       0.56      0.73      0.63        81
+    mid risk       0.42      0.33      0.37        67
+
+    accuracy                           0.61       203
+   macro avg       0.63      0.61      0.61       203
+weighted avg       0.61      0.61      0.60       203
+
+Confusion Matrix untuk Gaussian Naive Bayes:
+[[42  5  8]
+ [ 0 59 22]
+ [ 4 41 22]]
+</pre></div>
+</div>
+<img alt="_images/9f0209ffa55e4e1ae4c1ba271916b4b90a61e87aacc87e022b22255f75e473f6.png" src="_images/9f0209ffa55e4e1ae4c1ba271916b4b90a61e87aacc87e022b22255f75e473f6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Melatih Decision Tree...
+Decision Tree - Akurasi: 0.8522
+Laporan Klasifikasi untuk Decision Tree:
+              precision    recall  f1-score   support
+
+   high risk       0.91      0.95      0.93        55
+    low risk       0.90      0.77      0.83        81
+    mid risk       0.77      0.88      0.82        67
+
+    accuracy                           0.85       203
+   macro avg       0.86      0.86      0.86       203
+weighted avg       0.86      0.85      0.85       203
+
+Confusion Matrix untuk Decision Tree:
+[[52  1  2]
+ [ 3 62 16]
+ [ 2  6 59]]
+</pre></div>
+</div>
+<img alt="_images/ea0a0528cc9ef35a83ee3ea013badc84a1334d11e3dde0dcaae8f03c848cc60d.png" src="_images/ea0a0528cc9ef35a83ee3ea013badc84a1334d11e3dde0dcaae8f03c848cc60d.png" />
+</div>
+</div>
+<p>Penjelasan : Gambar-gambar tersebut menunjukkan hasil pelatihan dan evaluasi tiga model klasifikasi yang berbeda: K-Nearest Neighbors (KNN), Gaussian Naive Bayes, dan Decision Tree, untuk memprediksi tingkat risiko kesehatan ibu (high risk, low risk, mid risk). Untuk setiap model, disajikan laporan klasifikasi (precision, recall, f1-score, support) dan <em>confusion matrix</em>.</p>
+<p>Berikut adalah penjelasan untuk masing-masing model:</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h3><strong>1. K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi Keseluruhan:</strong> 0.7143 (71.43%)</p></li>
+<li><p><strong>Laporan Klasifikasi:</strong></p>
+<ul>
+<li><p><strong>High Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.91 (Dari semua yang diprediksi “high risk”, 91% benar-benar “high risk”.)</p></li>
+<li><p>Recall: 0.78 (Dari semua “high risk” yang sebenarnya, 78% berhasil diprediksi dengan benar.)</p></li>
+<li><p>F1-score: 0.84</p></li>
+<li><p>Support: 55 (Jumlah data aktual “high risk”.)</p></li>
+</ul>
+</li>
+<li><p><strong>Low Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.68</p></li>
+<li><p>Recall: 0.75</p></li>
+<li><p>F1-score: 0.71</p></li>
+<li><p>Support: 81</p></li>
+</ul>
+</li>
+<li><p><strong>Mid Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.62</p></li>
+<li><p>Recall: 0.61</p></li>
+<li><p>F1-score: 0.62</p></li>
+<li><p>Support: 67</p></li>
+</ul>
+</li>
+<li><p><strong>Macro Avg:</strong> Rata-rata metrik tanpa mempertimbangkan bobot support.</p></li>
+<li><p><strong>Weighted Avg:</strong> Rata-rata metrik dengan mempertimbangkan bobot support (jumlah data per kelas).</p></li>
+</ul>
+</li>
+<li><p><strong>Confusion Matrix:</strong></p>
+<ul>
+<li><p><strong>[43 6 6]</strong>: Dari 55 kasus “high risk” aktual: 43 diprediksi benar sebagai “high risk”, 6 salah diprediksi sebagai “low risk”, dan 6 salah diprediksi sebagai “mid risk”.</p></li>
+<li><p><strong>[1 61 19]</strong>: Dari 81 kasus “low risk” aktual: 1 salah diprediksi sebagai “high risk”, 61 diprediksi benar sebagai “low risk”, dan 19 salah diprediksi sebagai “mid risk”.</p></li>
+<li><p><strong>[3 23 41]</strong>: Dari 67 kasus “mid risk” aktual: 3 salah diprediksi sebagai “high risk”, 23 salah diprediksi sebagai “low risk”, dan 41 diprediksi benar sebagai “mid risk”.</p></li>
+</ul>
+</li>
+<li><p><strong>Analisis KNN:</strong> Model KNN cukup baik dalam memprediksi “high risk” dengan presisi tinggi. Namun, performanya sedikit menurun untuk kelas “low risk” dan “mid risk”, terutama dalam membedakan “low risk” dari “mid risk” (terlihat dari 19 low risk yang salah diklasifikasikan sebagai mid risk) dan “mid risk” dari “low risk” (23 mid risk yang salah diklasifikasikan sebagai low risk).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="gaussian-naive-bayes">
+<h3><strong>2. Gaussian Naive Bayes</strong><a class="headerlink" href="#gaussian-naive-bayes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi Keseluruhan:</strong> 0.6059 (60.59%)</p></li>
+<li><p><strong>Laporan Klasifikasi:</strong></p>
+<ul>
+<li><p><strong>High Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.91</p></li>
+<li><p>Recall: 0.76</p></li>
+<li><p>F1-score: 0.83</p></li>
+<li><p>Support: 55</p></li>
+</ul>
+</li>
+<li><p><strong>Low Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.56</p></li>
+<li><p>Recall: 0.73</p></li>
+<li><p>F1-score: 0.63</p></li>
+<li><p>Support: 81</p></li>
+</ul>
+</li>
+<li><p><strong>Mid Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.42 (Sangat rendah)</p></li>
+<li><p>Recall: 0.33 (Sangat rendah)</p></li>
+<li><p>F1-score: 0.37</p></li>
+<li><p>Support: 67</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Confusion Matrix:</strong></p>
+<ul>
+<li><p><strong>[42 5 8]</strong>: Dari 55 kasus “high risk” aktual: 42 diprediksi benar, 5 salah ke “low risk”, 8 salah ke “mid risk”.</p></li>
+<li><p><strong>[0 59 22]</strong>: Dari 81 kasus “low risk” aktual: 0 salah ke “high risk”, 59 diprediksi benar, 22 salah ke “mid risk”.</p></li>
+<li><p><strong>[4 41 22]</strong>: Dari 67 kasus “mid risk” aktual: 4 salah ke “high risk”, 41 salah ke “low risk”, 22 diprediksi benar.</p></li>
+</ul>
+</li>
+<li><p><strong>Analisis Gaussian Naive Bayes:</strong> Akurasi model ini lebih rendah dari KNN. Meskipun presisi untuk “high risk” masih tinggi, recall dan f1-score untuk “mid risk” sangat rendah. Confusion matrix menunjukkan bahwa model ini sangat kesulitan dalam memprediksi “mid risk”, seringkali salah mengklasifikasikannya sebagai “low risk” (41 kasus).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h3><strong>3. Decision Tree</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi Keseluruhan:</strong> 0.8522 (85.22%)</p></li>
+<li><p><strong>Laporan Klasifikasi:</strong></p>
+<ul>
+<li><p><strong>High Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.91</p></li>
+<li><p>Recall: 0.95</p></li>
+<li><p>F1-score: 0.93</p></li>
+<li><p>Support: 55</p></li>
+</ul>
+</li>
+<li><p><strong>Low Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.90</p></li>
+<li><p>Recall: 0.77</p></li>
+<li><p>F1-score: 0.83</p></li>
+<li><p>Support: 81</p></li>
+</ul>
+</li>
+<li><p><strong>Mid Risk:</strong></p>
+<ul>
+<li><p>Precision: 0.77</p></li>
+<li><p>Recall: 0.88</p></li>
+<li><p>F1-score: 0.82</p></li>
+<li><p>Support: 67</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Confusion Matrix:</strong></p>
+<ul>
+<li><p><strong>[52 1 2]</strong>: Dari 55 kasus “high risk” aktual: 52 diprediksi benar, 1 salah ke “low risk”, 2 salah ke “mid risk”.</p></li>
+<li><p><strong>[3 62 16]</strong>: Dari 81 kasus “low risk” aktual: 3 salah ke “high risk”, 62 diprediksi benar, 16 salah ke “mid risk”.</p></li>
+<li><p><strong>[2 6 59]</strong>: Dari 67 kasus “mid risk” aktual: 2 salah ke “high risk”, 6 salah ke “low risk”, 59 diprediksi benar.</p></li>
+</ul>
+</li>
+<li><p><strong>Analisis Decision Tree:</strong> Model Decision Tree menunjukkan performa terbaik di antara ketiga model dengan akurasi tertinggi (0.8522). Model ini memiliki presisi dan recall yang baik untuk semua kelas, terutama untuk “high risk” dan “mid risk”. Kesalahan klasifikasi antar kelas juga relatif lebih rendah dibandingkan dua model sebelumnya.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan-perbandingan-model">
+<h3><strong>Kesimpulan Perbandingan Model:</strong><a class="headerlink" href="#kesimpulan-perbandingan-model" title="Link to this heading">#</a></h3>
+<p>Berdasarkan akurasi dan metrik performa lainnya (precision, recall, f1-score), <strong>Decision Tree</strong> adalah model terbaik di antara ketiganya untuk tugas klasifikasi ini. Model ini mampu memprediksi tingkat risiko kesehatan ibu dengan tingkat kebenaran yang paling tinggi dan kesalahan klasifikasi antar kelas yang paling minim.</p>
+</section>
+</section>
+<section id="evaluasi-dan-perbandingan-model">
+<h2>Evaluasi dan Perbandingan Model<a class="headerlink" href="#evaluasi-dan-perbandingan-model" title="Link to this heading">#</a></h2>
+<section id="evaluasi-dan-perbandingan-model-lanjutan-dengan-cross-validation">
+<h3>Evaluasi dan Perbandingan Model Lanjutan dengan Cross-Validation<a class="headerlink" href="#evaluasi-dan-perbandingan-model-lanjutan-dengan-cross-validation" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Evaluasi Lanjutan dan Perbandingan Model ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cross-Validation (K-Fold) untuk evaluasi yang lebih robust</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Hasil Cross-Validation (5-Fold) ---&quot;</span><span class="p">)</span>
+<span class="n">cv_results</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c1"># Gunakan X_scaled_df dan y (data keseluruhan yang sudah diproses)</span>
+    <span class="n">kfold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span> <span class="c1"># 5-fold CV</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_scaled_df</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+    <span class="n">cv_results</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">scores</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> - Akurasi CV: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (+/- </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Visualisasi perbandingan Akurasi CV</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cv_results</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Akurasi Model (K-Fold Cross-Validation)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Akurasi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Ringkasan Laporan Klasifikasi per Model ---&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===== </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> =====&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi pada Data Uji: </span><span class="si">{</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;report&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Evaluasi Lanjutan dan Perbandingan Model ---
+
+--- Hasil Cross-Validation (5-Fold) ---
+K-Nearest Neighbors - Akurasi CV: 0.7239 (+/- 0.0330)
+Gaussian Naive Bayes - Akurasi CV: 0.6015 (+/- 0.0343)
+Decision Tree - Akurasi CV: 0.8225 (+/- 0.0278)
+</pre></div>
+</div>
+<img alt="_images/b91a1d2be59f3bee80461083d397611f4dae134a9fdeeda90f0760f0a83673af.png" src="_images/b91a1d2be59f3bee80461083d397611f4dae134a9fdeeda90f0760f0a83673af.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Ringkasan Laporan Klasifikasi per Model ---
+
+===== K-Nearest Neighbors =====
+Akurasi pada Data Uji: 0.7143
+Laporan Klasifikasi:
+              precision    recall  f1-score   support
+
+   high risk       0.91      0.78      0.84        55
+    low risk       0.68      0.75      0.71        81
+    mid risk       0.62      0.61      0.62        67
+
+    accuracy                           0.71       203
+   macro avg       0.74      0.72      0.72       203
+weighted avg       0.72      0.71      0.72       203
+
+
+===== Gaussian Naive Bayes =====
+Akurasi pada Data Uji: 0.6059
+Laporan Klasifikasi:
+              precision    recall  f1-score   support
+
+   high risk       0.91      0.76      0.83        55
+    low risk       0.56      0.73      0.63        81
+    mid risk       0.42      0.33      0.37        67
+
+    accuracy                           0.61       203
+   macro avg       0.63      0.61      0.61       203
+weighted avg       0.61      0.61      0.60       203
+
+
+===== Decision Tree =====
+Akurasi pada Data Uji: 0.8522
+Laporan Klasifikasi:
+              precision    recall  f1-score   support
+
+   high risk       0.91      0.95      0.93        55
+    low risk       0.90      0.77      0.83        81
+    mid risk       0.77      0.88      0.82        67
+
+    accuracy                           0.85       203
+   macro avg       0.86      0.86      0.86       203
+weighted avg       0.86      0.85      0.85       203
+</pre></div>
+</div>
+</div>
+</div>
+<p>Penjelasan : Gambar ini menyajikan hasil evaluasi lanjutan dan perbandingan model menggunakan metode <strong>K-Fold Cross-Validation (5-Fold)</strong>. Cross-validation adalah teknik yang digunakan untuk menilai seberapa baik model akan digeneralisasi ke dataset independen. Dengan 5-fold cross-validation, data dibagi menjadi 5 bagian, model dilatih 5 kali (setiap kali menggunakan 4 bagian untuk pelatihan dan 1 bagian untuk pengujian), dan akurasi rata-rata dari kelima iterasi tersebut dilaporkan.</p>
+<p>Visualisasi di bawahnya adalah <em>boxplot</em> yang menampilkan distribusi akurasi dari setiap model di seluruh 5 <em>fold</em> tersebut.</p>
+<p>Berikut adalah penjelasan untuk setiap model:</p>
+</section>
+<section id="id5">
+<h3><strong>1. K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi CV:</strong> <span class="math notranslate nohighlight">\(0.7239 (\pm 0.0330)\)</span></p></li>
+<li><p><strong>Penjelasan:</strong> Ini berarti rata-rata akurasi KNN di 5 kali <em>fold</em> cross-validation adalah sekitar 72.39%. Angka <span class="math notranslate nohighlight">\(\pm 0.0330\)</span> adalah deviasi standar, yang menunjukkan seberapa bervariasi akurasi di setiap <em>fold</em>. Deviasi standar yang kecil menunjukkan konsistensi.</p></li>
+<li><p><strong>Boxplot:</strong> Kotak biru menunjukkan bahwa sebagian besar akurasi KNN berada di rentang sekitar 0.70 hingga 0.75. Garis tengah (median) berada di sekitar 0.73. Whiskers menunjukkan rentang akurasi yang lebih luas.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3><strong>2. Gaussian Naive Bayes</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi CV:</strong> <span class="math notranslate nohighlight">\(0.6015 (\pm 0.0343)\)</span></p></li>
+<li><p><strong>Penjelasan:</strong> Rata-rata akurasi Gaussian Naive Bayes adalah sekitar 60.15%, dengan deviasi standar <span class="math notranslate nohighlight">\(0.0343\)</span>. Ini menunjukkan bahwa performanya lebih rendah dan sedikit lebih bervariasi dibandingkan KNN.</p></li>
+<li><p><strong>Boxplot:</strong> Kotak oranye menunjukkan rentang akurasi yang lebih rendah, sebagian besar di sekitar 0.57 hingga 0.63. Median akurasi berada di sekitar 0.60.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3><strong>3. Decision Tree</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi CV:</strong> <span class="math notranslate nohighlight">\(0.8225 (\pm 0.0278)\)</span></p></li>
+<li><p><strong>Penjelasan:</strong> Rata-rata akurasi Decision Tree adalah yang tertinggi di antara ketiga model, yaitu sekitar 82.25%. Deviasi standar <span class="math notranslate nohighlight">\(0.0278\)</span> adalah yang terkecil, menunjukkan bahwa akurasinya sangat konsisten di setiap <em>fold</em>.</p></li>
+<li><p><strong>Boxplot:</strong> Kotak hijau menunjukkan akurasi tertinggi, sebagian besar di rentang sekitar 0.80 hingga 0.84. Median akurasi berada di sekitar 0.82-0.83. Ini adalah boxplot dengan akurasi rata-rata tertinggi dan kotak yang paling rapat, menandakan performa yang paling stabil dan terbaik.</p></li>
+</ul>
+</section>
+<section id="kesimpulan-dari-evaluasi-cross-validation">
+<h3><strong>Kesimpulan dari Evaluasi Cross-Validation:</strong><a class="headerlink" href="#kesimpulan-dari-evaluasi-cross-validation" title="Link to this heading">#</a></h3>
+<p>Berdasarkan hasil cross-validation ini, <strong>Decision Tree</strong> adalah model dengan kinerja terbaik. Tidak hanya memiliki akurasi rata-rata tertinggi (0.8225), tetapi juga menunjukkan konsistensi yang sangat baik (deviasi standar terkecil, <span class="math notranslate nohighlight">\(\pm 0.0278\)</span>), yang berarti performanya tidak terlalu banyak berfluktuasi ketika diuji pada subset data yang berbeda.</p>
+<p>KNN menempati posisi kedua dengan akurasi yang moderat dan konsistensi yang cukup baik. Sementara itu, Gaussian Naive Bayes memiliki akurasi terendah dan sedikit lebih tidak konsisten.</p>
+<p>Evaluasi dengan cross-validation ini memberikan gambaran yang lebih robust tentang kinerja model dibandingkan hanya dengan satu kali pembagian data pelatihan dan pengujian, karena mengurangi risiko kebetulan yang mungkin terjadi pada satu pembagian data tertentu.</p>
+</section>
+<section id="aplikasi-prediksi-risiko-kesehatan-ibu">
+<h3>Aplikasi Prediksi Risiko Kesehatan Ibu<a class="headerlink" href="#aplikasi-prediksi-risiko-kesehatan-ibu" title="Link to this heading">#</a></h3>
+<p>Anda dapat mencoba aplikasi web interaktif ini secara langsung melalui link berikut:</p>
+<p><a class="reference external" href="https://prediksi-risiko-kesehatan-ibu-xqpqmydaee7jdx4xzrvnyb.streamlit.app/">Akses Aplikasi Streamlit di Sini</a></p>
+<hr class="docutils" />
+<p><strong>Catatan:</strong> Kode sumber lengkap untuk aplikasi ini dapat ditemukan di repositori GitHub saya:
+<a class="reference external" href="https://github.com/rhmnaan/Prediksi-Risiko-Kesehatan-Ibu.git">Repositori GitHub Proyek</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">Pendahuluan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kolom-fitur-pada-dataset-maternal-health-risk">Penjelasan Kolom (Fitur) pada Dataset “Maternal Health Risk”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-data-mining-pada-dataset-maternal-health-risk">Tujuan Data Mining pada Dataset “Maternal Health Risk”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impor-library">Impor Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unggah-dataset">Unggah Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding">Data Understanding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data">Menampilkan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informasi-dataset">Informasi Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif-fitur-numerik">Statistik Deskriptif Fitur Numerik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengecekan-nilai-hilang-dataset">Pengecekan Nilai Hilang Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-kolom-target">Distribusi Kolom Target</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-fitur-numerik">Distribusi Fitur Numerik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-korelasi-fitur-numerik">Matriks Korelasi Fitur Numerik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-fitur-numerik">Deteksi Outlier Fitur Numerik</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">Data Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-nilai-hilang">Penanganan Nilai Hilang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-outlier">Penanganan Outlier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encoding-variabel-target">Encoding Variabel Target</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pemisahan-fitur-dan-target">Pemisahan Fitur dan Target</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-scaling">Feature Scaling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pemisahan-data-latih-dan-uji">Pemisahan Data Latih dan Uji</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model">Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbors-knn">📌 1. <strong>K-Nearest Neighbors (KNN)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">🔍 <strong>Penjelasan:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-jarak-euclidean">🔹 Rumus Jarak Euclidean:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-prediksi">🔹 Langkah Prediksi:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">📌 2. <strong>Naive Bayes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🔍 <strong>Penjelasan:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">🔹 Teorema Bayes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asumsi-naive-fitur-independen">🔹 Asumsi Naive (fitur independen):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-klasifikasi-memilih-kelas-dengan-posterior-tertinggi">🔹 Rumus klasifikasi (memilih kelas dengan posterior tertinggi):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-fitur-numerik-gaussian-naive-bayes">🔹 Untuk fitur numerik – Gaussian Naive Bayes:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">📌 3. <strong>Decision Tree</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🔍 <strong>Penjelasan:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-ukuran-ketidakpastian">🔹 Entropy (ukuran ketidakpastian):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-gain-id3">🔹 Information Gain (ID3):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gain-ratio-c4-5">🔹 Gain Ratio (C4.5):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gini-index-cart">🔹 Gini Index (CART):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pelatihan-dan-evaluasi-model-klasifikasi-knn-naive-bayes-decision-tree">Pelatihan dan Evaluasi Model Klasifikasi (KNN, Naive Bayes, Decision Tree)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>1. K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-naive-bayes"><strong>2. Gaussian Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>3. Decision Tree</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-perbandingan-model"><strong>Kesimpulan Perbandingan Model:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-dan-perbandingan-model">Evaluasi dan Perbandingan Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-dan-perbandingan-model-lanjutan-dengan-cross-validation">Evaluasi dan Perbandingan Model Lanjutan dengan Cross-Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>1. K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>2. Gaussian Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>3. Decision Tree</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-dari-evaluasi-cross-validation"><strong>Kesimpulan dari Evaluasi Cross-Validation:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-prediksi-risiko-kesehatan-ibu">Aplikasi Prediksi Risiko Kesehatan Ibu</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rohman Maulana
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
